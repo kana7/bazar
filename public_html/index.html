@@ -124,53 +124,59 @@
                 window.location.href = "sql.exe?SqlDB=bazar&Sql=" + page + ".phs";
             }
                     </script>
-                    <table id="bazarHeader_bottom">
-                        <tbody><tr>
-                                <td id="bazarLogo"><a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs"><img id="bazarLogo_image" src="img/icon/logo.png"></a></td>
-                                <td id="bazarInputs">
-                                    <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
-                                        <table id="bazarSearch_container">
-                                            <tbody><tr>
-                                                    <td id="bazarSearch_container_left">
-                                                        <div id="bazarSearch_combo" style="width: 66px;">
-                                                            <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
-                                                            <select id="bazarSearch_choice" name="category" style="width: 88px;">
-                                                                <option value="0">Tous</option>
-                                                                <option value="1">Véhicules</option>
-                                                                <option value="19">Immobilier</option>
-                                                                <option value="30">Multimédia</option>
-                                                                <option value="48">Matériel professionnel</option>
-                                                                <option value="38">Enfance</option>
-                                                                <option value="52">Sport et loisirs</option>
-                                                                <option value="62">Maison</option>
-                                                                <option value="42">Mode</option>
-                                                                <option value="115">Beauté, Santé et Alimentation</option>
-                                                                <option value="70">Emploi et services</option>
-                                                                <option value="78">Rencontre</option>
-                                                                <option value="84">Autre</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td id="bazarSearch_container_middle">
-                                                        <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 434px;">
-                                                    </td>
-                                                    <td id="bazarSearch_container_right">
-                                                        <div id="bazarSearch_button" onclick="$('#bazarSearch').submit()">
-                                                            <img id="bazarSearch_button_image" src="img/icon/search.png">
-                                                        </div>
-                                                    </td>
-                                                    <td id="bazarSearch_container_advanced"><a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a></td>
-                                                </tr>
-                                            </tbody></table>
-                                    </form>
-                                </td>
-                                <td id="bazar_newAnnonce">
-                                    <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
-                                        <div id="bazar_newAnnonce_button">insérer une annonce</div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody></table>
+                    <div id="bazarHeader_bottom">
+                        <div class="clearfix phone-10 phone-push-2 align middle">
+                            
+                            <div id="bazarLogo" class="phone-2">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
+                                    <img id="bazarLogo_image" src="img/icon/logo.png"/>
+                                </a>
+                            </div>
+                            <div id="bazarInputs" class="phone-5" style="left: 5%;">
+                                <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                                    <div id="bazarSearch_container" class="align middle">
+                                        <div id="bazarSearch_container_left">
+                                            <div id="bazarSearch_combo" style="width: 66px;">
+                                                <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png"/>
+                                                <select id="bazarSearch_choice" name="category" style="width: 88px;">
+                                                    <option value="0">Tous</option>
+                                                    <option value="1">Véhicules</option>
+                                                    <option value="19">Immobilier</option>
+                                                    <option value="30">Multimédia</option>
+                                                    <option value="48">Matériel professionnel</option>
+                                                    <option value="38">Enfance</option>
+                                                    <option value="52">Sport et loisirs</option>
+                                                    <option value="62">Maison</option>
+                                                    <option value="42">Mode</option>
+                                                    <option value="115">Beauté, Santé et Alimentation</option>
+                                                    <option value="70">Emploi et services</option>
+                                                    <option value="78">Rencontre</option>
+                                                    <option value="84">Autre</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="bazarSearch_container_middle">
+                                            <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 434px;"/>
+                                        </div>
+                                        <div id="bazarSearch_container_right">
+                                            <div id="bazarSearch_button" onclick="\$('#bazarSearch').submit()">
+                                                <img id="bazarSearch_button_image" src="img/icon/search.png"/>
+                                            </div>
+                                        </div>
+                                        <div id="bazarSearch_container_advanced">
+                                            <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="bazar_newAnnonce" class="phone-push-1 phone-2">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
+                                    <button id="bazar_newAnnonce_button">insérer une annonce</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <script>
                         $(document).ready(function () {
                             resizeSelect($('#bazarSearch_choice'));
@@ -217,13 +223,13 @@
                                                 <ul class="sub_categories" id="sub_category_1">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 2);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Voitures<span class="sub_category_number">(292)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_2">
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 3);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Berline<span class="sub_category_number">(111)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_3">
@@ -231,7 +237,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 4);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Cabriolet<span class="sub_category_number">(23)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_4">
@@ -239,7 +245,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 5);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Tout-terrain<span class="sub_category_number">(30)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_5">
@@ -247,7 +253,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 100);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Coupé<span class="sub_category_number">(18)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_100">
@@ -255,7 +261,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 101);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Citadine<span class="sub_category_number">(75)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_101">
@@ -263,7 +269,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 102);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Break<span class="sub_category_number">(23)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_102">
@@ -278,7 +284,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 131);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Monospace<span class="sub_category_number">(12)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_131">
@@ -288,13 +294,13 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 7);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Motos<span class="sub_category_number">(16)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_7">
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 8);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     &lt; 125 cm3<span class="sub_category_number">(6)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_8">
@@ -302,7 +308,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 9);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     125 cm3 - 750 cm3<span class="sub_category_number">(6)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_9">
@@ -310,7 +316,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 10);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     &gt; 750 cm3<span class="sub_category_number">(4)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_10">
@@ -320,7 +326,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 11);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Utilitaires-camions<span class="sub_category_number">(17)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_11">
@@ -328,7 +334,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 12);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Caravanes, camping-cars, remorques<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_12">
@@ -336,7 +342,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 13);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Nautisme<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_13">
@@ -344,7 +350,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 14);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Equipements: Voitures<span class="sub_category_number">(316)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_14">
@@ -352,7 +358,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 15);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Equipements: Moto<span class="sub_category_number">(7)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_15">
@@ -360,7 +366,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 16);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Equipements: Utilitaire<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_16">
@@ -389,13 +395,13 @@
                                                 <ul class="sub_categories" id="sub_category_19">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 20);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Vente<span class="sub_category_number">(8)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_20">
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 21);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Maison<span class="sub_category_number">(2)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_21">
@@ -403,7 +409,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 22);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Appartement<span class="sub_category_number">(4)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_22">
@@ -411,7 +417,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 23);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Studio<span class="sub_category_number">(1)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_23">
@@ -419,7 +425,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 24);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Locaux commerciaux<span class="sub_category_number">(1)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_24">
@@ -450,7 +456,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 29);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Location<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_29">
@@ -465,7 +471,7 @@
                                                 <ul class="sub_categories" id="sub_category_30">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 31);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Informatique<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_31">
@@ -473,7 +479,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 32);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Image et son<span class="sub_category_number">(3)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_32">
@@ -481,7 +487,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 33);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Console et jeux vidéos<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_33">
@@ -489,7 +495,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 34);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Téléphonie, Fax<span class="sub_category_number">(8)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_34">
@@ -497,7 +503,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 35);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Accessoires<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_35">
@@ -505,7 +511,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 36);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             CD, Musique<span class="sub_category_number">(30)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_36">
@@ -527,7 +533,7 @@
                                                 <ul class="sub_categories" id="sub_category_48">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 49);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Fournitures de bureau<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_49">
@@ -542,7 +548,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 51);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Commerces et marchés<span class="sub_category_number">(5)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_51">
@@ -550,7 +556,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 103);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Autres<span class="sub_category_number">(4)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_103">
@@ -558,7 +564,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 104);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Restauration et Hôtellerie<span class="sub_category_number">(3)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_104">
@@ -573,7 +579,7 @@
                                                 <ul class="sub_categories" id="sub_category_38">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 39);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Equipement bébé<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_39">
@@ -602,7 +608,7 @@
                                                 <ul class="sub_categories" id="sub_category_52">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 53);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Livres<span class="sub_category_number">(23)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_53">
@@ -610,13 +616,13 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 54);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Jeux et jouets<span class="sub_category_number">(8)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_54">
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 132);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Modélisme<span class="sub_category_number">(6)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_132">
@@ -624,7 +630,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 133);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Autres<span class="sub_category_number">(1)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_133">
@@ -634,7 +640,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 55);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Vélos<span class="sub_category_number">(4)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_55">
@@ -649,7 +655,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 57);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Instruments de musique<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_57">
@@ -657,7 +663,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 58);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Collections<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_58">
@@ -672,7 +678,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 60);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Sport et hobbies<span class="sub_category_number">(5)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_60">
@@ -687,7 +693,7 @@
                                                 <ul class="sub_categories" id="sub_category_62">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 63);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Bricolage<span class="sub_category_number">(55)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_63">
@@ -695,7 +701,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 64);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Ameublement<span class="sub_category_number">(83)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_64">
@@ -703,7 +709,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 65);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Décoration<span class="sub_category_number">(17)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_65">
@@ -711,7 +717,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 66);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Electroménager<span class="sub_category_number">(10)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_66">
@@ -719,7 +725,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 67);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Arts de la table<span class="sub_category_number">(2)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_67">
@@ -727,7 +733,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 68);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Jardinage<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_68">
@@ -749,7 +755,7 @@
                                                 <ul class="sub_categories" id="sub_category_42">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 43);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Vêtements<span class="sub_category_number">(23)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_43">
@@ -764,7 +770,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 45);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Accessoires<span class="sub_category_number">(16)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_45">
@@ -793,7 +799,7 @@
                                                 <ul class="sub_categories" id="sub_category_115">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 123);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Beauté<span class="sub_category_number">(3)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_123">
@@ -822,13 +828,13 @@
                                                 <ul class="sub_categories" id="sub_category_70">
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 71);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Emploi<span class="sub_category_number">(11)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_71">
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 72);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Offre<span class="sub_category_number">(8)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_72">
@@ -843,7 +849,7 @@
                                                             </li>
                                                             <li class="sub_category_entry">
                                                                 <div onclick="getBazarItems($(this), 'content', 75);
-                                                                        event.stopPropagation();">
+                                                                            event.stopPropagation();">
                                                                     Formations et stages<span class="sub_category_number">(3)</span>
                                                                 </div>
                                                                 <ul class="sub_categories" id="sub_category_75">
@@ -853,7 +859,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 76);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Services<span class="sub_category_number">(6)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_76">
@@ -882,7 +888,7 @@
                                                     </li>
                                                     <li class="sub_category_entry">
                                                         <div onclick="getBazarItems($(this), 'content', 126);
-                                                                event.stopPropagation();">
+                                                                    event.stopPropagation();">
                                                             Homme cherche femme<span class="sub_category_number">(1)</span>
                                                         </div>
                                                         <ul class="sub_categories" id="sub_category_126">

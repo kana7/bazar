@@ -565,17 +565,17 @@ td, th {
 /* */
 
 #bazarHeader_bottom {
-	width: 100%;
-	height: 100px;
-	border-collapse: collapse;
-	clear: both;
-	width: 1240px;
-	margin: 0 auto;
+	/* width: 100%; */
+	/* height: 100px; */
+	/* border-collapse: collapse; */
+	/* clear: both; */
+	/* width: 1240px; */
+	/* margin: 0 auto; */
 }
 
 #bazarLogo {
-	width: 15%;
-	width: 250px;
+	/* width: 15%; */
+	/* width: 250px; */
 	//text-align: center;
 }
 
@@ -585,9 +585,9 @@ td, th {
 }
 
 #bazarInputs {
-	width: 70%;
-	width: 790px;
-	width: 785px;
+	/* width: 70%; */
+	/* width: 790px; */
+	/* width: 785px; */
 }
 
 #bazar_newAnnonce {
@@ -603,13 +603,14 @@ td, th {
 }
 
 #bazarSearch_container  {
-	width: 500px;
-	margin: auto;
-	border-collapse: collapse;
+	/* width: 500px; */
+	/* margin: auto; */
+	/* border-collapse: collapse; */
 }
 
 #bazarSearch_container_left, #bazarSearch_container_middle, #bazarSearch_container_right {
 	padding: 0px;
+	display: inline-block;
 }
 
 #bazarSearch_container_advanced {
