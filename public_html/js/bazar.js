@@ -18,17 +18,6 @@ $(document).ready(function() {
 	
 });
 
-function showHideCategory(id) {
-	
-	var element = $('#' + id);
-	/* */
-	if(element.css('display') == 'none')
-		$('#' + id).show();
-	else
-		$('#' + id).hide();
-	
-}
-
 function resizeAllImages() {
 	
 	$('.bazar_image').each(function() {
@@ -66,16 +55,18 @@ function resizeAllImages() {
 }
 
 function getBazarItems(element, container, id) {
-	
 	$('.selectedCategory').removeClass('selectedCategory');
 	element.addClass('selectedCategory');
-	$.ajaxSetup({
-		'beforeSend' : function(xhr) {
-			xhr.overrideMimeType('text/html; charset=windows-1252');
-		},
-	});
-	$('#' + container).load('sql.exe?SqlDB=bazar&Sql=loadAnnonces.phs&_cat=' + id, function() {
-		resizeAllImages();
-	});
-	
+	window.location = 'sql.exe?SqlDB=bazar&Sql=Search.phs&category=' + id;	
+}
+
+function getMoreBazarItems(page, container, id) {
+	window.location = 'sql.exe?SqlDB=bazar&Sql=Search.phs&category=' + id + '&page=' + page;
+}
+
+function showHideCategory(id) {
+	var element = $('#' + id);
+	/* */
+	element.show();
+	element.parents('.sub_categories').show();
 }
