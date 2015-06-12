@@ -937,22 +937,24 @@ td, th {
 }
 
 #annonces_last_content {
-	border-collapse: separate;
-	width: 900px;
-	border-collapse: collapse;
+	/* border-collapse: separate; */
+	/* width: 900px; */
+	/* border-collapse: collapse; */
 	margin-top: 10px;
 	margin-bottom: 20px;
 	/* TEST */
-	width: 1030px;
-	width: 100%;
-	width: 990px;
+	/* width: 1030px; */
+	/* width: 100%; */
+	/* width: 990px; */
 }
 
 .annonces_last_entry {
-	width: 50%;
+	/* width: 50%; */
 	height: 130px;
 	border: 1px solid #e0e0e0;
+	margin: -1px 0 0 -1px;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 .annonces_last_entry table {
