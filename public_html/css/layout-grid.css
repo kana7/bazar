@@ -10,7 +10,7 @@ media queries a utiliser pour chaques points de rupture (types de resolution):
 
 @media (min-width: 992px){} -----> desktop et plus
 
-@media (min-width: 1172px){} -----> large desktop et plus
+@media (min-width: 1260px){} -----> large desktop et plus
 */
 
 
@@ -436,9 +436,9 @@ pre code {
     }
 }
 /*Desktop large*/
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .container {
-        width: 1160px;
+        width: 1220px;
     }
 }
 
@@ -455,7 +455,6 @@ pre code {
 .row {
     margin-left: -10px;
     margin-right: -10px;
-    /* height: 100%; */
 }
 
 /*Definition des colonnes*/
@@ -464,11 +463,11 @@ pre code {
     display: inline-block;
     min-height: 1px;
 }
-/*
+
 .phone-auto, .phone-0, .phone-1, .phone-2, .phone-3, .phone-4, .phone-5, .phone-6, .phone-7, .phone-8, .phone-9, .phone-10, .phone-11, .phone-12 {
     float: left;
 }
-*/
+
 /* Colonnes pour telephone*/
 .phone-12 {
     width: 100%;
@@ -1099,7 +1098,7 @@ pre code {
     }
 }
 /*Colonnes pour desktop large (ecran haute definition et plus)*/
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .lgdesk-auto, .lgdesk-0, .lgdesk-1, .lgdesk-2, .lgdesk-3, .lgdesk-4, .lgdesk-5, .lgdesk-6, .lgdesk-7, .lgdesk-8, .lgdesk-9, .lgdesk-10, .lgdesk-11, .lgdesk-12 {
         float: left;
     }
@@ -1489,7 +1488,7 @@ pre code {
 }
 
 /*Classes permettant d'afficher un bloc uniquement en haute resolution*/
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .display-lgdesk {
         display: block !important;
     }
@@ -1504,17 +1503,17 @@ pre code {
         display: table-cell !important;
     }
 }
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .display-lgdesk-block {
         display: block !important;
     }
 }
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .display-lgdesk-inline {
         display: inline !important;
     }
 }
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .display-lgdesk-inline-block {
         display: inline-block !important;
     }
@@ -1540,7 +1539,7 @@ pre code {
     }
 }
 /*Cacher bloc en haute resolution*/
-@media (min-width: 1172px) {
+@media (min-width: 1260px) {
     .hidden-lgdesk {
         display: none !important;
     }
