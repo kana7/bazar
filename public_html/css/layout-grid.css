@@ -280,11 +280,11 @@ th {
 }
 
 /* La taille d'un element (largeur et hauteur) est definie jusque a? la bordure mais pas sans les marges*/
-/* *{
+*{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}*/
+}
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
@@ -438,7 +438,7 @@ pre code {
 /*Desktop large*/
 @media (min-width: 1172px) {
     .container {
-        width: 1140px;
+        width: 1160px;
     }
 }
 
