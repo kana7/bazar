@@ -76,19 +76,21 @@ td, th {
     padding: 0px;
 }
 
-.container-bazar{
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 #wrap{
+    position: relative;
     margin: 0px;
     padding: 0px;
     border-collapse: collapse;
     width: 100%;
+    min-height: 100%;
+}
+
+.container-topHeader{
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #header, #body {
@@ -277,9 +279,10 @@ td, th {
 }
 
 #nMenuContainer li {
-    margin: 0px;
+    /* margin: 0px; */
     padding: 0px;
     width: auto;
+    margin-top: 2px;
 }
 
 #nMenuContainer li:hover {
@@ -299,7 +302,7 @@ td, th {
 
 .menuIconImg {
     position: relative;
-    top: -4px;
+    top: -5px;
 }
 
 .nMenuSeparator {
@@ -416,15 +419,13 @@ td, th {
 }
 
 #bazarHeader_top_menu {
-    /* line-height: 25px; */
-    position: relative;
-    top: 13px; 
-    /* right: 80px; */
     font-weight: bold;
     font-size: 13pt;
-    /* text-align: right; */
-    /* padding-left: 45px; */
-    height: 100%;
+    height: 34px;
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    padding-right: 4%;
 }
 
 #bazarConnexion, #bazarInscription, #profil_top_layer {
@@ -575,6 +576,7 @@ td, th {
     /* clear: both; */
     /* width: 1240px; */
     /* margin: 0 auto; */
+    margin-top: 28px;
 }
 
 #bazarLogo {
@@ -592,14 +594,16 @@ td, th {
     /* width: 70%; */
     /* width: 790px; */
     /* width: 785px; */
+    margin-top: 13px;
 }
 
 #bazar_newAnnonce {
-    line-height: 100px;
+    /* line-height: 100px; */
     cursor: pointer;
     text-align: right;
     /* width: 240px; */
     /* width: 205px; */
+    margin-top: 10px;
 }
 
 #bazarSearch {
@@ -883,21 +887,21 @@ td, th {
     /* TEST */
     width: 1030px;
     width: 100%;
-    width: 990px;
+    /* width: 990px; */
 }
 
 .annonces_une_block {
-    width: 800px;
+    /* width: 800px; */
     height: 100px;
     position: absolute;
     top: 0px;
     /* TEST */
-    width: 925px
-}
+    /* width: 925px
+ */}
 
 #annonces_une_container_middle {
-    width: 850px;
-    width: 900px;
+    /* width: 850px; */
+    /* width: 900px; */
     overflow: hidden;
     height: 100px;
     position: relative;
@@ -1157,27 +1161,23 @@ html,body {
     width: 100%;
     overflow-x: hidden;
 }
-#wrap {
-    min-height: 100%;
-    //height: 100%;
-    /* position: relative; */
-}
+
 #body {
-    /* padding-bottom: 58px; */
+    padding-bottom: 90px;
 }
 #header {
     height: 160px;
 }
 #bazar_footer {
-    /* width: 100%; */
+    width: 100%;
     height: 58px;
     border-top: 1px solid #dedede;
     background: #f8f8f8;
-    padding-top: 12px;
+    padding-top: 23px;
     /* padding: 10px 0; */
-    /* position: absolute; */
-    /* bottom: 0px; */
-    line-height: 35px;
+    position: absolute;
+    bottom: 0px;
+    /* line-height: 35px; */
 }
 
 #bazar_footer_content {
@@ -1224,7 +1224,7 @@ html,body {
     width: 41px;
     text-align: center;
     position: relative;
-    bottom: 8px;
+    bottom: 2px;
 }
 
 #bazarSearch_container_advanced a {

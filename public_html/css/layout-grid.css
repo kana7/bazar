@@ -436,9 +436,9 @@ pre code {
     }
 }
 /*Desktop large*/
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .container {
-        width: 1220px;
+        width: 1284px;
     }
 }
 
@@ -455,6 +455,7 @@ pre code {
 .row {
     margin-left: -10px;
     margin-right: -10px;
+    /* border-bottom: 1px solid black; */
 }
 
 /*Definition des colonnes*/
