@@ -10,7 +10,7 @@ media queries a utiliser pour chaques points de rupture (types de resolution):
 
 @media (min-width: 992px){} -----> desktop et plus
 
-@media (min-width: 1260px){} -----> large desktop et plus
+@media (min-width: 1316px){} -----> large desktop et plus
 */
 
 
@@ -1099,7 +1099,7 @@ pre code {
     }
 }
 /*Colonnes pour desktop large (ecran haute definition et plus)*/
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .lgdesk-auto, .lgdesk-0, .lgdesk-1, .lgdesk-2, .lgdesk-3, .lgdesk-4, .lgdesk-5, .lgdesk-6, .lgdesk-7, .lgdesk-8, .lgdesk-9, .lgdesk-10, .lgdesk-11, .lgdesk-12 {
         float: left;
     }
@@ -1489,7 +1489,7 @@ pre code {
 }
 
 /*Classes permettant d'afficher un bloc uniquement en haute resolution*/
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .display-lgdesk {
         display: block !important;
     }
@@ -1504,17 +1504,17 @@ pre code {
         display: table-cell !important;
     }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .display-lgdesk-block {
         display: block !important;
     }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .display-lgdesk-inline {
         display: inline !important;
     }
 }
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .display-lgdesk-inline-block {
         display: inline-block !important;
     }
@@ -1540,7 +1540,7 @@ pre code {
     }
 }
 /*Cacher bloc en haute resolution*/
-@media (min-width: 1260px) {
+@media (min-width: 1316px) {
     .hidden-lgdesk {
         display: none !important;
     }
