@@ -267,6 +267,7 @@ td, th {
     /* padding: 0px !important; */
     border: none !important;
     box-shadow: 0 0 2px 2px #999;
+    z-index: 10;
     /* text-align: center; */
 }
 
@@ -307,9 +308,9 @@ td, th {
 }
 @media (max-width: 991px){
     .menuIconImg {
-    position: relative;
-    top: -9px;
-}
+        position: relative;
+        top: -9px;
+    }
 }
 
 .nMenuSeparator {
@@ -434,6 +435,11 @@ td, th {
     top: 8px;
     right: 0px;
     padding-right: 20px;
+}
+@media (max-width: 991px){
+    #bazarHeader_top_menu {
+        padding-right: 50px;
+    }
 }
 @media(min-width: 992px){
     #bazarHeader_top_menu>ul {
@@ -590,6 +596,7 @@ td, th {
     /* clear: both; */
     /* width: 1240px; */
     /* margin: 0 auto; */
+    /* z-index: 0; */
     margin-top: 28px;
 }
 
@@ -740,6 +747,7 @@ td, th {
     //font-weight: bold;
     background: #00529c;
     color: #fff;
+    /* z-index: 0; */
 }
 
 #bazarBody {
@@ -769,8 +777,9 @@ td, th {
 }
 
 #bazarBandeau {
-    height: 40px;
-    line-height: 40px;
+    /* height: 40px; */
+    padding: 8px 4px;
+    line-height: 25px;
     background: #f7f7f7;
     text-align: center;
     border: 1px solid #e0e0e0;
@@ -1298,4 +1307,63 @@ html,body {
     margin-left: auto;
     padding-left: 25px;
     padding-right: 25px;
+}
+
+
+/*Ajout des nouvelles classes*/
+#nMenu_dropdown{
+    /* position: relative; */
+    top: 4px;
+    position: relative;
+}
+#nMenu_dropdown>a{
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'helvetica', sans-serif;
+}
+#nMenu_dropdown>a>i{
+    font-size: 17px;
+    transform: scale(1,1.5);
+    margin-left: 10px;
+    position: relative;
+    bottom: 7px;
+}
+#nMenu_dropdown>ul.dropdown{
+    display: none;
+    z-index: 1;
+    width: 150px;
+    padding: 0px 0px;
+    margin: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #00529C;
+    position: absolute;
+    top: 37px;
+    right: -18px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 4px 4px 0 #999;
+    list-style-type: none;
+}
+#nMenu_dropdown>ul.dropdown.active{
+    display: block;
+}
+ul.dropdown>li{
+    display: block;
+    text-align: center;
+    padding: 12px 0px;
+}
+ul.dropdown>li:active{
+    background-color: #D2D2D2;
+}
+ul.dropdown>li:not(:last-child){
+    border-bottom: 1px solid #D2D2D2;
+}
+
+ul.dropdown>li>a{
+    text-decoration: none;
+    color: #00529C;
+    font-family: 'neo_bold';
+    text-transform: uppercase;
+    font-size: 14px;
 }
