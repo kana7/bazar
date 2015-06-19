@@ -13,23 +13,18 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
         <script src="/s/bazar.js" type="text/javascript"></script>
         <script src="js/slide.js" type="text/javascript"></script>
+        <script src="js/view"></script>
         <script>
             $(document).ready(function () {
                 initPanels(1, 'annonces_une_block');
 
                 $('#nMenu_dropdown>a').click(function () {
-                    if ($(this).siblings('.dropdown').hasClass('active')) {
-                        $(this).siblings('.dropdown').removeClass('active');
-                    } else {
-                        $(this).siblings('.dropdown').addClass('active');
-                    }
+                    $(this).siblings('.dropdown').toggleClass('active');
                 });
                 $('html').click(function (event) {
                     var element = $('#nMenu_dropdown');
                     if (!element.is(event.target) && element.has(event.target).length === 0) {
-                        if ($('#nMenu_dropdown>a').siblings('.dropdown').hasClass('active')) {
-                            $('#nMenu_dropdown>a').siblings('.dropdown').removeClass('active');
-                        }
+                        $('#nMenu_dropdown>a').siblings('.dropdown.active').removeClass('active');
                     }
                 });
             });</script>
@@ -180,53 +175,62 @@
                         }
                     </style>
                     <div id="bazarHeader_bottom" class="container-bazar">
-                        <div class="row">
-                            <div id="bazarLogo" class="phone-2">
+                        <div class="appendix">
+                            <div id="bazarLogo" class="margin_mobile">
                                 <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
                                     <img id="bazarLogo_image" src="img/icon/logo.png">
                                 </a>
                             </div>
-                            <div id="bazarInputs" class="phone-push-1 phone-6">
+                            <div class="phone-12 display-phone display-tab margin_mobile">
+                                <div class=" align split">
+                                    <button class="mobile_button" style="padding-right: 30px;">
+                                        <span class="icon"><img src="img/icon/gemincon/categorie.png" alt="voir catégorie" title="voir catégorie"/></span>CATÉGORIES
+                                    </button>
+                                    <button class="mobile_button" style="padding-right: 50px;">
+                                        <span class="icon"><img src="img/icon/gemincon/plus.png" alt="ajout annonce" title="ajouter une annonce"/></span>INSÉRER
+                                    </button>
+                                    <button class="mobile_button" style="padding-right: 18px;">
+                                        <span class="icon"><img src="img/icon/gemincon/cle.png"/></span>SE CONNECTER
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6 margin_mobile">
                                 <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
-                                    <div id="bazarSearch_container">
-                                        <div id="bazarSearch_container_left" style="width: 13.78579003181336%;" class="pull-left">
-                                            <div id="bazarSearch_combo" style="width: 100%;">
-                                                <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
-                                                <select id="bazarSearch_choice" class="select" style="width: 100%;" name="category">
-                                                    <option value="0">Tous</option>
-                                                    <option value="1">Véhicules</option>
-                                                    <option value="19">Immobilier</option>
-                                                    <option value="30">Multimédia</option>
-                                                    <option value="48">Matériel professionnel</option>
-                                                    <option value="38">Enfance</option>
-                                                    <option value="52">Sport et loisirs</option>
-                                                    <option value="62">Maison</option>
-                                                    <option value="42">Mode</option>
-                                                    <option value="115">Beauté, Santé et Alimentation</option>
-                                                    <option value="70">Emploi et services</option>
-                                                    <option value="78">Rencontre</option>
-                                                    <option value="84">Autre</option>
-                                                </select>
-                                            </div>
+                                    <div id="bazarSearch_container_left" class="pull-left">
+                                        <div id="bazarSearch_combo" style="width: 100%;">
+                                            <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
+                                            <select id="bazarSearch_choice" class="select" style="width: 100%;" name="category">
+                                                <option value="0">Tous</option>
+                                                <option value="1">Véhicules</option>
+                                                <option value="19">Immobilier</option>
+                                                <option value="30">Multimédia</option>
+                                                <option value="48">Matériel professionnel</option>
+                                                <option value="38">Enfance</option>
+                                                <option value="52">Sport et loisirs</option>
+                                                <option value="62">Maison</option>
+                                                <option value="42">Mode</option>
+                                                <option value="115">Beauté, Santé et Alimentation</option>
+                                                <option value="70">Emploi et services</option>
+                                                <option value="78">Rencontre</option>
+                                                <option value="84">Autre</option>
+                                            </select>
                                         </div>
-                                        <div id="bazarSearch_container_middle" class="pull-left" style="width: 64.15694591728526%">
-                                            <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
-                                        </div>
-                                        <div id="bazarSearch_container_right" style="
-                                             width: 22.05726405090138%;
-                                             " class="pull-left">
-                                            <button id="bazarSearch_button" onclick="$('#bazarSearch').submit()">
-                                                <img id="bazarSearch_button_image" src="img/icon/search.png">
-                                            </button>
-                                            <div id="bazarSearch_container_advanced">
-                                                <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
-                                            </div>
+                                    </div>
+                                    <div id="bazarSearch_container_middle" class="pull-left">
+                                        <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
+                                    </div>
+                                    <div id="bazarSearch_container_right" class="pull-left">
+                                        <button id="bazarSearch_button"  onclick="\$('#bazarSearch').submit()">
+                                            <img id="bazarSearch_button_image" src="img/icon/gemincon/loupe.png">
+                                        </button>
+                                        <div id="bazarSearch_container_advanced" class="hidden-phone">
+                                            <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
                                         </div>
                                     </div>
                                 </form>
                             </div>
 
-                            <div id="bazar_newAnnonce" class="phone-3 pull-right">
+                            <div id="bazar_newAnnonce" class="hidden-phone hidden-tab desk-3 pull-right">
                                 <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
                                     <button id="bazar_newAnnonce_button">insérer une annonce</button>
                                 </a>
@@ -235,10 +239,18 @@
                     </div>
                     <script>
                         $(document).ready(function () {
-                            //resizeSelect($('#bazarSearch_choice'));
+                            resizeInput();
                             $('#bazarSearch_choice').change(function () {
                                 resizeSelect($(this));
                             });
+                            $(window).resize(function () {
+                                resizeInput();
+                            });
+                            function resizeInput() {
+                                var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
+                                var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
+                                $('#bazarSearch_container_middle').width((99 - (left_width + right_width)) + '%');
+                            }
                             function resizeSelect(element) {
                                 var ghost = $('<div id="width_tmp" style="display:none;"></div>');
                                 $('body').append(ghost);
@@ -253,20 +265,16 @@
                                 }
                                 //conversion des tailles des containers du champ de recherche en pourcent
                                 var left_width = ((new_width + paddingHigh) / $('#bazarSearch_container_left').parent().width()) * 100;
-                                var right_width = 22.05726405090138;
-                                var middle_width = 100 - (left_width + right_width);
-
                                 $('#bazarSearch_container_left').width(left_width + '%');
-                                $('#bazarSearch_container_middle').width(middle_width + '%');
-                                //$('#bazarSearch_text').width(500 - new_width - paddingLow);
+                                resizeInput();
                                 ghost.remove();
                             }
                         });</script>
                 </div>
             </div>
             <div id="body" class="container-bazar">
-                <div id="bazarBody" class="row">
-                    <div id="sidebar">
+                <div id="bazarBody" class="clearfix">
+                    <div id="sidebar" class="hidden-phone hidden-tab">
                         <div id="category">
                             <div id="category_title">Catégories</div>
                             <ul id="categories">
@@ -1088,7 +1096,7 @@
                         <div id="annonces_last" class="phone-12">
                             <div id="annonces_last_title">Dernières annonces</div>
                             <div id="annonces_last_content" class="clearfix">
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
                                         <table>
                                             <tbody><tr>
@@ -1112,7 +1120,7 @@
                                         </table>
                                     </a>
                                 </div>
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1158">
                                         <table>
                                             <tbody><tr>
@@ -1135,7 +1143,7 @@
                                             </tbody></table>
                                     </a>
                                 </div>
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1154">
                                         <table>
                                             <tbody><tr>
@@ -1158,7 +1166,7 @@
                                             </tbody></table>
                                     </a>
                                 </div>
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1153">
                                         <table>
                                             <tbody><tr>
@@ -1181,7 +1189,7 @@
                                             </tbody></table>
                                     </a>
                                 </div>
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1152">
                                         <table>
                                             <tbody><tr>
@@ -1204,7 +1212,7 @@
                                             </tbody></table>
                                     </a>
                                 </div>
-                                <div class="annonces_last_entry phone-6 desk-6">
+                                <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1155">
                                         <table>
                                             <tbody><tr>
@@ -1246,7 +1254,7 @@
             </div>
             <div id="bazar_footer">
                 <div class="container-bazar" style="height: 100%;">
-                    <div id="bazar_footer_content" class="row">
+                    <div id="bazar_footer_content" class="clearfix">
                         <div id="bazar_copy" class="phone-4">Copyright © 2015 Luxembourg Online S.A.</div>
                         <div id="bazar_footer_links" class="pull-right phone-8" style="text-align: right;">
                             <ul class="bazar_footer_link">
