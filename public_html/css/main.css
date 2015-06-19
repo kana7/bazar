@@ -696,7 +696,7 @@ td, th {
     */
 }
 @media(min-width: 992px){
-    
+
     #bazarSearch_container_left{
         width: 13.78579003181336%;
     }
@@ -1139,6 +1139,13 @@ td, th {
 
 .annonces_last_entry_image {
     width: 20%;
+    display: inline-block;
+    float: left;
+}
+.annonces_last_entry_content{
+    width: 80%;
+    display: inline-block;
+    float: left;
 }
 
 .annonces_last_entry_image_pic {
@@ -1159,9 +1166,7 @@ td, th {
 
 .annonces_last_entry_info {
     width: 30%;
-    //position: relative;
 }
-
 .annonces_last_entry_desc_urgent {
     background: none repeat scroll 0 0 red;
     color: #fff;
@@ -1383,7 +1388,14 @@ html,body {
 #bazarSearch_container_advanced a:hover {
     color: #777;
 }
-
+.annonces_last_entry{
+    box-shadow: 
+        1px 0 0 0 #E0E0E0, 
+        0 1px 0 0 #E0E0E0, 
+        1px 1px 0 0 #E0E0E0,   /* Just to fix the corner */
+        1px 0 0 0 #E0E0E0 inset, 
+        0 1px 0 0 #E0E0E0 inset;
+}
 .annonces_last_entry a {
     display: block;
     height: 130px;
@@ -1404,7 +1416,6 @@ html,body {
 
 /*Ajout des nouvelles classes*/
 #nMenu_dropdown{
-    /* position: relative; */
     top: 4px;
     position: relative;
 }
@@ -1479,6 +1490,28 @@ ul.dropdown>li>a{
 }
 .mobile_button>.icon>img{
     width: 24px;
+}
+.mobile_button:active{
+    -moz-box-shadow:    inset 0 0 13px #B5B5B5;
+    -webkit-box-shadow: inset 0 0 13px #B5B5B5;
+    box-shadow:         inset 0 0 13px #B5B5B5;
+}
+@media(max-width: 679px){
+    .mobile_button>.icon{
+        position: initial;
+        display: block;
+        margin-bottom: 5px; 
+    }
+    .mobile_button{
+        font-size: 7pt;
+        text-align: center;
+        width: 30%;
+        height: 60px;
+        padding: 0 !important;
+    }
+    #bazarBandeau{
+        font-size: 11pt;
+    }
 }
 
 button:focus, input:focus{

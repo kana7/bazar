@@ -34,7 +34,7 @@
             <div id="header">
                 <div id="bazarHeader" class="phone-12">
                     <script src="js/googletracking_Bazar.js" type="text/javascript"></script>
-                    <div id="bazarHeader_top_menu" class="phone-5">
+                    <div id="bazarHeader_top_menu" class="phone-12">
                         <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none;">
                             <li class="hidden-phone hidden-tab"><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
                             <li class="hidden-phone hidden-tab"><div class="bazar_top_menu_separator">&nbsp;</div></li>
@@ -190,7 +190,7 @@
                                         <span class="icon"><img src="img/icon/gemincon/plus.png" alt="ajout annonce" title="ajouter une annonce"/></span>INSÉRER
                                     </button>
                                     <button class="mobile_button" style="padding-right: 18px;">
-                                        <span class="icon"><img src="img/icon/gemincon/cle.png"/></span>SE CONNECTER
+                                        <span class="icon"><img src="img/icon/gemincon/cadenas_close_1.png"/></span>CONNEXION
                                     </button>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                             function resizeInput() {
                                 var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
                                 var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
-                                $('#bazarSearch_container_middle').width((99 - (left_width + right_width)) + '%');
+                                $('#bazarSearch_container_middle').width((99.5 - (left_width + right_width)) + '%');
                             }
                             function resizeSelect(element) {
                                 var ghost = $('<div id="width_tmp" style="display:none;"></div>');
@@ -1098,26 +1098,23 @@
                             <div id="annonces_last_content" class="clearfix">
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
-                                        <table>
-                                            <tbody><tr>
-                                                    <td class="annonces_last_entry_image">
-                                                        <div class="annonces_last_entry_image_pic"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150608102626_19389.png"></div>
-                                                    </td>
-                                                    <td class="annonces_last_entry_desc">
-                                                        <div class="annonces_last_entry_desc_title">Dériveur LASER</div>
-                                                        <div class="annonces_last_entry_desc_genre">Sport et hobbies</div>
-                                                    </td>
-                                                    <td class="annonces_last_entry_info">
-                                                        <div class="annonces_last_entry_info_price">
-                                                            <span class="bazar_euro">EUR</span> 250
-                                                        </div>
-                                                        <div class="annonces_last_entry_info_day">
-                                                            Aujourd'hui&nbsp;05:14
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                            <div class="annonces_last_entry_image phone-4">
+                                                <div class="annonces_last_entry_image_pic"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150608102626_19389.png"></div>
+                                            </div>
+                                        <div class="annonces_last_entry_content phone-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-3">
+                                                <div class="annonces_last_entry_desc_title">Dériveur LASER</div>
+                                                <div class="annonces_last_entry_desc_genre">Sport et hobbies</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info clearfix phone-12 tab-3">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 250
+                                                </div>
+                                                <div class="annonces_last_entry_info_day">
+                                                    Aujourd'hui&nbsp;05:14
+                                                </div>
+                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
