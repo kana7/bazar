@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bazar.lu</title>
+        <link rel="icon" href="img/icon/favicon.gif" type="image/gif">
+        <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="http://jquery.bluechameleon.com/js/jquery" type="text/javascript"></script>
+        <script src="http://jquery.bluechameleon.com/js/jquery-ui" type="text/javascript"></script>
+        <style type="text/css"></style>
+        <link rel="stylesheet" type="text/css" href="css/layout-grid.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/search.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+        <script src="/s/bazar.js" type="text/javascript"></script>
+        <script src="js/slide.js" type="text/javascript"></script>
+        <script src="js/view"></script>
+        <script>
+            $(document).ready(function () {
+                initPanels(1, 'annonces_une_block');
+
+                $('#nMenu_dropdown>a').click(function () {
+                    $(this).siblings('.dropdown').toggleClass('active');
+                });
+                $('html').click(function (event) {
+                    var element = $('#nMenu_dropdown');
+                    if (!element.is(event.target) && element.has(event.target).length === 0) {
+                        $('#nMenu_dropdown>a').siblings('.dropdown.active').removeClass('active');
+                    }
+                });
+            });</script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <div id="bazarHeader" class="phone-12">
+                    <script src="js/googletracking_Bazar.js" type="text/javascript"></script>
+                    <div id="bazarHeader_top_menu" class="phone-12">
+                        <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none;">
+                            <li class="hidden-phone hidden-tab"><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
+                            <li class="hidden-phone hidden-tab"><div class="bazar_top_menu_separator">&nbsp;</div></li>
+                            <li class="hidden-phone hidden-tab"><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
+                            <li id="nMenu_dropdown" class="display-phone display-tab">
+                                <a href="#">BAZAR.LU<i class="fa fa-sort-desc" style="height: 5px;"></i></a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                            <div id="cinemaOnline">Cinema</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                            <div id="newsOnline">High-Tech</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                            <div id="guidetvOnline">Guide TV</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                            <div id="sortiesOnline">Sorties</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--<td><div class="bazar_top_menu_separator">&nbsp;</div></td>
+                            <td>
+                            <div id="bazarCountries">
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=2"><img src="/images/france_selected.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=1"><img src="/images/british.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=3"><img src="/images/germany.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=5"><img src="/images/portugal.png" /></a>
+                            </div>
+                            </td>-->
+                        </ul>
+                    </div>
+                    <div id="bazarHeader_top">
+                        <div class="container-bazar" style="height: 100%;">
+                            <div class="row">
+                                <ul id="nMenuContainer" class="clearfix desk-10">
+                                    <li id="nMenuLogo" class="clearfix">
+                                        <a href="http://www.internet.lu" target="_blank">
+                                            <img border="0" class="menuIconImg" src="img/icon/logoPortail.png" alt="Luxembourg Online">
+                                            <h1 id="logo_title">cinema Luxembourg</h1>
+                                        </a>
+                                    </li>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink  hidden-tab hidden-phone" href="http://www.bazar.lu/Scripts/sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
+                                        <li class="nMenuEntry nMenuSelected clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="bazarOnline">Bazar.lu</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-tab hidden-phone" href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="cinemaOnline">Cinema</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-tab hidden-phone" href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="newsOnline">High-Tech</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-tab hidden-phone" href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="guidetvOnline">Guide TV</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-tab hidden-phone" href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="sortiesOnline">Sorties</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-tab hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+            function showProfil() {
+                var element = $('#profil');
+                /* */
+                if (element.css('display') == 'none')
+                    element.css('display', 'inline-block');
+            }
+            function hideProfil() {
+                var element = $('#profil');
+                /* */
+                if (element.css('display') != 'none')
+                    element.css('display', 'none');
+            }
+            $('#bazarHeader_profil').click(function (e) {
+                showProfil();
+                e.stopPropagation();
+            });
+            $('#profil_bottom_layer_username').click(function (e) {
+                hideProfil();
+                e.stopPropagation();
+            });
+            $(document).click(function () {
+                hideProfil();
+            });
+            function logout() {
+                window.location.href = "sql.exe?SqlDB=bazar&Sql=Logout.phs";
+            }
+            function switchTo(page) {
+                window.location.href = "sql.exe?SqlDB=bazar&Sql=" + page + ".phs";
+            }
+                    </script>
+                    <style>
+                        .select{
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            text-indent: 0.01px;
+                            text-overflow: '';
+                        }
+                        select::-ms-expand {
+                            display: none;
+                        }
+                    </style>
+                    <div id="bazarHeader_bottom" class="container-bazar">
+                        <div class="appendix">
+                            <div id="bazarLogo" class="margin_mobile">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
+                                    <img id="bazarLogo_image" src="img/icon/logo.png">
+                                </a>
+                            </div>
+                            <div class="phone-12 display-phone display-tab margin_mobile">
+                                <div class=" align split">
+                                    <button class="mobile_button" style="padding-right: 30px;">
+                                        <span class="icon"><img src="img/icon/gemincon/categorie.png" alt="voir catégorie" title="voir catégorie"/></span>CATÉGORIES
+                                    </button>
+                                    <button class="mobile_button" style="padding-right: 50px;">
+                                        <span class="icon"><img src="img/icon/gemincon/plus.png" alt="ajout annonce" title="ajouter une annonce"/></span>INSÉRER
+                                    </button>
+                                    <button class="mobile_button" style="padding-right: 18px;">
+                                        <span class="icon"><img src="img/icon/gemincon/cadenas_close_1.png"/></span>CONNEXION
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6 margin_mobile">
+                                <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                                    <div id="bazarSearch_container_left" class="pull-left">
+                                        <div id="bazarSearch_combo" style="width: 100%;">
+                                            <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
+                                            <select id="bazarSearch_choice" class="select" style="width: 100%;" name="category">
+                                                <option value="0">Tous</option>
+                                                <option value="1">Véhicules</option>
+                                                <option value="19">Immobilier</option>
+                                                <option value="30">Multimédia</option>
+                                                <option value="48">Matériel professionnel</option>
+                                                <option value="38">Enfance</option>
+                                                <option value="52">Sport et loisirs</option>
+                                                <option value="62">Maison</option>
+                                                <option value="42">Mode</option>
+                                                <option value="115">Beauté, Santé et Alimentation</option>
+                                                <option value="70">Emploi et services</option>
+                                                <option value="78">Rencontre</option>
+                                                <option value="84">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="bazarSearch_container_middle" class="pull-left">
+                                        <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
+                                    </div>
+                                    <div id="bazarSearch_container_right" class="pull-left">
+                                        <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()">
+                                            <img id="bazarSearch_button_image" src="img/icon/gemincon/loupe.png">
+                                        </button>
+                                        <div id="bazarSearch_container_advanced" class="hidden-phone">
+                                            <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="bazar_newAnnonce" class="hidden-phone hidden-tab desk-3 pull-right">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
+                                    <button id="bazar_newAnnonce_button">insérer une annonce</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            resizeInput();
+                            $('#bazarSearch_choice').change(function () {
+                                resizeSelect($(this));
+                            });
+                            $(window).resize(function () {
+                                resizeInput();
+                            });
+                            function resizeInput() {
+                                var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
+                                var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
+                                $('#bazarSearch_container_middle').width((99.5 - (left_width + right_width)) + '%');
+                            }
+                            function resizeSelect(element) {
+                                var ghost = $('<div id="width_tmp" style="display:none;"></div>');
+                                $('body').append(ghost);
+                                $("#width_tmp").html($('#' + element.attr('id') + ' option:selected').text());
+                                var new_width = $("#width_tmp").width();
+                                if (new_width > 100) {
+                                    var paddingHigh = 30;
+                                    var paddingLow = 20;
+                                } else {
+                                    var paddingHigh = 40;
+                                    var paddingLow = 30;
+                                }
+                                //conversion des tailles des containers du champ de recherche en pourcent
+                                var left_width = ((new_width + paddingHigh) / $('#bazarSearch_container_left').parent().width()) * 100;
+                                $('#bazarSearch_container_left').width(left_width + '%');
+                                resizeInput();
+                                ghost.remove();
+                            }
+                        });</script>
+                </div>
+            </div>
+            <div id="body" class="container-bazar">
+                <div id="bazarBody" class="clearfix">
+                    <div id="sidebar" class="hidden-phone hidden-tab">
+                        <form id="search_form" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                            <input type="hidden" name="_name" value="">
+                            <input id="search_page" type="hidden" name="page" value="1">
+                            <input id="search_page" type="hidden" name="category" value="1">
+                            <div id="category">
+                                <div id="category_title">Catégories</div>
+                                <ul id="categories">
+                                    <li class="category_entry">
+                                        <div class="selectedCategory" onclick="getBazarItems($(this), 'content', 1);">
+                                            Véhicules<span class="category_number">(799)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_1" style="display: block;">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 2);
+                                                        event.stopPropagation();">
+                                                    Voitures<span class="sub_category_number">(358)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_2">
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 3);
+                                                                event.stopPropagation();">
+                                                            Berline<span class="sub_category_number">(125)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_3">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 4);
+                                                                event.stopPropagation();">
+                                                            Cabriolet<span class="sub_category_number">(32)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_4">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 5);
+                                                                event.stopPropagation();">
+                                                            Tout-terrain<span class="sub_category_number">(35)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_5">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 100);
+                                                                event.stopPropagation();">
+                                                            Coupé<span class="sub_category_number">(22)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_100">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 101);
+                                                                event.stopPropagation();">
+                                                            Citadine<span class="sub_category_number">(91)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_101">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 102);
+                                                                event.stopPropagation();">
+                                                            Break<span class="sub_category_number">(33)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_102">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="event.stopPropagation();">
+                                                            Voiture sans permis<span class="sub_category_number">(0)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_6">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 131);
+                                                                event.stopPropagation();">
+                                                            Monospace<span class="sub_category_number">(20)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_131">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 7);
+                                                        event.stopPropagation();">
+                                                    Motos<span class="sub_category_number">(35)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_7">
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 8);
+                                                                event.stopPropagation();">
+                                                            &lt; 125 cm3<span class="sub_category_number">(6)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_8">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 9);
+                                                                event.stopPropagation();">
+                                                            125 cm3 - 750 cm3<span class="sub_category_number">(7)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_9">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 10);
+                                                                event.stopPropagation();">
+                                                            &gt; 750 cm3<span class="sub_category_number">(22)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_10">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 11);
+                                                        event.stopPropagation();">
+                                                    Utilitaires-camions<span class="sub_category_number">(20)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_11">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 12);
+                                                        event.stopPropagation();">
+                                                    Caravanes, camping-cars, remorques<span class="sub_category_number">(3)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_12">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 13);
+                                                        event.stopPropagation();">
+                                                    Nautisme<span class="sub_category_number">(2)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_13">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 14);
+                                                        event.stopPropagation();">
+                                                    Equipements: Voitures<span class="sub_category_number">(354)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_14">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 15);
+                                                        event.stopPropagation();">
+                                                    Equipements: Moto<span class="sub_category_number">(8)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_15">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 16);
+                                                        event.stopPropagation();">
+                                                    Equipements: Utilitaire<span class="sub_category_number">(7)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_16">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Equipements: Caravaning<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_17">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Equipements: Nautisme<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_18">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <script>showHideCategory('sub_category_1');</script>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 19);">
+                                            Immobilier<span class="category_number">(461)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_19">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 20);
+                                                        event.stopPropagation();">
+                                                    Vente<span class="sub_category_number">(410)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_20">
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 21);
+                                                                event.stopPropagation();">
+                                                            Maison<span class="sub_category_number">(124)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_21">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 22);
+                                                                event.stopPropagation();">
+                                                            Appartement<span class="sub_category_number">(254)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_22">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 23);
+                                                                event.stopPropagation();">
+                                                            Studio<span class="sub_category_number">(1)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_23">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 24);
+                                                                event.stopPropagation();">
+                                                            Locaux commerciaux<span class="sub_category_number">(15)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_24">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 25);
+                                                                event.stopPropagation();">
+                                                            Terrain<span class="sub_category_number">(16)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_25">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="event.stopPropagation();">
+                                                            Autres biens<span class="sub_category_number">(0)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_26">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Colocation<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_28">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 29);
+                                                        event.stopPropagation();">
+                                                    Location<span class="sub_category_number">(51)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_29">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 30);">
+                                            Multimédia<span class="category_number">(47)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_30">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 31);
+                                                        event.stopPropagation();">
+                                                    Informatique<span class="sub_category_number">(2)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_31">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 32);
+                                                        event.stopPropagation();">
+                                                    Image et son<span class="sub_category_number">(4)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_32">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 33);
+                                                        event.stopPropagation();">
+                                                    Console et jeux vidéos<span class="sub_category_number">(2)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_33">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 34);
+                                                        event.stopPropagation();">
+                                                    Téléphonie, Fax<span class="sub_category_number">(8)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_34">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 35);
+                                                        event.stopPropagation();">
+                                                    Accessoires<span class="sub_category_number">(1)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_35">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 36);
+                                                        event.stopPropagation();">
+                                                    CD, Musique<span class="sub_category_number">(30)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_36">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    DVD, Films<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_37">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 48);">
+                                            Matériel professionnel<span class="category_number">(17)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_48">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 49);
+                                                        event.stopPropagation();">
+                                                    Fournitures de bureau<span class="sub_category_number">(1)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_49">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Matériel médical<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_50">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 51);
+                                                        event.stopPropagation();">
+                                                    Commerces et marchés<span class="sub_category_number">(5)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_51">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 103);
+                                                        event.stopPropagation();">
+                                                    Autres<span class="sub_category_number">(6)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_103">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 104);
+                                                        event.stopPropagation();">
+                                                    Restauration et Hôtellerie<span class="sub_category_number">(4)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_104">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 38);">
+                                            Enfance<span class="category_number">(10)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_38">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 39);
+                                                        event.stopPropagation();">
+                                                    Equipement bébé<span class="sub_category_number">(10)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_39">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Jeux bébé<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_40">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Vêtements bébé<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_41">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 52);">
+                                            Sport et loisirs<span class="category_number">(62)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_52">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 53);
+                                                        event.stopPropagation();">
+                                                    Livres<span class="sub_category_number">(23)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_53">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 54);
+                                                        event.stopPropagation();">
+                                                    Jeux et jouets<span class="sub_category_number">(9)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_54">
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 132);
+                                                                event.stopPropagation();">
+                                                            Modélisme<span class="sub_category_number">(6)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_132">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 133);
+                                                                event.stopPropagation();">
+                                                            Autres<span class="sub_category_number">(2)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_133">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 55);
+                                                        event.stopPropagation();">
+                                                    Vélos<span class="sub_category_number">(4)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_55">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Equipements: vélo<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_56">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 57);
+                                                        event.stopPropagation();">
+                                                    Instruments de musique<span class="sub_category_number">(6)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_57">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 58);
+                                                        event.stopPropagation();">
+                                                    Collections<span class="sub_category_number">(15)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_58">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Vins et gastronomie<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_59">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 60);
+                                                        event.stopPropagation();">
+                                                    Sport et hobbies<span class="sub_category_number">(5)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_60">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 62);">
+                                            Maison<span class="category_number">(282)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_62">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 63);
+                                                        event.stopPropagation();">
+                                                    Bricolage<span class="sub_category_number">(56)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_63">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 64);
+                                                        event.stopPropagation();">
+                                                    Ameublement<span class="sub_category_number">(95)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_64">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 65);
+                                                        event.stopPropagation();">
+                                                    Décoration<span class="sub_category_number">(93)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_65">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 66);
+                                                        event.stopPropagation();">
+                                                    Electroménager<span class="sub_category_number">(28)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_66">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 67);
+                                                        event.stopPropagation();">
+                                                    Arts de la table<span class="sub_category_number">(2)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_67">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 68);
+                                                        event.stopPropagation();">
+                                                    Jardinage<span class="sub_category_number">(3)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_68">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Linge de maison<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_69">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 42);">
+                                            Mode<span class="category_number">(39)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_42">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 43);
+                                                        event.stopPropagation();">
+                                                    Vêtements<span class="sub_category_number">(23)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_43">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Chaussures<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_44">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 45);
+                                                        event.stopPropagation();">
+                                                    Accessoires<span class="sub_category_number">(16)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_45">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Bijoux<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_46">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Bagagerie<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_47">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 115);">
+                                            Beauté, Santé et Alimentation<span class="category_number">(3)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_115">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 123);
+                                                        event.stopPropagation();">
+                                                    Beauté<span class="sub_category_number">(3)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_123">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Santé<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_124">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Alimentation<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_125">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 70);">
+                                            Emploi et services<span class="category_number">(18)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_70">
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 71);
+                                                        event.stopPropagation();">
+                                                    Emploi<span class="sub_category_number">(12)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_71">
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 72);
+                                                                event.stopPropagation();">
+                                                            Offre<span class="sub_category_number">(9)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_72">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="event.stopPropagation();">
+                                                            Recherche<span class="sub_category_number">(0)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_73">
+                                                        </ul>
+                                                    </li>
+                                                    <li class="sub_category_entry">
+                                                        <div onclick="getBazarItems($(this), 'content', 75);
+                                                                event.stopPropagation();">
+                                                            Formations et stages<span class="sub_category_number">(3)</span>
+                                                        </div>
+                                                        <ul class="sub_categories" id="sub_category_75">
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 76);
+                                                        event.stopPropagation();">
+                                                    Services<span class="sub_category_number">(6)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_76">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Cours particuliers<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_77">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 78);">
+                                            Rencontre<span class="category_number">(1)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_78">
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Amicale<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_79">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="getBazarItems($(this), 'content', 126);
+                                                        event.stopPropagation();">
+                                                    Homme cherche femme<span class="sub_category_number">(1)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_126">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Femme cherche homme<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_127">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Homme cherche homme<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_128">
+                                                </ul>
+                                            </li>
+                                            <li class="sub_category_entry">
+                                                <div onclick="event.stopPropagation();">
+                                                    Femme cherche femme<span class="sub_category_number">(0)</span>
+                                                </div>
+                                                <ul class="sub_categories" id="sub_category_129">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="category_entry">
+                                        <div onclick="getBazarItems($(this), 'content', 84);">
+                                            Autre<span class="category_number">(12)</span>
+                                        </div>
+                                        <ul class="sub_categories" id="sub_category_84">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search_section">
+                                <div class="search_section_title">Type d'annonce</div>
+                                <div class="search_section_data search_main_data">
+                                    <div class="search_section_data_entry">
+                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_offre" value="1">
+                                        Offre<span class="search_section_data_detail">(798)</span>
+                                    </div>
+                                    <div class="search_section_data_entry">
+                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_demande" value="2">
+                                        Demande<span class="search_section_data_detail">(1)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_section">
+                                <div class="search_section_title">Annonceur</div>
+                                <div class="search_section_data search_main_data">
+                                    <div class="search_section_data_entry">
+                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_prive" value="1">
+                                        Privé<span class="search_section_data_detail">(124)</span>
+                                    </div>
+                                    <div class="search_section_data_entry">
+                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_pro" value="2">
+                                        Professionnel<span class="search_section_data_detail">(675)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_section">
+                                <div class="search_section_title">Prix</div>
+                                <div class="search_section_dat search_main_data">
+                                    <div class="search_section_data_entry">
+                                        de <input class="search_section_data_price" type="text" name="price_min_main" value="">
+                                        à <input class="search_section_data_price" type="text" name="price_max_main" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_section">
+                                <div class="search_section_data">
+                                    <input class="search_section_data_button" type="submit" value="Rechercher">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="content" class="phone-12">
+                        <div id="bazarBandeau" class="phone-12">
+                            <div id="bazarBandeau_search_results"><span id="bazarBandeau_search_results_nbr">799</span> annonce(s) trouvée(s)</div>
+                            <div id="bazarBandeau_search_arrangeby">
+                                <span id="bazarBandeau_search_arrangeby_text">Trier par</span>
+                                <div id="bazarBandeau_search_arrangeby_select_container"><img src="img/icon/dropdownmenu.png"></div>
+                                <select id="bazarBandeau_search_arrangeby_select" name="arrange_by">
+                                    <option value="1">Dernières annonces</option>
+                                    <option value="2">Prix: le moins cher</option>
+                                    <option value="3">Prix: le plus cher</option>
+                                    <option value="4">Urgent</option>
+                                </select>
+                            </div>
+                            <div id="bazarBandeau_buttons" class="btn-group pull-right list-group-button-style">
+                                <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list"></span>Liste</a>
+                                <a href="#" id="grid" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th"></span>Grille</a>
+                            </div>
+                        </div>
+                        <div id="annonces_une" class="phone-12">
+                            <div id="annonces_une_title">Annonces à la une</div>
+                            <div id="annonces_une_howto">comment apparaître ici?</div>
+                            <table id="annonces_une_container">
+                                <tbody><tr>
+                                        <td id="annonces_une_container_left"><div id="annonces_une_left" onclick="previousPanel(1, 'annonces_une_block')"></div></td>
+                                        <td id="annonces_une_container_middle">
+                                            <div class="annonces_une_block" style="margin-left: 0%;">
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=387">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150421105457_20970.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">Carrelage bisazza 20.59</div>
+                                                        <div class="annonces_une_entry_genre">Bricolage</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 57
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150608102626_19389.png"></div>
+                                                        <div class="annonces_une_entry_title">Dériveur LASER</div>
+                                                        <div class="annonces_une_entry_genre">Sport et hobbies</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 250
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=960">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150530105915_26869.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">Renault clio 1.5l dci 85 ch POUR PIECES</div>
+                                                        <div class="annonces_une_entry_genre">Equipements: Voitures</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 1000
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=195">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150331155143_7209.jpeg"></div>
+                                                        <div class="annonces_une_entry_title"> Bureau secretaire style</div>
+                                                        <div class="annonces_une_entry_genre">Ameublement</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_negotiate">à discuter</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="annonces_une_block" style="margin-left: 100%;">
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1141">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150609113531_5906.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">RENAULT SCENIC </div>
+                                                        <div class="annonces_une_entry_genre">Monospace</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 3490
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=447">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150423181006_22567.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">Peugeot 207 1.6 hdi 92 cv premium</div>
+                                                        <div class="annonces_une_entry_genre">Citadine</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 5600
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=701">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150504111645_19632.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">SALLE A MANGER DESIGN </div>
+                                                        <div class="annonces_une_entry_genre">Ameublement</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_negotiate">à discuter</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1041">
+                                                    <div class="annonces_une_entry">
+                                                        <div class="annonces_une_entry_image"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150604123912_14390.jpeg"></div>
+                                                        <div class="annonces_une_entry_title">Bloc moteur  Derbi  </div>
+                                                        <div class="annonces_une_entry_genre">Equipements: Moto</div>
+                                                        <div class="annonces_une_entry_price">
+                                                            <span class="bazar_euro">EUR</span> 990
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td id="annonces_une_container_right">
+                                            <div id="annonces_une_right" onclick="nextPanel(1, 'annonces_une_block', 0)"></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="annonces_last" class="phone-12">
+                            <div id="annonces_last_title">Dernières annonces</div>
+                            <div id="annonces_last_content" class="clearfix">
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150608102626_19389.png"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">Dériveur LASER</div>
+                                                <div class="annonces_last_entry_desc_genre">Sport et hobbies</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 250
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Aujourd'hui&nbsp;05:14
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1158">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609153003_25847.jpeg"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">Flipper</div>
+                                                <div class="annonces_last_entry_desc_genre">Autres</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_negotiate">à discuter</span>
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Hier&nbsp;15:31
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1154">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609151248_24336.jpeg"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">BMW 318</div>
+                                                <div class="annonces_last_entry_desc_genre">Berline</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 3500
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Hier&nbsp;15:13
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1153">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609151027_24120.jpeg"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">BMW 523</div>
+                                                <div class="annonces_last_entry_desc_genre">Berline</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 14000
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Hier&nbsp;15:11
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1152">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609150520_23680.jpeg"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">ALFA ROMEO SPRINT</div>
+                                                <div class="annonces_last_entry_desc_genre">Coupé</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 3000
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Hier&nbsp;15:06
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="annonces_last_entry phone-12 tab-6">
+                                    <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1155">
+                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                            <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609150122_23266.jpeg"></div>
+                                        </div>
+                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                            <div class="annonces_last_entry_desc phone-12 tab-7">
+                                                <div class="annonces_last_entry_desc_title">bmw 320</div>
+                                                <div class="annonces_last_entry_desc_genre">Berline</div>
+                                            </div>
+                                            <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
+                                                <div class="annonces_last_entry_info_price">
+                                                    <span class="bazar_euro">EUR</span> 10000
+                                                </div>
+                                                <div class="annonces_last_entry_info_day hidden-phone">
+                                                    Hier&nbsp;15:03
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pages" class="phone-12 pull-right align right">
+                            <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=1"><div class="page_element"> &lt;&lt; </div></a>
+                            <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=1"><div class="page_element"> &lt; </div></a>
+                            <div class="page_element page_info">Page 1&nbsp;/&nbsp;169</div>
+                            <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=2"><div class="page_element"> &gt; </div></a>
+                            <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=169"><div class="page_element"> &gt;&gt; </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bazar_footer">
+                <div class="container-bazar" style="height: 100%;">
+                    <div id="bazar_footer_content" class="clearfix">
+                        <div id="bazar_copy" class="phone-12 tab-4">Copyright © 2015 Luxembourg Online S.A.</div>
+                        <div id="bazar_footer_links" class="pull-right phone-12 tab-8">
+                            <ul class="bazar_footer_link">
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="#" target="_blank">Mentions légales</a>
+                                </li>
+                                <li class="bazar_footer_section"><span class="bazar_footer_link_separator">|</span></li>
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="mailto:bazar@bazar.lu" id="bazar_footer_link_email">Contact: bazar@bazar.lu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

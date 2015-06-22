@@ -220,7 +220,7 @@
                                         <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
                                     </div>
                                     <div id="bazarSearch_container_right" class="pull-left">
-                                        <button id="bazarSearch_button"  onclick="\$('#bazarSearch').submit()">
+                                        <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()">
                                             <img id="bazarSearch_button_image" src="img/icon/gemincon/loupe.png">
                                         </button>
                                         <div id="bazarSearch_container_advanced" class="hidden-phone">
@@ -990,8 +990,11 @@
                         </div>
                     </div>
                     <div id="content">
-                        <div id="bazarBandeau" class="phone-12">
 
+                        <div id="bazarBandeau" class="phone-12 display-phone">
+                            Petites annonces gratuites: <span>1011 annonces</span>
+                        </div>
+                        <div id="bazarBandeau" class="phone-12 hidden-phone">
                             Petites annonces gratuites, actuellement avec <span>1011 annonces</span>
                         </div>
                         <div id="annonces_une" class="phone-12">
@@ -1225,11 +1228,6 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            #pages>*{
-                                margin-left: 8px;
-                            }
-                        </style>
                         <div id="pages" class="phone-12 pull-right align right">
                             <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=1"><div class="page_element"> &lt;&lt; </div></a>
                             <a class="page_link" href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs&amp;page=1"><div class="page_element"> &lt; </div></a>
@@ -1243,8 +1241,8 @@
             <div id="bazar_footer">
                 <div class="container-bazar" style="height: 100%;">
                     <div id="bazar_footer_content" class="clearfix">
-                        <div id="bazar_copy" class="phone-4">Copyright © 2015 Luxembourg Online S.A.</div>
-                        <div id="bazar_footer_links" class="pull-right phone-8" style="text-align: right;">
+                        <div id="bazar_copy" class="phone-12 tab-4">Copyright © 2015 Luxembourg Online S.A.</div>
+                        <div id="bazar_footer_links" class="pull-right phone-12 tab-8">
                             <ul class="bazar_footer_link">
                                 <li class="clearfix" style="display: inline-block">
                                     <a href="#" target="_blank">Mentions légales</a>
