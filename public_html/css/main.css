@@ -867,7 +867,7 @@ td, th {
     padding: 8px 4px;
     line-height: 26px;
     background: #f7f7f7;
-    /* text-align: center; */
+    text-align: center;
     border: 1px solid #e0e0e0;
     color: #555;
     border-radius: 5px;
