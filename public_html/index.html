@@ -13,18 +13,19 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
         <script src="/s/bazar.js" type="text/javascript"></script>
         <script src="js/slide.js" type="text/javascript"></script>
-        <script src="js/view"></script>
+        <script src="js/viewport.js"></script>
         <script>
             $(document).ready(function () {
                 initPanels(1, 'annonces_une_block');
 
-                $('#nMenu_dropdown>a').click(function () {
-                    $(this).siblings('.dropdown').toggleClass('active');
+                $('#nMenu_dropdown').click(function () {
+                    event.stopPropagation();
+                    $('#nMenu_dropdown+.dropdown').toggleClass('active');
                 });
                 $('html').click(function (event) {
                     var element = $('#nMenu_dropdown');
                     if (!element.is(event.target) && element.has(event.target).length === 0) {
-                        $('#nMenu_dropdown>a').siblings('.dropdown.active').removeClass('active');
+                        $('.dropdown.active').removeClass('active');
                     }
                 });
             });</script>
@@ -34,36 +35,11 @@
             <div id="header">
                 <div id="bazarHeader" class="phone-12">
                     <script src="js/googletracking_Bazar.js" type="text/javascript"></script>
-                    <div id="bazarHeader_top_menu" class="phone-12">
+                    <div id="bazarHeader_top_menu" class="phone-12  hidden-phone">
                         <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none;">
-                            <li class="hidden-phone hidden-tab"><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
-                            <li class="hidden-phone hidden-tab"><div class="bazar_top_menu_separator">&nbsp;</div></li>
-                            <li class="hidden-phone hidden-tab"><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
-                            <li id="nMenu_dropdown" class="display-phone display-tab">
-                                <a href="#">BAZAR.LU<i class="fa fa-sort-desc" style="height: 5px;"></i></a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
-                                            <div id="cinemaOnline">Cinema</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
-                                            <div id="newsOnline">High-Tech</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
-                                            <div id="guidetvOnline">Guide TV</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
-                                            <div id="sortiesOnline">Sorties</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            <li><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
+                            <li><div cla ss="bazar_top_menu_separator">&nbsp;</div></li>
+                            <li><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
 
                             <!--<td><div class="bazar_top_menu_separator">&nbsp;</div></td>
                             <td>
@@ -76,7 +52,35 @@
                             </td>-->
                         </ul>
                     </div>
-                    <div id="bazarHeader_top">
+                    <button id="nMenu_dropdown" class="display-phone hidden">
+                        <i class="fa fa-sort-desc" style="height: 5px;"></i>
+                    </button>
+                    <ul class="dropdown">
+                        <li>
+                            <div id="logoLuxOnline" style="text-align: left; padding-left: 20px;"><img src="img/icon/logoPortail_bleu.png" alt="logo Luxembourg Online"/></div>
+                        </li>
+                        <li>
+                            <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                <div id="cinemaOnline">Cinema</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                <div id="newsOnline">High-Tech</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                <div id="guidetvOnline">Guide TV</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                <div id="sortiesOnline">Sorties</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="bazarHeader_top" class="hidden-phone hidden-tab">
                         <div class="container-bazar" style="height: 100%;">
                             <div class="row">
                                 <ul id="nMenuContainer" class="clearfix desk-10">
@@ -990,11 +994,7 @@
                         </div>
                     </div>
                     <div id="content">
-
-                        <div id="bazarBandeau" class="phone-12 display-phone">
-                            Petites annonces gratuites: <span>1011 annonces</span>
-                        </div>
-                        <div id="bazarBandeau" class="phone-12 hidden-phone">
+                        <div id="bazarBandeau" class="phone-12 hidden-phone hidden-tab">
                             Petites annonces gratuites, actuellement avec <span>1011 annonces</span>
                         </div>
                         <div id="annonces_une" class="phone-12">
