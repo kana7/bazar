@@ -246,7 +246,6 @@
                     </div>
                     <script>
                         $(document).ready(function () {
-
                             if (viewport().width < 992) {
                                 $('#sidebar').prependTo('body');
                             } else {
@@ -269,24 +268,25 @@
                             });
                             $('#categorie').on('click', function () {
                                 event.stopPropagation();
+                                $('#sidebar').css({
+                                    top: $('#content').offset().top
+                                });
                                 $('#sidebar').toggleClass('open');
-                                if($('#sidebar').hasClass('open')){
-                                    setTimeout(function(){
+                                if ($('#sidebar').hasClass('open')) {
+                                    $('body, html').addClass('noscroll');
+                                } else {
+                                    setTimeout(function () {
                                         $('body, html').removeClass('noscroll');
-                                    },300);
-                                }else{
-                                    setTimeout(function(){
-                                        $('body, html').removeClass('noscroll');
-                                    },300);
+                                    }, 400);
                                 }
                             });
                             $('html').click(function (event) {
                                 var element = $('#sidebar, #categorie');
                                 if (!element.is(event.target) && element.has(event.target).length === 0) {
                                     $('#sidebar.open').removeClass('open');
-                                    setTimeout(function(){
+                                    setTimeout(function () {
                                         $('body, html').removeClass('noscroll');
-                                    },300);
+                                    }, 400);
                                 }
                             });
                         });
