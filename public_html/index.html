@@ -246,8 +246,8 @@
                     </div>
                     <script>
                         $(document).ready(function () {
-                            if (viewport().width < 992) {
-                                $('#sidebar').prependTo('body');
+                             if (viewport().width < 992) {
+                                $('#sidebar').prependTo('#content');
                             } else {
                                 $('#sidebar').prependTo('#bazarBody');
                             }
@@ -260,23 +260,21 @@
 
                             $(window).resize(function () {
                                 if (viewport().width < 992) {
-                                    $('#sidebar').prependTo('body');
+                                    $('#sidebar').prependTo('#body');
                                 } else {
                                     $('#sidebar').prependTo('#bazarBody');
                                 }
                                 resizeInput();
                             });
+
                             $('#categorie').on('click', function () {
                                 event.stopPropagation();
-                                $('#sidebar').css({
-                                    top: $('#content').offset().top
-                                });
                                 $('#sidebar').toggleClass('open');
                                 if ($('#sidebar').hasClass('open')) {
-                                    $('body, html').addClass('noscroll');
+                                    //$('body, html').addClass('noscroll');
                                 } else {
                                     setTimeout(function () {
-                                        $('body, html').removeClass('noscroll');
+                                        //$('body, html').removeClass('noscroll');
                                     }, 400);
                                 }
                             });
@@ -285,7 +283,7 @@
                                 if (!element.is(event.target) && element.has(event.target).length === 0) {
                                     $('#sidebar.open').removeClass('open');
                                     setTimeout(function () {
-                                        $('body, html').removeClass('noscroll');
+                                        //$('body, html').removeClass('noscroll');
                                     }, 400);
                                 }
                             });
@@ -324,7 +322,7 @@
                 <div id="bazarBody" class="clearfix">
                     <div id="sidebar">
                         <div id="category">
-                            <div id="category_title">Catégories</div>
+                            <div id="category_title" class="hidden-tab hidden-phone">Catégories</div>
                             <ul id="categories">
                                 <li class="category_entry">
                                     <div onclick="getBazarItems($(this), 'content', 1);">
