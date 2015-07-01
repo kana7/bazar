@@ -187,16 +187,16 @@
                             </div>
                             <div class="phone-12 display-phone display-tab">
                                 <div class="align middle center" style="padding: 0px 15px;">
-                                    <button class="mobile_button" style="margin-right: 20px; margin-left: 7px;">
+                                    <button id="categorie" class="mobile_button" style="margin-right: 20px; margin-left: 7px;">
                                         <img src="img/icon/categorie.svg" alt="voir catégorie" title="voir catégorie"/>
                                     </button>
-                                    <button class="mobile_button" style="margin-right: 10px;">
+                                    <button id="search" class="mobile_button" style="margin-right: 10px;">
                                         <img src="img/icon/recherche.svg" alt="rechercher une annonce" title="rechercher une annonce"/>
                                     </button>
-                                    <button class="mobile_button" style="margin-right: 5px;">
+                                    <button id="insert" class="mobile_button" style="margin-right: 5px;">
                                         <img src="img/icon/inserer.svg" alt="ajout annonce" title="ajouter une annonce"/>
                                     </button>
-                                    <button class="mobile_button">
+                                    <button id="connect" class="mobile_button">
                                         <img src="img/icon/connexion.svg" alt="connexion" title="se connecter"/>
                                     </button>
                                 </div>
@@ -246,42 +246,83 @@
                     </div>
                     <script>
                         $(document).ready(function () {
+
+                            if (viewport().width < 992) {
+                                $('#sidebar').prependTo('body');
+                            } else {
+                                $('#sidebar').prependTo('#bazarBody');
+                            }
+
                             resizeInput();
+
                             $('#bazarSearch_choice').change(function () {
                                 resizeSelect($(this));
                             });
+
                             $(window).resize(function () {
+                                if (viewport().width < 992) {
+                                    $('#sidebar').prependTo('body');
+                                } else {
+                                    $('#sidebar').prependTo('#bazarBody');
+                                }
                                 resizeInput();
                             });
-                            function resizeInput() {
-                                var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
-                                var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
-                                $('#bazarSearch_container_middle').width((99.5 - (left_width + right_width)) + '%');
-                            }
-                            function resizeSelect(element) {
-                                var ghost = $('<div id="width_tmp" style="display:none;"></div>');
-                                $('body').append(ghost);
-                                $("#width_tmp").html($('#' + element.attr('id') + ' option:selected').text());
-                                var new_width = $("#width_tmp").width();
-                                if (new_width > 100) {
-                                    var paddingHigh = 30;
-                                    var paddingLow = 20;
-                                } else {
-                                    var paddingHigh = 40;
-                                    var paddingLow = 30;
+                            $('#categorie').on('click', function () {
+                                event.stopPropagation();
+                                $('#sidebar').toggleClass('open');
+                                if($('#sidebar').hasClass('open')){
+                                    setTimeout(function(){
+                                        $('body, html').removeClass('noscroll');
+                                    },300);
+                                }else{
+                                    setTimeout(function(){
+                                        $('body, html').removeClass('noscroll');
+                                    },300);
                                 }
-                                //conversion des tailles des containers du champ de recherche en pourcent
-                                var left_width = ((new_width + paddingHigh) / $('#bazarSearch_container_left').parent().width()) * 100;
-                                $('#bazarSearch_container_left').width(left_width + '%');
-                                resizeInput();
-                                ghost.remove();
+                            });
+                            $('html').click(function (event) {
+                                var element = $('#sidebar, #categorie');
+                                if (!element.is(event.target) && element.has(event.target).length === 0) {
+                                    $('#sidebar.open').removeClass('open');
+                                    setTimeout(function(){
+                                        $('body, html').removeClass('noscroll');
+                                    },300);
+                                }
+                            });
+                        });
+
+                        function resizeInput() {
+                            var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
+                            var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
+                            $('#bazarSearch_container_middle').width((99.5 - (left_width + right_width)) + '%');
+                        }
+
+                        function resizeSelect(element) {
+                            var ghost = $('<div id="width_tmp" style="display:none;"></div>');
+                            $('body').append(ghost);
+                            $("#width_tmp").html($('#' + element.attr('id') + ' option:selected').text());
+                            var new_width = $("#width_tmp").width();
+                            if (new_width > 100) {
+                                var paddingHigh = 30;
+                                var paddingLow = 20;
+                            } else {
+                                var paddingHigh = 40;
+                                var paddingLow = 30;
                             }
-                        });</script>
+
+                            //conversion des tailles des containers du champ de recherche en pourcent
+                            var left_width = ((new_width + paddingHigh) / $('#bazarSearch_container_left').parent().width()) * 100;
+                            $('#bazarSearch_container_left').width(left_width + '%');
+                            resizeInput();
+                            ghost.remove();
+                        }
+
+                    </script>
                 </div>
             </div>
             <div id="body" class="container-bazar">
                 <div id="bazarBody" class="clearfix">
-                    <div id="sidebar" class="hidden-phone hidden-tab">
+                    <div id="sidebar">
                         <div id="category">
                             <div id="category_title">Catégories</div>
                             <ul id="categories">
