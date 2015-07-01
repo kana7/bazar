@@ -597,7 +597,7 @@ td, th {
     /* width: 1240px; */
     /* margin: 0 auto; */
     /* z-index: 0; */
-    margin-top: 28px;
+    margin-top: 25px;
 }
 
 #bazarLogo {
@@ -612,10 +612,12 @@ td, th {
         width: 100%;
         display: flex;
         justify-content: center;
-        /* margin-bottom: 20px; */
+        position: relative;
+        left: 13px;
+        margin-bottom: 10px;
     }
     #bazarLogo_image{
-        height: 50px;
+        height: 55px;
     }
 }
 
@@ -894,13 +896,13 @@ td, th {
 }
 
 #category_title, #annonces_une_title, #annonces_last_title {
-    font-weight: bold;
-    color: #444;
+    /* font-weight: bold; */
+    /* color: #444; */
 }
 
 #annonces_une_title, #annonces_last_title {
-    width: 990px;
-    margin: 15px 0;
+    /* width: 990px; */
+    /* margin: 15px 0; */
 }
 
 #categories, .sub_categories, .search_section_data {
@@ -1123,7 +1125,7 @@ td, th {
     /* border-collapse: separate; */
     /* width: 900px; */
     /* border-collapse: collapse; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 20px;
     /* TEST */
     /* width: 1030px; */
@@ -1177,13 +1179,18 @@ td, th {
     /* width: 50%; */
     /* vertical-align: top; */
     padding-left: 15px;
-    padding-top: 18px;
+    padding-top: 15px;
 }
 
 .annonces_last_entry_info {
     /* width: 30%; */
     height: 100%;
 }
+
+annonces_last_entry_content{
+    position: relative;
+}
+
 .annonces_last_entry_desc_urgent {
     background: none repeat scroll 0 0 red;
     color: #fff;
@@ -1201,6 +1208,7 @@ td, th {
     text-overflow: ellipsis;
     white-space: nowrap;
     height: 25px;
+    font-size: 18px;
 }
 
 .annonces_last_entry_desc_genre {
@@ -1212,17 +1220,35 @@ td, th {
     /* right: 10px; */
     /* top: 20px; */
     text-align: right;
-    /* padding-left: 15px; */    padding-top: 18px;
+    /* padding-left: 15px; */    
+    padding-top: 18px;
     margin-right: 10px;
+}
+@media(max-width: 679px){
+    .annonces_last_entry_info_price{
+        float: right;
+        margin-right: 15px;
+        text-align: right;
+        font-size: 17px;
+        color: #00529C;}
+    .annonces_last_entry_info{
+        height: auto;
+        position:absolute;
+        bottom: 10px;
+        right: 0px;
+    }
 }
 
 .bazar_euro {
     font-size: 10pt;
+    color: #555;
+    /* font-weight: 600; */
 }
 
 .bazar_free, .bazar_negotiate {
-    color: #555;
-    font-size: 11pt;
+    /* color: #555; */
+    /* font-size: 11pt; */
+    /* font-weight: 600; */
 }
 
 .annonces_last_entry_info_day {
@@ -1449,8 +1475,8 @@ html,body {
 .container-bazar{
     margin-right: auto;
     margin-left: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
 }
 
 
@@ -1537,58 +1563,26 @@ ul.dropdown>li>a{
     font-size: 14px;
 }
 .mobile_button{
-    font-family: 'helvetica', sans-serif;
-    font-size: 10.5pt;
+    border: none;
     background-color: #ffffff;
-    border: 1px solid #ECECEC;
-    border-radius: 7px;
-    text-align: right;
-    width: 180px;
-    height: 44px;
-    padding-top: 3px;
-    position: relative;
-    background-image: linear-gradient(#FFF,#F4F4F4);
+    padding: 0;
+    text-align: center;
+    width: 82px;
+    height: 82px;
 }
-.mobile_button>.icon{
-    position: absolute;
-    bottom: 9px;
-    left: 15px;
+.mobile_button>img{
+    width: 100%;
+    height: auto;
 }
-.mobile_button>.icon>img{
-    width: 24px;
-}
-.mobile_button:active{
-    -moz-box-shadow:    inset 0 0 13px #B5B5B5;
-    -webkit-box-shadow: inset 0 0 13px #B5B5B5;
-    box-shadow:         inset 0 0 13px #B5B5B5;
-}
+
 @media(max-width: 679px){
-    .mobile_button>.icon{
-        position: initial;
-        display: block;
-        margin-bottom: 5px; 
-
-        text-align: center;
-    }
-    .mobile_button{
-        font-size: 7pt;
-        text-align: center;
-        width: 30%;
-        height: 60px;
-        padding: 0 !important;
-    }
-    #bazarBandeau{
-        font-size: 11pt;
+    button:focus, input:focus{
+        outline: 0;
     }
 }
-
-button:focus, input:focus{
-    outline: 0;
-}
-
 @media(max-width: 991px){
     .margin_mobile{
-        margin-bottom: 24px;
+        margin-bottom: 15px;
     }
 }
 #pages>*{
@@ -1598,5 +1592,21 @@ button:focus, input:focus{
 @media(max-width: 400px){
     #pages>*{
         margin-left: 0px;
+    }
+}
+.title{
+    margin: 0px;
+    font-family: 'Helvetica', sans-serif;
+}
+@media(max-width: 679px){
+    .title{
+        background-color: #00529C;
+        padding: 15px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    #logoLuxOnline>img{
+        width: 150px;
     }
 }

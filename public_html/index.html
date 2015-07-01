@@ -57,7 +57,7 @@
                     </button>
                     <ul class="dropdown">
                         <li>
-                            <div id="logoLuxOnline" style="text-align: left; padding-left: 20px;"><img src="img/icon/logoPortail_bleu.png" alt="logo Luxembourg Online"/></div>
+                            <div id="logoLuxOnline" style="text-align: left; padding-left: 20px;"><img src="img/icon/Logo_LOL_bleu_baseline.svg" alt="logo Luxembourg Online"/></div>
                         </li>
                         <li>
                             <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
@@ -180,25 +180,28 @@
                     </style>
                     <div id="bazarHeader_bottom" class="container-bazar">
                         <div class="appendix">
-                            <div id="bazarLogo" class="margin_mobile">
+                            <div id="bazarLogo">
                                 <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
-                                    <img id="bazarLogo_image" src="img/icon/logo.png">
+                                    <img id="bazarLogo_image" src="img/icon/Logo_bazar.lu.svg">
                                 </a>
                             </div>
-                            <div class="phone-12 display-phone display-tab margin_mobile">
-                                <div class=" align split">
-                                    <button class="mobile_button" style="padding-right: 30px;">
-                                        <span class="icon"><img src="img/icon/gemincon/categorie.png" alt="voir catégorie" title="voir catégorie"/></span>CATÉGORIES
+                            <div class="phone-12 display-phone display-tab">
+                                <div class="align middle center" style="padding: 0px 15px;">
+                                    <button class="mobile_button" style="margin-right: 20px; margin-left: 7px;">
+                                        <img src="img/icon/categorie.svg" alt="voir catégorie" title="voir catégorie"/>
                                     </button>
-                                    <button class="mobile_button" style="padding-right: 50px;">
-                                        <span class="icon"><img src="img/icon/gemincon/plus.png" alt="ajout annonce" title="ajouter une annonce"/></span>INSÉRER
+                                    <button class="mobile_button" style="margin-right: 10px;">
+                                        <img src="img/icon/recherche.svg" alt="rechercher une annonce" title="rechercher une annonce"/>
                                     </button>
-                                    <button class="mobile_button" style="padding-right: 18px;">
-                                        <span class="icon"><img src="img/icon/gemincon/cadenas_close_1.png"/></span>CONNEXION
+                                    <button class="mobile_button" style="margin-right: 5px;">
+                                        <img src="img/icon/inserer.svg" alt="ajout annonce" title="ajouter une annonce"/>
+                                    </button>
+                                    <button class="mobile_button">
+                                        <img src="img/icon/connexion.svg" alt="connexion" title="se connecter"/>
                                     </button>
                                 </div>
                             </div>
-                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6 margin_mobile">
+                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6 hidden-phone">
                                 <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                                     <div id="bazarSearch_container_left" class="pull-left">
                                         <div id="bazarSearch_combo" style="width: 100%;">
@@ -998,7 +1001,7 @@
                             Petites annonces gratuites, actuellement avec <span>1011 annonces</span>
                         </div>
                         <div id="annonces_une" class="phone-12">
-                            <div id="annonces_une_title">Annonces à la une</div>
+                            <div id="annonces_une_title" class="title">Annonces à la une</div>
                             <div id="annonces_une_howto">comment apparaître ici?</div>
                             <table id="annonces_une_container">
                                 <tbody><tr>
@@ -1097,7 +1100,7 @@
                             </table>
                         </div>
                         <div id="annonces_last" class="phone-12">
-                            <div id="annonces_last_title">Dernières annonces</div>
+                            <div id="annonces_last_title" class="title">Dernières annonces</div>
                             <div id="annonces_last_content" class="clearfix">
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
@@ -1175,7 +1178,7 @@
                                             </div>
                                             <div class="annonces_last_entry_info phone-12 tab-5 pull-right">
                                                 <div class="annonces_last_entry_info_price">
-                                                    <span class="bazar_euro">EUR</span> 14000
+                                                    <span class="bazar_euro">EUR</span> 14000<br>à discuter
                                                 </div>
                                                 <div class="annonces_last_entry_info_day hidden-phone">
                                                     Hier&nbsp;15:11
