@@ -885,7 +885,6 @@ td, th {
     }
     #sidebar.open{
         transform: translateX(300px);
-        box-shadow: 10px 5px 10px 0px #000;
     }
     #category{
         padding: 0px !important;
@@ -981,6 +980,7 @@ td, th {
     /* width: 990px; */
     /* vertical-align: top; */
     position: relative;
+    padding-bottom: 47px;
 }
 
 .annonces_entry_link, .bazar_link {
@@ -1413,7 +1413,7 @@ html.noscroll,body.noscroll{
 }
 
 #body {
-    padding-bottom: 47px;
+    /* padding-bottom: 47px; */
     /* height: 100%; */
 }
 #header {
