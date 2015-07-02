@@ -53,7 +53,7 @@
                         </ul>
                     </div>
                     <button id="nMenu_dropdown" class="display-phone hidden">
-                        <i class="fa fa-sort-desc" style="height: 5px;"></i>
+                        <i class="fa fa-sort-desc"></i>
                     </button>
                     <ul class="dropdown">
                         <li>
@@ -245,7 +245,12 @@
                         </div>
                     </div>
                     <script>
-                        $(document).ready(function () {
+                        $(function () {
+                            var docHeight = $('#content').height();
+
+                            $("#content").append("<div id='overlay' class='hidden display-tab display-phone'></div>");
+
+                            $("#overlay").height(docHeight);
                             if (viewport().width < 992) {
                                 $('#sidebar').prependTo('#content');
                             } else {
@@ -260,7 +265,7 @@
 
                             $(window).resize(function () {
                                 if (viewport().width < 992) {
-                                    $('#sidebar').prependTo('#body');
+                                    $('#sidebar').prependTo('#content');
                                 } else {
                                     $('#sidebar').prependTo('#bazarBody');
                                 }
@@ -269,22 +274,13 @@
 
                             $('#categorie').on('click', function () {
                                 event.stopPropagation();
-                                $('#sidebar').toggleClass('open');
-                                if ($('#sidebar').hasClass('open')) {
-                                    //$('body, html').addClass('noscroll');
-                                } else {
-                                    setTimeout(function () {
-                                        //$('body, html').removeClass('noscroll');
-                                    }, 400);
-                                }
+                                $('#sidebar, #categorie, #overlay').toggleClass('open');
                             });
                             $('html').click(function (event) {
                                 var element = $('#sidebar, #categorie');
                                 if (!element.is(event.target) && element.has(event.target).length === 0) {
-                                    $('#sidebar.open').removeClass('open');
-                                    setTimeout(function () {
-                                        //$('body, html').removeClass('noscroll');
-                                    }, 400);
+                                    $('#sidebar.open, #categorie.open, #overlay').removeClass('open');
+
                                 }
                             });
                         });
