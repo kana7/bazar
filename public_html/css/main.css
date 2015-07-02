@@ -1059,7 +1059,7 @@ td, th {
     cursor: pointer;
     padding-left: 9px;
     padding-right: 9px;
-    height: 180px;
+    height: 100%;
 }
 @media(max-width: 569px){
     #annonces_une_container_left, #annonces_une_container_right {
@@ -1085,6 +1085,7 @@ td, th {
         width: 92%;
     }
 }
+/*
 @media (max-width:569px){
     .annonces_une_entry {
         width: 100%;
@@ -1104,7 +1105,7 @@ td, th {
     .annonces_une_entry {
         width: 25%;
     }
-}
+}*/
 
 .annonces_une_entry:hover, .annonces_last_entry:hover {
     opacity: 0.9;
@@ -1690,4 +1691,9 @@ ul.dropdown>li>a{
         box-shadow: 0 4px 4px 0 #999;
         transform: translateY(64px);
     }
+}
+.gallery-cell {
+  width: 100%; /* half-width */
+  height: 160px;
+  margin-right: 10px;
 }
