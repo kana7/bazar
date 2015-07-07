@@ -40,7 +40,7 @@
                     <div id="bazarHeader_top_menu" class="phone-12  hidden-phone">
                         <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none;">
                             <li><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
-                            <li><div cla ss="bazar_top_menu_separator">&nbsp;</div></li>
+                            <li><div class="bazar_top_menu_separator">&nbsp;</div></li>
                             <li><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
 
                             <!--<td><div class="bazar_top_menu_separator">&nbsp;</div></td>
@@ -230,7 +230,7 @@
                                     </div>
                                     <div id="bazarSearch_container_right" class="pull-left">
                                         <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()">
-                                            <img id="bazarSearch_button_image" src="img/icon/gemincon/loupe.png">
+                                            <img id="bazarSearch_button_image" src="img/icon/recherche_icon.svg">
                                         </button>
                                         <div id="bazarSearch_container_advanced" class="hidden-phone">
                                             <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
@@ -248,20 +248,15 @@
                     </div>
                     <script>
                         $(function () {
+
+                            //Overlay à l'affichage du menu catégorie en mobile
                             var docHeight = $('#content').height();
 
                             $("#content").append("<div id='overlay' class='hidden display-tab display-phone'></div>");
                             $("#overlay").height(docHeight);
 
                             //Au chargement, on replace les éléments en fonction de la résolution
-                            if (viewport().width < 992) {
-                                $('#sidebar').prependTo('#content');
-                                $('#bazarInputs').prependTo('#content');
-                            } else {
-                                $('#sidebar').prependTo('#bazarBody');
-                                $('#bazarInputs').insertAfter('#buttonList');
-                            }
-
+                            changeToMobile();
                             resizeInput();
 
                             $('#bazarSearch_choice').change(function () {
@@ -271,13 +266,7 @@
                             $(window).resize(function () {
                                 //Au resize, on replace les éléments pour la version mobile ou la version desktop
                                 if (!$('input').is(':focus')) {
-                                    if (viewport().width < 992) {
-                                        $('#sidebar').prependTo('#content');
-                                        $('#bazarInputs').prependTo('#content');
-                                    } else {
-                                        $('#sidebar').prependTo('#bazarBody');
-                                        $('#bazarInputs').insertAfter('#buttonList');
-                                    }
+                                    changeToMobile();
                                 }
                                 resizeInput();
                             });
@@ -291,7 +280,7 @@
                                 event.stopPropagation();
                                 $('#sidebar, #categorie, #overlay').toggleClass('open');
                             });
-
+                            //ferme le menu catégorie sur mobile quand on clic ailleurs
                             $('html').click(function (event) {
                                 var element = $('#sidebar, #categorie, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
                                 if (!element.is(event.target) && element.has(event.target).length === 0) {
@@ -305,6 +294,15 @@
                             var left_width = (($('#bazarSearch_container_left').width() / $('#bazarSearch_container_left').parent().width()) * 100);
                             var right_width = (($('#bazarSearch_container_right').width() / $('#bazarSearch_container_right').parent().width()) * 100);
                             $('#bazarSearch_container_middle').width((99.5 - (left_width + right_width)) + '%');
+                        }
+                        function changeToMobile() {
+                            if (viewport().width < 992) {
+                                $('#sidebar').prependTo('#content');
+                                $('#bazarInputs').prependTo('#content');
+                            } else {
+                                $('#sidebar').prependTo('#bazarBody');
+                                $('#bazarInputs').insertAfter('#buttonList');
+                            }
                         }
 
                         function resizeSelect(element) {
@@ -948,7 +946,8 @@
                                     <ul class="sub_categories" id="sub_category_70">
                                         <li class="sub_category_entry">
                                             <div onclick="getBazarItems($(this), 'content', 71);
-                                                    event.stopPropagation();">
+                                                    event.stopPropagation()
+                                                    ;">
                                                 Emploi<span class="sub_category_number">(11)</span>
                                             </div>
                                             <ul class="sub_categories" id="sub_category_71">
@@ -1165,10 +1164,10 @@
                             <div id="annonces_last_content" class="clearfix">
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillHeight" src="img/page_accueil/bazar_20150608102626_19389.png"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">Dériveur LASER</div>
                                                 <div class="annonces_last_entry_desc_genre">Sport et hobbies</div>
@@ -1186,10 +1185,10 @@
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1158">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609153003_25847.jpeg"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">Flipper</div>
                                                 <div class="annonces_last_entry_desc_genre">Autres</div>
@@ -1208,10 +1207,10 @@
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1154">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609151248_24336.jpeg"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">BMW 318</div>
                                                 <div class="annonces_last_entry_desc_genre">Berline</div>
@@ -1229,10 +1228,10 @@
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1153">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609151027_24120.jpeg"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">BMW 523</div>
                                                 <div class="annonces_last_entry_desc_genre">Berline</div>
@@ -1250,10 +1249,10 @@
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1152">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609150520_23680.jpeg"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">ALFA ROMEO SPRINT</div>
                                                 <div class="annonces_last_entry_desc_genre">Coupé</div>
@@ -1271,10 +1270,10 @@
                                 </div>
                                 <div class="annonces_last_entry phone-12 tab-6">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1155">
-                                        <div class="annonces_last_entry_image phone-5 tab-4">
+                                        <div class="annonces_last_entry_image phone-6 tab-4">
                                             <div class="annonces_last_entry_image_pic align middle center"><img class="bazar_image fillWidth" src="img/page_accueil/bazar_20150609150122_23266.jpeg"></div>
                                         </div>
-                                        <div class="annonces_last_entry_content phone-7 tab-8">
+                                        <div class="annonces_last_entry_content phone-6 tab-8">
                                             <div class="annonces_last_entry_desc phone-12 tab-7">
                                                 <div class="annonces_last_entry_desc_title">bmw 320</div>
                                                 <div class="annonces_last_entry_desc_genre">Berline</div>
@@ -1323,9 +1322,14 @@
         </div>
         <script>
             $('.main-gallery').flickity({
-                // options
-                freeScroll: true,
-                wrapAround: true
+            // options
+            cellAlign: 'left',
+                    freeScroll: true,
+                    wrapAround: true,
+                    setGallerySize: false,
+                    pageDots: false,
+                    autoPlay: 2000,
+                    arrowShape: "M51.582,82.766L20.135,54.08l31.419-28.661c2.191-1.856,2.467-5.149,0.612-7.342c-0.992-1.173-2.443-1.847-3.979-1.847c-1.229,0-2.423,0.439-3.39,1.259L9.06,50.09c-0.733,0.62-1.277,1.434-1.583,2.375l-0.032,0.09c-0.074,0.251-0.122,0.506-0.165,0.788c-0.016,0.075-0.029,0.149-0.036,0.227c-0.013,0.137-0.013,0.274-0.01,0.412v0.196c-0.002,0.138-0.002,0.275,0.011,0.415c0.006,0.075,0.021,0.148,0.042,0.247c0.04,0.26,0.085,0.518,0.162,0.764l0.047,0.145c0.303,0.908,0.841,1.708,1.537,2.3l35.793,32.647c0.938,0.795,2.134,1.233,3.362,1.233c1.537,0,2.986-0.673,3.979-1.845c0.9-1.063,1.331-2.412,1.215-3.8C53.264,84.898,52.616,83.639,51.582,82.766z"
             });
         </script>
     </body>
