@@ -86,11 +86,8 @@ td, th {
     padding: 0px;
     border-collapse: collapse;
     width: 100%;
-    /* height: 100%; */
     min-height: 100%;
-    /* background-color: #000; */
 }
-
 .container-topHeader{
     width: 95%;
     margin-right: auto;
@@ -110,7 +107,6 @@ td, th {
         margin-bottom: 0px;
     }
 }
-
 /* New design menu */
 #bazarHeader_top {
     margin: 0px 0px 10px 5px;
@@ -132,17 +128,12 @@ td, th {
     z-index: 11000;
     color: #fff;
 }
-
 #bazarHeader_top li {
     list-style: none;
     display: inline-block;
     float: left;
-    /* width: 100px; */
-    /* padding: 4px; */
     z-index: 2;
-    /* margin-top: 5px; */
 }
-
 .ssMenu {
     margin: 0px auto;
     padding: 0px;
@@ -150,7 +141,6 @@ td, th {
     text-align: center;
     background: white;
 }
-
 .ssMenu li {
     display: inline-block;
     list-style-type: none;
@@ -158,7 +148,6 @@ td, th {
     padding: 0px 0px;
     width: 140px;
 }
-
 .subMenuTxt {
     color: #555;
     font-size: 9pt !important;
@@ -168,37 +157,30 @@ td, th {
     font-weight: normal;
     font-family: neo !important;
 }
-
 .name, .name a {
     font-family: jeanne !important;
     font-size: 18pt !important;
     color: #104c92 !important;
     font-weight: bold !important;
 }
-
 #subMenuTab {
     font-size: 13pt !important;
     color:#777;
-    /* */
     position: absolute;
     bottom: 20px;
     left: 74px;
 }
-
 .ssMenu a:active, .ssMenu a:link, .ssMenu a:visited, .ssMenu a:hover {
     color:#555;
     text-decoration: none;
 }
-
 .subMenuSelected {
     border-bottom: 2px solid #104C92;
     padding-bottom: 4px !important;
 }
-
 .hoverMenuItem2 div {
     padding-top:5px;
 }
-
 .hoverMenuItem2:hover {
     border-bottom: 1px solid #104C92;
     padding-bottom: 5px !important;
@@ -207,7 +189,6 @@ td, th {
     border-bottom: 2px solid #104C92;
     padding-bottom: 4px !important;
 }
-
 .subMenuTxt h1 {
     color: #555;
     font-size: 9pt !important;
@@ -216,12 +197,10 @@ td, th {
     white-space: nowrap;
     font-weight: normal;
 }
-
 #subMenuTab h1 {
     font-size: 13pt !important;
     color:#777;
 }
-
 .nMenuEntry {
     font-family: neo_bold;
     font-size: 10pt;
@@ -229,14 +208,12 @@ td, th {
     text-transform: uppercase;
     height: 45px;
 }
-
 .nMenuSelected {
     background: white !important;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     padding-bottom: 3px !important;
 }
-
 #logo_title {
     font-size: 12pt;
     text-decoration: none;
@@ -244,7 +221,6 @@ td, th {
     cursor: pointer;
     display: none;
 }
-
 .siteLogo {
     margin-top: 17px;
     padding-bottom: 0px;
@@ -252,40 +228,34 @@ td, th {
     text-align: center;
     font-weight: normal;
 }
-
 .onlineMenu {
     position: relative;
     top: -4px;
     font-weight: normal;
     color: #555 !important;
 }
-
 #bazarHeader_top {
     background: #00529c;
+    position: relative;
     width: 100% !important;
     margin-left: 0px;
     padding-right: 2px;
     border: none !important;
     box-shadow: 0 0 2px 2px #999;
-    z-index: 10;
+    z-index: 6;
 }
-
 #nMenuContainer {
     margin: 0px !important;
     padding: 0px !important;
     border: none !important;
 }
-
 #nMenuContainer li {
     padding: 0px;
     width: auto;
-    margin-top: 2px;
 }
-
 #nMenuContainer li:hover {
     background: none;
 }
-
 #nMenuLogo {
     padding-top: 5px;
     padding-bottom: 9px;
@@ -296,18 +266,10 @@ td, th {
     width: 145px;
     height: 10px;
 }
-
 .menuIconImg {
     position: relative;
-    top: -5px;
+    top: -4px;
 }
-@media (max-width: 991px){
-    .menuIconImg {
-        position: relative;
-        top: -9px;
-    }
-}
-
 .nMenuSeparator {
     width: 1px;
     padding: 0px;
@@ -341,13 +303,12 @@ td, th {
 
 .siteLogo {
     margin: 0px;
-    top: 18px;
+    top: 21px;
 }
 
 .nMenuSelected {
     width: 100%;
     height: 55px;
-    padding: 0px !important;
     margin: 0px !important;
 }
 
@@ -438,6 +399,12 @@ td, th {
     #bazarHeader_top_menu>ul {
         align-items: center;
         display: flex;
+    }
+    .title{
+        margin: 15px 0px !important;
+    }
+    .container-bazar{
+            width: 97%;
     }
 }
 
@@ -576,7 +543,6 @@ td, th {
 .bazar_user_menu_nav_selected {
     text-decoration: underline;
 }
-/* */
 
 #bazarHeader_bottom {
     margin-top: 15px;
@@ -607,10 +573,10 @@ td, th {
         width: 41.66666667%;
         position: relative;
         top: 7px;
-        
+
         display: inline-block;
         float: left;
-}
+    }
     #bazarLogo_image{
         height: 60px;
         position: relative;
@@ -629,18 +595,18 @@ td, th {
         display: inline-block;
         float: left;
         position: relative;
-        bottom: 8px;
+        top: 2px;
     }
 }
 
 #bazarLogo_image {
     cursor: pointer;
-    width: 100%;
+    /* width: 100%; */
 }
 
 @media(min-width: 992px){
     #bazarInputs {
-        margin-top: 13px;
+        margin-top: 20px;
     }
 }
 
@@ -650,7 +616,7 @@ td, th {
     text-align: right;
     /* width: 240px; */
     /* width: 205px; */
-    margin-top: 10px;
+    margin-top: 17px;
     /* position: absolute; */
 }
 
@@ -1155,7 +1121,6 @@ td, th {
     text-align: center;
     height: 140px;
     width: 100%;
-    /* line-height: 110px; */
 }
 
 .annonces_une_entry_title {
@@ -1393,7 +1358,6 @@ html{
 html,body {
     margin: 0;
     padding: 0;
-    /* height: 100%; */
     width: 100%;
     overflow-x: hidden;
 }
@@ -1413,7 +1377,7 @@ html.noscroll,body.noscroll{
 
 #bazar_footer_content {
     height: 100%;
-    /* margin-top: 5px; */
+    display: flex;    align-items: center;
 }
 @media(max-width: 679px){
     #bazar_footer_content{
@@ -1441,6 +1405,8 @@ html.noscroll,body.noscroll{
 #bazar_copy {
     font-size: 8pt;
     float: left;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 #bazar_footer_links {
@@ -1508,7 +1474,7 @@ html.noscroll,body.noscroll{
 .container-bazar{
     margin-right: auto;
     margin-left: auto;
-    /* margin-top: 3px; */
+
 }
 
 
@@ -1524,20 +1490,38 @@ html.noscroll,body.noscroll{
     background-color: #00529C;
     border-radius: 0px 0px 0px 5px;
     text-align: center;
-    z-index: 6;
+    z-index: 7;
+}
+@media(min-width:711px){
+    #nMenu_dropdown{
+        display: none !important;
+    }
 }
 @media(min-width:680px)and (max-width:991px){
+    #nMenuContainer, #bazarLogo, .title, #bazar_footer{
+        padding-left: 15px !important;
+    }
+}
+@media(min-width:680px)and (max-width:711px){
+    ul.dropdown{
+        width: 30% !important;
+        right: 0px !important;
+        text-align: center;
+        top: -180px !important;
+    }
     #nMenu_dropdown{
-        top: 6px !important
-    ;
+        top: 6px !important;
         right: 6px;
         border-radius: 5px 5px 5px 5px;
-}
-    #nMenuContainer{
-        padding-left: 15px !important;
     }
     #bazarHeader_top{
         margin: 0px;
+    }
+    .sorties{
+        display: none;
+    }
+    .dropdown .sorties{
+        display: inline-block !important;
     }
 }
 #nMenu_dropdown>a{
@@ -1564,7 +1548,6 @@ ul.dropdown{
     border-top: 1px solid #00529C;
     position: absolute;
     top: 37px;
-    right: -18px;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0 4px 4px 0 #999;
     list-style-type: none;
@@ -1580,7 +1563,6 @@ ul.dropdown{
         border-top: 1px solid #f5f5f5;
         position: absolute;
         top: -231px;
-        left: 0px;
         transform: translateY(0px);
         transition-property: transform;
         transition-duration: 0.3s;
@@ -1696,7 +1678,6 @@ ul.dropdown>li>a{
         padding: 15px;
         transform: translateY(0px);
         background-color: #ffffff;
-        /* border-top: 1px solid #E0E0E0; */
         border-bottom: 1px solid #00529C;
         transition-property: transform;
         transition-duration: 0.3s;
@@ -1704,7 +1685,6 @@ ul.dropdown>li>a{
     }
     #bazarInputs.open{
         box-shadow: 0px 4px 15px 0px #575757;
-        /* opacity: 0.5; */
         transform: translateY(66px);
     }
 }

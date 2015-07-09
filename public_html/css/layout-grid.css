@@ -1390,7 +1390,7 @@ pre code {
 .display-lgdesk-block,
 .display-lgdesk-inline,
 .display-lgdesk-inline-block {
-    display: none !important;
+    display: none;
 }
 
 /*Classes permettant d'afficher un bloc uniquement en resolution telephone*/
