@@ -404,7 +404,7 @@ td, th {
         margin: 15px 0px !important;
     }
     .container-bazar{
-            width: 97%;
+        width: 97%;
     }
 }
 
@@ -1353,7 +1353,7 @@ annonces_last_entry_content{
     font-size: 11pt;
 }
 html{
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 html,body {
     margin: 0;
@@ -1377,11 +1377,13 @@ html.noscroll,body.noscroll{
 
 #bazar_footer_content {
     height: 100%;
-    display: flex;    align-items: center;
+    display: flex;    
+    align-items: center;
 }
 @media(max-width: 679px){
     #bazar_footer_content{
         text-align: center !important;
+        display: block;
     }
     #bazar_footer{
         padding: 6px 0px;
@@ -1726,5 +1728,14 @@ ul.dropdown>li>a{
 .flickity-prev-next-button.next svg{
     top: 24% !important;
     left: 13% !important;
+}
+.select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+select::-ms-expand {
+    display: none;
 }
 
