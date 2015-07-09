@@ -14,6 +14,10 @@ button, input, select, textarea {
     font: inherit;
 }
 
+button:focus{
+    outline: 0;
+}
+
 table {
     border-spacing: 1px;
     border-collapse: collapse;
@@ -578,19 +582,11 @@ td, th {
     margin-top: 15px;
 }
 
-#bazarLogo {
-    width: 20%;
-    display: inline-block;
-    float: left;
-    position: relative;
-    bottom: 8px;
-}
-@media(max-width: 991px){
+@media(max-width: 679px){
     #bazarLogo {
         width: 100%;
         display: flex;
         justify-content: center;
-        /* margin-bottom: 10px; */
         bottom: 0px;
     }
     #bazarLogo_image{
@@ -598,6 +594,42 @@ td, th {
 
         position: relative;
         left: 15px;
+    }
+    #buttonList>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 15px;
+    }
+}
+@media(min-width: 680px){
+    #bazarLogo {
+        width: 41.66666667%;
+        position: relative;
+        top: 7px;
+        
+        display: inline-block;
+        float: left;
+}
+    #bazarLogo_image{
+        height: 60px;
+        position: relative;
+        left: 0px;
+    }
+    #buttonList>div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 15px;
+    }
+}
+@media (min-width: 992px){
+    #bazarLogo {
+        width: 20%;
+        display: inline-block;
+        float: left;
+        position: relative;
+        bottom: 8px;
     }
 }
 
@@ -1361,13 +1393,12 @@ html{
 html,body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     overflow-x: hidden;
 }
 html.noscroll,body.noscroll{
 }
-
 #body {
 }
 #header {
@@ -1382,17 +1413,28 @@ html.noscroll,body.noscroll{
 
 #bazar_footer_content {
     height: 100%;
+    /* margin-top: 5px; */
 }
 @media(max-width: 679px){
     #bazar_footer_content{
         text-align: center !important;
     }
     #bazar_footer{
-        padding-top: 13px;
+        padding: 6px 0px;
     }
     #bazar_footer_links{
         margin-top: 5px;
         text-align: center !important;
+    }
+}
+@media(min-width: 680px){
+    #bazar_footer{
+        padding: 10px 10px;
+    }
+}
+@media(max-width: 991px){
+    #bazar_footer{
+        height: auto;
     }
 }
 
@@ -1466,6 +1508,7 @@ html.noscroll,body.noscroll{
 .container-bazar{
     margin-right: auto;
     margin-left: auto;
+    /* margin-top: 3px; */
 }
 
 
@@ -1482,7 +1525,20 @@ html.noscroll,body.noscroll{
     border-radius: 0px 0px 0px 5px;
     text-align: center;
     z-index: 6;
-
+}
+@media(min-width:680px)and (max-width:991px){
+    #nMenu_dropdown{
+        top: 6px !important
+    ;
+        right: 6px;
+        border-radius: 5px 5px 5px 5px;
+}
+    #nMenuContainer{
+        padding-left: 15px !important;
+    }
+    #bazarHeader_top{
+        margin: 0px;
+    }
 }
 #nMenu_dropdown>a{
     text-decoration:none;
@@ -1513,7 +1569,7 @@ ul.dropdown{
     box-shadow: 0 4px 4px 0 #999;
     list-style-type: none;
 }
-@media(max-width: 680px){
+@media(max-width: 991px){
     ul.dropdown{
         z-index: 5;
         width: 100%;
@@ -1593,10 +1649,10 @@ ul.dropdown>li>a{
     margin: 0px;
     font-family: 'Helvetica', sans-serif;
 }
-@media(max-width: 679px){
+@media(max-width: 991px){
     .title{
         background-color: #00529C;
-        padding: 15px;
+        padding: 8px;
         color: #ffffff;
         font-size: 15px;
         font-weight: 600;
@@ -1634,7 +1690,7 @@ ul.dropdown>li>a{
     #bazarInputs{
         width: 100%;
         position: absolute;
-        top: -64px;
+        top: -66px;
         left: 0px;
         z-index: 2;
         padding: 15px;
@@ -1649,7 +1705,7 @@ ul.dropdown>li>a{
     #bazarInputs.open{
         box-shadow: 0px 4px 15px 0px #575757;
         /* opacity: 0.5; */
-        transform: translateY(64px);
+        transform: translateY(66px);
     }
 }
 @media (max-width:569px){
@@ -1688,7 +1744,7 @@ ul.dropdown>li>a{
     left: 25% !important;
 }
 .flickity-prev-next-button.next svg{
-    top: 26% !important;
+    top: 24% !important;
     left: 13% !important;
 }
 
