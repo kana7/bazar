@@ -1647,7 +1647,8 @@ ul.dropdown>li>a{
         transition-timing-function: ease;
     }
     #bazarInputs.open{
-        box-shadow: 0 4px 4px 0 #999;
+        box-shadow: 0px 4px 15px 0px #575757;
+        /* opacity: 0.5; */
         transform: translateY(64px);
     }
 }
@@ -1678,3 +1679,16 @@ ul.dropdown>li>a{
 .gallery-cell {
     height: 100%;
 }
+.flickity-prev-next-button{
+    border: none;
+}
+
+.flickity-prev-next-button.previous svg{
+    top: 20% !important;
+    left: 25% !important;
+}
+.flickity-prev-next-button.next svg{
+    top: 26% !important;
+    left: 13% !important;
+}
+
