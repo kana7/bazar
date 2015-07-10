@@ -5,15 +5,19 @@
 $(document).ready(function () {
 
     $('#list').click(function (event) {
-        event.preventDefault();
-        $('#search_result_content .item').addClass('list-group-item');
-        $('#search_result_content').addClass("list-group-style2").removeClass("list-group-style1");
+        if (viewport().width > 680) {
+            event.preventDefault();
+            $('#search_result_content .item').addClass('list-group-item');
+            $('#search_result_content').addClass("list-group-style2").removeClass("list-group-style1");
+        }
     });
     $('#grid').click(function (event) {
-        event.preventDefault();
-        $('#search_result_content').addClass("list-group-style1").removeClass("list-group-style2");
-        $('#search_result_content .item').removeClass('list-group-item');
-        $('#search_result_content .item').addClass('grid-group-item');
+        if (viewport().width > 680) {
+            event.preventDefault();
+            $('#search_result_content').addClass("list-group-style1").removeClass("list-group-style2");
+            $('#search_result_content .item').removeClass('list-group-item');
+            $('#search_result_content .item').addClass('grid-group-item');
+        }
     });
 
 });

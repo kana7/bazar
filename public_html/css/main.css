@@ -73,7 +73,7 @@ td, th {
     padding:0px;
     border-collapse:collapse;
     width:100%;
-    height:100%;
+    min-height: 100%;
 }
 .container-topHeader{
     width:95%;
@@ -717,6 +717,9 @@ td, th {
     display:inline-block;
     width:20%;
     float:left;
+    /* clear: both; */
+    /* margin-bottom: 39px; */
+    /* overflow: auto; */
 }
 #content{
     width:80%;
@@ -964,32 +967,32 @@ td, th {
     width:50%;
     text-align:right;
 }
-#annonces_last_content {
+#annonces_last_content, #search_result_content {
     margin-bottom:20px;
 }
-.annonces_last_entry.phone-12.desk-6 {
+.annonces_last_entry.phone-12.desk-6, .search_result_entry.phone-12.desk-6 {
     height:130px;
     border:1px solid #e0e0e0;
     margin:-1px 0 0 -1px;
     cursor:pointer;
     box-sizing:border-box;
 }
-.annonces_last_entry table {
+.annonces_last_entry table, .search_result_entry table {
     width:100%;
     height:100%;
     position:relative;
 }
-.annonces_last_entry_image {
+.annonces_last_entry_image, .search_result_entry_image {
     display:inline-block;
     float:left;
     height:100%;
 }
-.annonces_last_entry_content{
+.annonces_last_entry_content, .search_result_entry_content{
     display:inline-block;
     float:left;
     height:100%;
 }
-.annonces_last_entry_image_pic {
+.annonces_last_entry_image_pic, .search_result_entry_img_pic {
     width:100%;
     height:100%;
     overflow:hidden;
@@ -997,17 +1000,17 @@ td, th {
     box-shadow:1px 0 0 0 #E0E0E0, 0 1px 0 0 #E0E0E0, 1px 1px 0 0 #E0E0E0, 1px 0 0 0 #E0E0E0 inset, 0 1px 0 0 #E0E0E0 inset;
     text-align:center;
 }
-.annonces_last_entry_desc {
+.annonces_last_entry_desc, .search_result_entry_desc {
     padding-left:15px;
     padding-top:15px;
 }
-.annonces_last_entry_info {
+.annonces_last_entry_info, .search_result_entry_info {
     height:100%;
 }
-annonces_last_entry_content{
+annonces_last_entry_content, .search_result_entry_content{
     position:relative;
 }
-.annonces_last_entry_desc_urgent {
+.annonces_last_entry_desc_urgent, .search_result_entry_desc_urgent {
     background:none repeat scroll 0 0 red;
     color:#fff;
     text-align:center;
@@ -1015,7 +1018,7 @@ annonces_last_entry_content{
     font-weight:bold;
     margin-bottom:15px;
 }
-.annonces_last_entry_desc_title {
+.annonces_last_entry_desc_title, .search_result_entry_desc_title {
     color:#005dc3;
     width:100%;
     overflow:hidden;
@@ -1024,23 +1027,23 @@ annonces_last_entry_content{
     height:25px;
     font-size:16px;
 }
-.annonces_last_entry_desc_genre {
+.annonces_last_entry_desc_genre, .search_result_entry_desc_genre {
     color:#aaa;
     font-size:11pt;
 }
-.annonces_last_entry_info_price {
+.annonces_last_entry_info_price, .search_result_entry_info_price {
     text-align:right;
     padding-top:18px;
     margin-right:10px;
 }
 @media(max-width:679px){
-    .annonces_last_entry_info_price{
+    .annonces_last_entry_info_price, .search_result_entry_info_price{
         float:right;
         margin-right:15px;
         text-align:right;
         font-size:17px;
         color:#00529C;}
-    .annonces_last_entry_info{
+    .annonces_last_entry_info, .search_result_entry_info{
         height:auto;
         position:absolute;
         bottom:10px;
@@ -1053,7 +1056,7 @@ annonces_last_entry_content{
 }
 .bazar_free, .bazar_negotiate {
 }
-.annonces_last_entry_info_day {
+.annonces_last_entry_info_day, .search_result_entry_info_day {
     position:absolute;
     bottom:16px;
     right:10px;
@@ -1144,10 +1147,13 @@ html,body {
     overflow-x:hidden;
 }
 #bazar_footer {
-    width:100%;
+    /* width:100%; */
     height:58px;
+    /* position: initial; */
     border-top:1px solid #dedede;
+    clear: both;
     background:#f8f8f8;
+    display: block;
     padding-top:23px;
 }
 #bazar_footer_content {
@@ -1174,7 +1180,10 @@ html,body {
 @media(min-width:680px){
     #bazar_footer{
         padding:10px 10px;
-    }
+    
+        /* position: absolute; */
+        /* bottom: 0; */
+}
 }
 @media(max-width:991px){
     #bazar_footer{

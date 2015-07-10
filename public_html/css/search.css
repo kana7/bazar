@@ -12,7 +12,7 @@ a, a:hover {
 	/* height: 30px; */
 	/* line-height: 30px; */
 }
-
+/*
 #search_result_title, .search_section_title {
 	font-weight: bold;
 	color: #444;
@@ -21,18 +21,18 @@ a, a:hover {
 .search_section_title {
 	font-size: 11pt;
 }
-
+*/
 #search_result {
 	margin-top: 20px;
 }
-
+/*
 #search_result_content {
 	border-collapse: separate;
 	width: 900px;
 	border-collapse: collapse;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	/* TEST */
+	
 	width: 1030px;
 	width: 990px;
 }
@@ -48,11 +48,11 @@ a, a:hover {
 	width: 100%;
 	margin-top: -1px;
 }
-
+*/
 .search_result_entry:hover {
 	opacity: 0.9;
 }
-
+/*
 .search_result_entry table {
 	width: 100%;
 	height: 100%;
@@ -98,12 +98,13 @@ a, a:hover {
 	padding-top: 18px;
 }
 
+
 .search_result_entry_info {
 	width: 30%;
 	width: 150px;
 	//position: relative;
 }
-
+*/
 .search_result_entry_desc_urgent {
     background: none repeat scroll 0 0 red;
     color: #fff;
@@ -112,7 +113,7 @@ a, a:hover {
 	font-weight: bold;
 	margin-bottom: 5px;
 }
-
+/*
 .search_result_entry_desc_title {
 	color: #005dc3;
 	margin-bottom: 5px;
@@ -139,26 +140,27 @@ a, a:hover {
 	right: 10px;
 	font-size: 10pt;
 }
-
+*/
 /* display buttons design */
 .item.grid-group-item {
 	border: 1px solid #e0e0e0;
-	width: 450px;
+	/* width: 450px; */
+	width: 50%;
 	height: 130px;
 	margin-top: -1px;
 	margin-right: -1px;
 	float: left;
 	/* TEST */
-	width: 516px;
-	width: 495px;
-	margin-right: -2px;
+	/* width: 516px; */
+	/* width: 495px; */
+	/* margin-right: -2px; */
 }
 
 .item.list-group-item {
 	border: 1px solid #e0e0e0;
 	width: 100%;
 	height: 130px;
-	margin-top: -1px;
+	/* margin-top: -1px; */
 }
 
 .list-group-item, .grid-group-item {
@@ -189,7 +191,7 @@ a, a:hover {
 	width: 200px;
 	margin: 0 auto;
 	margin-bottom: 20px;
-	height: 30px;
+	/* height: 30px; */
 	line-height: 30px;
 	background: #f5f5f5;
 	border: 1px solid #ddd;
@@ -323,7 +325,7 @@ a, a:hover {
 
 .search_section_data td, .search_section_data tr, .search_section_data {
 	line-height: 20px;
-	height: 20px;
+	/* height: 20px; */
 	padding: 10px;
 	padding-left: 0px;
 	margin-top: 0px;
@@ -372,6 +374,11 @@ a, a:hover {
 
 .search_section {
 	padding: 20px 0 0 15px;
+	height: 100%;
+	width: 100%;
+	float: left;
+	position: relative;
+	display: inline-block;
 }
 
 .add_annonce_select {
