@@ -1,6 +1,6 @@
-$(window).load(function () {
+/*$(window).load(function () {
     resizeAllImages();
-});
+});*/
 
 $(document).ready(function () {
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 });
 
-function resizeAllImages() {
+/*function resizeAllImages() {
 
     $('.bazar_image').each(function () {
 
@@ -52,7 +52,7 @@ function resizeAllImages() {
 
     });
 
-}
+}*/
 
 function getBazarItems(element, container, id) {
     $('.selectedCategory').removeClass('selectedCategory');
@@ -84,7 +84,7 @@ function changeToMobile() {
     } else {
         $('#sidebar').prependTo('#bazarBody');
         $('#bazarInputs').insertAfter('#buttonList');
-        $('#bazar_footer').appendTo('body');
+        $('#bazar_footer').appendTo('#wrap');
     }
 }
 

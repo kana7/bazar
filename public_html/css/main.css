@@ -86,7 +86,7 @@ td, th {
     padding: 0px;
     border-collapse: collapse;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
 }
 .container-topHeader{
     width: 95%;
@@ -700,6 +700,8 @@ td, th {
 }
 
 #bazarSearch_container_advanced {
+    position: relative;
+    bottom: 5px;
     font-size: 8pt;
     line-height: 15px;
     text-align: left;
@@ -1400,7 +1402,7 @@ html.noscroll,body.noscroll{
 }
 @media(max-width: 991px){
     #bazar_footer{
-        height: auto;
+        height: 42px;
     }
 }
 
@@ -1503,6 +1505,9 @@ html.noscroll,body.noscroll{
     #nMenuContainer, #bazarLogo, .title, #bazar_footer{
         padding-left: 15px !important;
     }
+    #bazarHeader_bottom {
+    margin-top: 0px;
+}
 }
 @media(min-width:680px)and (max-width:711px){
     ul.dropdown{
@@ -1575,8 +1580,9 @@ ul.dropdown{
     }
     ul.dropdown.open{
         transform: translateY(231px);
-        box-shadow: 0 4px 4px 0 #999;
-    }
+    
+        box-shadow: 0px 4px 15px 0px #575757;
+}
 }
 ul.dropdown>li{
     display: block;
