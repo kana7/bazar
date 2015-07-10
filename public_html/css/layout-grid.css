@@ -936,7 +936,7 @@ pre code {
     .desk-auto{
         width: auto;
     }
-    
+
     /*Deplacement vers la gauche desktop*/
     .desk-pull-12 {
         right: 100%;
@@ -1603,67 +1603,85 @@ Appliquez ces classes sur le conteneur (parent) des elements que vous voulez ali
 
 /* Active l'alignement: toujours commencer par cette classe si vous voulez aligner quelque chose*/
 .align{
-    display: flex;
+    display: flex !important;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;
 }
 /*Dispose les elements en ligne*/
 .align.row{
     flex-direction: row;
+    -webkit-flex-direction: row;
 }
 /*Dispose les elements en ligne en inversant l'ordre'*/
 .align.row-reverse{
     flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
 }
 /*Dispose les elements de haut en bas*/
 .align.column{
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 /*Dispose les elements de bas en haut*/
 .align.column-reverse{
     flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
 }
 /*Permet de mettre les elements a la ligne si il prennent trop de place*/
 .align.wrap{
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 /*Aligne les elements a gauche (horizontalement)*/
 .align.left{
     justify-content: flex-start;
+    -webkit-justify-content: flex-start;
 }
 /*Aligne les elements au milieu (horizontalement)*/
 .align.center{
     justify-content: center;
+    -webkit-justify-content: center;
 }
 
 /*Aligne les elements a droite (horizontalement)*/
 .align.right{
     justify-content: flex-end;
+    -webkit-justify-content: flex-end;
 }
 
 /*Reparti les elements avec un espace regulier entre eux*/
 .align.spread{
     justify-content: space-around;
+    -webkit-justify-content: space-around;
 }
 
 /*Ecarte les elements en prennant toute la place disponible*/
 .align.split{
     justify-content: space-between;
+    -webkit-justify-content: space-between;
 }
 /*Aligne les elements sur le haut du container(verticalement)*/
 .align.top{
     align-items: flex-start;
+    -webkit-align-items: flex-start;
 }
 
 /*Aligne les elements sur le milieu du container(verticalement)*/
 .align.middle{
     align-items: center;
+    -webkit-align-items: center;
 }
 
 /*Aligne les elements sur le bas du container(verticalement)*/
 .align.bottom{
     align-items: flex-end;
+    -webkit-align-items: flex-end;
 }
 /*Etire les elements pour qu'ils prennent toute la hauteur du container*/
 .align.stretch{
     align-items: stretch;
+    -webkit-align-items: stretch;
 }
