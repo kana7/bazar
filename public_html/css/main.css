@@ -811,11 +811,11 @@ td, th {
     margin:5px 0;
     cursor:pointer;
 }
-.category_number, .sub_category_number {
+.category_number, .sub_category_number, .search_section_data_detail{
     color:#00529C;
     margin-left:5px;
 }
-.category_number, .sub_category_number {
+.category_number, .sub_category_number, .search_section_data_detail{
     font-size:9pt;
 }
 #content {
