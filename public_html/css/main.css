@@ -801,7 +801,7 @@ td, th {
     display:none;
     margin-left:15px;
     font-size:10pt;
-    margin-bottom:15px;
+    /* margin-bottom:15px; */
 }
 .category_entry, .search_section_data_entry, .sub_category_entry {
     width:100%;
