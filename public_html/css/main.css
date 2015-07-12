@@ -735,6 +735,7 @@ td, th {
     #sidebar{
         width:300px;
         height:100%;
+        overflow-y: scroll;
         position:absolute;
         left:-300px;
         top:0;
@@ -777,6 +778,12 @@ td, th {
     color:#555;
     border-radius:5px;
     position:relative;
+}
+@media(max-width:991px){
+    #bazarBandeau {
+        border-radius:0px;
+        border:none;
+    }
 }
 #bazarBandeau span {
     color:#444;
@@ -1188,10 +1195,10 @@ html,body {
 @media(min-width:680px){
     #bazar_footer{
         padding:10px 10px;
-    
+
         /* position: absolute; */
         /* bottom: 0; */
-}
+    }
 }
 @media(max-width:991px){
     #bazar_footer{
