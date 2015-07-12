@@ -73,7 +73,7 @@ td, th {
     padding:0px;
     border-collapse:collapse;
     width:100%;
-    min-height: 100%;
+    /* min-height: 100%; */
 }
 .container-topHeader{
     width:95%;
@@ -826,6 +826,7 @@ td, th {
     text-decoration:none;
     color:#555;
     width:100%;
+    height: 100%;
 }
 #annonces_une {
     position:relative;
@@ -995,9 +996,11 @@ td, th {
 .annonces_last_entry_image_pic, .search_result_entry_img_pic {
     width:100%;
     height:100%;
+    /* margin-bottom: -1px; */
+    /* margin-top: -1px; */
     overflow:hidden;
     line-height:90px;
-    box-shadow:1px 0 0 0 #E0E0E0, 0 1px 0 0 #E0E0E0, 1px 1px 0 0 #E0E0E0, 1px 0 0 0 #E0E0E0 inset, 0 1px 0 0 #E0E0E0 inset;
+    box-shadow: 1px 1px 0 0 #E0E0E0;
     text-align:center;
 }
 .annonces_last_entry_desc, .search_result_entry_desc {
@@ -1078,7 +1081,7 @@ annonces_last_entry_content, .search_result_entry_content{
     margin-top:-2px;
 }
 .fillHeight {
-    height:100%;
+    height: 100%;
     width:auto;
     display:inline-block;
 }
@@ -1091,8 +1094,7 @@ annonces_last_entry_content, .search_result_entry_content{
 }
 /* Needed for resizeAllImages function */
 .search_result_entry_image_pic {
-    height:90px;
-    width:90px;
+    height: 100%;
 }
 /* Button */
 .annonce_button {
@@ -1113,6 +1115,9 @@ annonces_last_entry_content, .search_result_entry_content{
 /* Pages */
 #pages {
     margin-bottom:19px;
+    /* position: absolute; */
+    /* right: 0; */
+    /* bottom: 0; */
 }
 @media(max-width:679px){
     #pages{
@@ -1147,11 +1152,13 @@ html,body {
     overflow-x:hidden;
 }
 #bazar_footer {
-    /* width:100%; */
-    height:58px;
+    width:100%;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    /* height:58px; */
     /* position: initial; */
     border-top:1px solid #dedede;
-    clear: both;
+    /* clear: both; */
     background:#f8f8f8;
     display: block;
     padding-top:23px;
