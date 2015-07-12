@@ -73,6 +73,7 @@ td, th {
     padding:0px;
     border-collapse:collapse;
     width:100%;
+    overflow: hidden;
     /* min-height: 100%; */
 }
 .container-topHeader{
