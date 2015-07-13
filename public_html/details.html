@@ -7,6 +7,7 @@
         <link rel="icon" href="img/icon/favicon.gif" type="image/gif"/>
         <style type="text/css"></style>
         <link rel="stylesheet" type="text/css" href="css/layout-grid.css"/>
+        <link rel="stylesheet" type="text/css" href="css/flickity.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <link rel="stylesheet" type="text/css" href="css/annonce.css"/>
         <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
@@ -948,11 +949,11 @@
                     <div id="content">
                         <div class="clearfix">
                             <div id="bazarBandeau" class="phone-12">
-                                <span id="bazarBandeauBack" onclick="history.go(-1);">&lt;&nbsp; retour vers la liste</span>
+                                <span id="bazarBandeauBack" onclick="history.go( - 1);">&lt;&nbsp; retour vers la liste</span>
                             </div>
                         </div>
                         <div class="clearfix">
-                            <div id="annonce_left" class="phone-12 tab-8">
+                            <div id="annonce_left">
                                 <div class="annonce_entry">
                                     <div class="annonce_entry_top">
                                         <div class="annonce_entry_top_title">Appartement - Wasserbillig</div>
@@ -965,61 +966,71 @@
                                                 <img id="annonce_entry_image_pic_image" class="bazar_image fillHeight" border="0" src="img/details/Bazar20150611092154-304089172.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                             </div>
                                         </a>
-                                        <div class="annonce_entry_image_leftarrow"><div id="annonces_une_left" onclick="previousPanel(1, 'annonce_entry_image_thumbnails')"></div></div>
-                                        <div id="annonce_entry_image_container">
-                                            <div class="annonce_entry_image_thumbnails" style="margin-left: 0%;">
+                                        <div id="annonce_entry_image_container" class="main-gallery">
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-1303455736.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-1303455736.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-35005211.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-35005211.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-521595368.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-521595368.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-294702567.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-294702567.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="annonce_entry_image_thumbnails" style="margin-left: 100%;">
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-1726956429.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-1726956429.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-336465782.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-336465782.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-861021530.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-861021530.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
+                                            </div>
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-278722862.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillHeight" src="img/details/minimize/Bazar20150611092154-278722862.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="annonce_entry_image_thumbnails" style="margin-left: 200%;">
+                                            <div class="gallery-cell">
                                                 <a href="img/details/minimize/Bazar20150611092154-233665123.jpg" rel="lightbox[bazar]">
-                                                    <div class="annonce_entry_image_thumbnails_pic">
+                                                    <div class="annonce_entry_image_thumbnails_pic align bottom center">
                                                         <img class="bazar_image fillWidth" src="img/details/minimize/Bazar20150611092154-233665123.jpg" alt="Appartement - Wasserbillig - Bazar.lu" title="Appartement - Wasserbillig">
                                                     </div>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="annonce_entry_image_rightarrow"><div id="annonces_une_right" onclick="nextPanel(1, 'annonce_entry_image_thumbnails', 0)"></div></div>
                                     </div>
                                     <div class="crlf"></div>
                                     <div id="annonce_info">
@@ -1227,7 +1238,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="annonce_right" class="phone-12 tab-4 pull-right">
+                            <div id="annonce_right">
                                 <div class="annonces-right-container">
                                     <div id="annonce_buttons">
                                         <div id="annonce_contact" class="annonce_button" onclick="contactUserOffline(1411);">
@@ -1310,80 +1321,93 @@
         <script src="js/slide.js" type="text/javascript"></script>
         <script src="js/flickity.pkgd.min.js" type="text/javascript"></script>
         <script>
-                                    $(function () {
+                                            $(function () {
 
-                                        //Au chargement, on replace les éléments en fonction de la résolution
-                                        changeToMobile();
-                                        resizeInput();
-
-                                        $('#bazarSearch_choice').change(function () {
-                                            resizeSelect($(this));
-                                        });
-
-                                        $(window).resize(function () {
-                                            //Au resize, on replace les éléments pour la version mobile ou la version desktop
-                                            if (!$('input').is(':focus')) {
+                                                //Au chargement, on replace les éléments en fonction de la résolution
                                                 changeToMobile();
-                                            }
-                                            resizeInput();
-                                            resizeOverlay();
-                                        });
+                                                resizeInput();
+                                                $('#bazarSearch_choice').change(function () {
+                                                    resizeSelect($(this));
+                                                });
+                                                $(window).resize(function () {
+                                                    //Au resize, on replace les éléments pour la version mobile ou la version desktop
+                                                    if (!$('input').is(':focus')) {
+                                                        changeToMobile();
+                                                    }
+                                                    resizeInput();
+                                                    resizeOverlay();
+                                                    if (viewport().width <= 810) {
+                                                        if ($('#annonce_entry_image_pic_image.fillHeight')) {
+                                                            $('#annonce_entry_image_pic_image').removeClass('fillHeight');
+                                                            $('#annonce_entry_image_pic_image').addClass('fillWidth');
+                                                        }
+                                                    } else {
+                                                        if ($('#annonce_entry_image_pic_image.fillWidth')) {
+                                                            $('#annonce_entry_image_pic_image').removeClass('fillWidth');
+                                                            $('#annonce_entry_image_pic_image').addClass('fillHeight');
+                                                        }
+                                                    }
+                                                });
+                                                $('#bazarBandeau_search_arrangeby_select').change(function () {
+                                                    $('#search_form').submit();
+                                                });
+                                                function goTo(page) {
+                                                    $('#search_page').val(page);
+                                                    $('#search_form').submit();
+                                                }
 
-                                        $('#bazarBandeau_search_arrangeby_select').change(function () {
-                                            $('#search_form').submit();
-                                        });
-                                        function goTo(page) {
-                                            $('#search_page').val(page);
-                                            $('#search_form').submit();
-                                        }
-
-                                        //Au clic sur le bouton recherche, on ouvre le panneau avec le champ de recherche
-                                        $('#search').click(function (event) {
-                                            event.stopPropagation();
-                                            $('#bazarInputs').toggleClass('open');
-                                        });
-                                        //au clic sur le bouton catégorie, on ouvre le sidebar et on affiche l'overlay noir
-                                        $('#categorie').click('click', function (event) {
-                                            event.stopPropagation();
-                                            $('#sidebar, #categorie, #overlay').toggleClass('open');
-                                        });
-                                        //ferme le menu catégorie sur mobile quand on clic ailleurs
-                                        $('html').click(function (event) {
-                                            var element = $('#sidebar, #categorie, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
-                                            if (!element.is(event.target) && element.has(event.target).length === 0) {
-                                                $('#sidebar.open, #categorie.open, #overlay').removeClass('open');
-
-                                            }
-                                        });
-
-                                        initPanels(1, 'annonces_une_block');
-
-                                        $('#nMenu_dropdown').click(function (event) {
-                                            event.stopPropagation();
-                                            $('#nMenu_dropdown+.dropdown').toggleClass('open');
-                                        });
-                                        $('html').click(function (event) {
-                                            var element = $('#nMenu_dropdown');
-                                            if (!element.is(event.target) && element.has(event.target).length === 0) {
-                                                $('.dropdown.active').removeClass('open');
-                                            }
-                                        });
-                                        $('#bazarHeader_profil').click(function (e) {
-                                            showProfil();
-                                            e.stopPropagation();
-                                        });
-                                        $('#profil_bottom_layer_username').click(function (e) {
-                                            hideProfil();
-                                            e.stopPropagation();
-                                        });
-                                        $(document).click(function () {
-                                            hideProfil();
-                                        });
-
-                                        //Overlay à l'affichage du menu catégorie en mobile
-                                        $('#content').append("<div id='overlay' class='hidden display-tab display-phone'></div>");
-                                        resizeOverlay();
-                                    });
+                                                //Au clic sur le bouton recherche, on ouvre le panneau avec le champ de recherche
+                                                $('#search').click(function (event) {
+                                                    event.stopPropagation();
+                                                    $('#bazarInputs').toggleClass('open');
+                                                });
+                                                //au clic sur le bouton catégorie, on ouvre le sidebar et on affiche l'overlay noir
+                                                $('#categorie').click('click', function (event) {
+                                                    event.stopPropagation();
+                                                    $('#sidebar, #categorie, #overlay').toggleClass('open');
+                                                });
+                                                //ferme le menu catégorie sur mobile quand on clic ailleurs
+                                                $('html').click(function (event) {
+                                                    var element = $('#sidebar, #categorie, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
+                                                    if (!element.is(event.target) && element.has(event.target).length === 0) {
+                                                        $('#sidebar.open, #categorie.open, #overlay').removeClass('open');
+                                                    }
+                                                });
+                                                initPanels(1, 'annonces_une_block');
+                                                $('#nMenu_dropdown').click(function (event) {
+                                                    event.stopPropagation();
+                                                    $('#nMenu_dropdown+.dropdown').toggleClass('open');
+                                                });
+                                                $('html').click(function (event) {
+                                                    var element = $('#nMenu_dropdown');
+                                                    if (!element.is(event.target) && element.has(event.target).length === 0) {
+                                                        $('.dropdown.active').removeClass('open');
+                                                    }
+                                                });
+                                                $('#bazarHeader_profil').click(function (e) {
+                                                    showProfil();
+                                                    e.stopPropagation();
+                                                });
+                                                $('#profil_bottom_layer_username').click(function (e) {
+                                                    hideProfil();
+                                                    e.stopPropagation();
+                                                });
+                                                $(document).click(function () {
+                                                    hideProfil();
+                                                });
+                                                $('.main-gallery').flickity({
+                                                    // options
+                                                    cellAlign: 'left',
+                                                    freeScroll: true,
+                                                    wrapAround: true,
+                                                    setGallerySize: false,
+                                                    pageDots: false,
+                                                    arrowShape: "M51.582,82.766L20.135,54.08l31.419-28.661c2.191-1.856,2.467-5.149,0.612-7.342c-0.992-1.173-2.443-1.847-3.979-1.847c-1.229,0-2.423,0.439-3.39,1.259L9.06,50.09c-0.733,0.62-1.277,1.434-1.583,2.375l-0.032,0.09c-0.074,0.251-0.122,0.506-0.165,0.788c-0.016,0.075-0.029,0.149-0.036,0.227c-0.013,0.137-0.013,0.274-0.01,0.412v0.196c-0.002,0.138-0.002,0.275,0.011,0.415c0.006,0.075,0.021,0.148,0.042,0.247c0.04,0.26,0.085,0.518,0.162,0.764l0.047,0.145c0.303,0.908,0.841,1.708,1.537,2.3l35.793,32.647c0.938,0.795,2.134,1.233,3.362,1.233c1.537,0,2.986-0.673,3.979-1.845c0.9-1.063,1.331-2.412,1.215-3.8C53.264,84.898,52.616,83.639,51.582,82.766z"
+                                                });
+                                                //Overlay à l'affichage du menu catégorie en mobile
+                                                $('#content').append("<div id='overlay' class='hidden display-tab display-phone'></div>");
+                                                resizeOverlay();
+                                            });
         </script>
     </body>
 </html>
