@@ -12,12 +12,12 @@
 }
 
 #annonce_left {
-	width: 640px;
+	/* width: 640px; */
 }
 
 #annonce_right {
 	text-align: center;
-	width: 350px;
+	/* width: 350px; */
 	padding-top: 0px;
 }
 
@@ -27,14 +27,14 @@
 
 .annonce_entry_top_title {
 	float: left;
-	width: 85%;
+	width: 75%;
 	font-size: 15pt;
 	font-weight: bold;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	/* ToDo */
-	width: 480px;
+	/* width: 480px; */
 	height: 60px;
 	line-height: 60px;
 	margin: 0px;
@@ -48,8 +48,11 @@
 .annonce_entry_top_date {
 	font-size: 10pt;
 	position: absolute;
+	width: 25%;
 	right: 0px;
 	bottom: 5px;
+	text-align: right;
+	/* float: right; */
 }
 
 .annonce_entry_images {
@@ -127,7 +130,7 @@
 }
 
 #annonce_right, #annonce_left {
-	vertical-align: top;
+	/* vertical-align: top; */
 }
 
 .crlf {
@@ -137,7 +140,8 @@
 #annonce_price {
 	font-weight: bold;
 	padding: 25px 0;
-	margin-left: 35px;
+	width: 100%;
+	/* margin-left: 35px; */
 }
 
 #annonce_price_highlight, #annonce_price_highlight .bazar_free, #annonce_price_highlight .bazar_negotiate {
@@ -179,7 +183,7 @@
 #annonce_all {
 	color: #FF87BF;
 	text-decoration: underline;
-	margin-left: 35px;
+	/* margin-left: 35px; */
 	padding: 5px 0 25px;
 	cursor: pointer;
 	margin-top: 10px;
@@ -200,7 +204,7 @@
 }
 
 #annonce_options {
-	margin-left: 80px;
+	margin-left: 10%;
 	margin-top: 35px;
 	text-align: left;
 }
@@ -217,10 +221,12 @@
 #annonce_contact, #annonce_phone {
 	width: 145px;
 	margin-top: 0px;
+	float: right;
 }
 
 #annonce_contact {
-	margin-left: 35px;
+	/* margin-left: 35px; */
+	float: left;
 }
 
 .annonce_option_image {
@@ -235,6 +241,7 @@
 
 .annonce_entry_description_long {
 	margin-bottom: 50px;
+	width: 100%;
 }
 
 .annonce_option_image_container {
@@ -250,13 +257,19 @@
 .annonce_attribute_entry {
 	vertical-align: top;
 	margin: 10px 0 20px 0;
-	width: 430px;
+	width: 74.39446366782007%;
 }
 
 .annonce_attribute_text {
 	font-weight: bold;
 	margin-bottom: 20px;
 	font-size: 12pt;
+	width: 100%;
+}
+@media(max-width: 679px){
+    .annonce_attribute_entry{
+        width: 100%;
+    }
 }
 
 .annonce_attribute_value {
@@ -309,6 +322,7 @@
 	border: 1px solid #ddd;
 	padding: 10px 30px;
 	font-size: 11pt;
+	width: 100%;
 }
 
 .annonce_subtitle {
@@ -318,8 +332,8 @@
 
 .annonce_attribute {
 	display: inline-block;
-	width: 210px;
-	vertical-align: top;
+	width: 48.83720930232558%;
+	/* vertical-align: top; */
 	margin-bottom: 10px;
 }
 
@@ -328,7 +342,8 @@
 }
 
 #annonce_user {
-	margin-left: 35px;
+	/* margin-left: 35px; */
+	width: 100%;
 	min-height: 50px;
 }
 
@@ -337,7 +352,7 @@
 }
 
 #annonce_user_container {
-	width: 250px;
+	width: 79.36507936507937%;
 	margin: 0 auto;
 	border: 1px solid #ddd;
 	border-radius: 5px;
@@ -346,7 +361,7 @@
 
 #annonce_buttons {
 	height: 45px;
-	width: 350px;
+	width: 100%;
 	margin: 0 auto;
 	padding-top: 20px;
 }
@@ -380,4 +395,12 @@
 
 #annonce_attribute_list_entries td {
 	vertical-align: top;
+}
+
+.annonces-right-container{
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 90%;
+    
 }
