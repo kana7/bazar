@@ -27,6 +27,7 @@ img {
 a{
     text-decoration:none;
     outline:0;
+    /* display: inline; */
 }
 @font-face {
     font-family:neo_light;
@@ -1090,7 +1091,7 @@ annonces_last_entry_content, .search_result_entry_content{
 }
 .fillHeight {
     height: 100%;
-    width:auto;
+    /* width:auto; */
     display:inline-block;
 }
 .full_width {
