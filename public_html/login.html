@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bazar.lu</title>
+        <link rel="icon" href="img/icon/favicon.gif" type="image/gif">
+        <link rel="stylesheet" type="text/css" href="css/layout-grid.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header" class="clearfix">
+                <div id="bazarHeader" class="phone-12">
+                    <script src="js/googletracking_Bazar.js" type="text/javascript"></script>
+                    <div id="bazarHeader_top_menu" class="phone-12 hidden-phone hidden-tab">
+                        <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none; position: relative; z-index: 7;">
+                            <li style="display: inline-block;"><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
+                            <li style="display: inline-block;"><div class="bazar_top_menu_separator">&nbsp;</div></li>
+                            <li style="display: inline-block;"><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
+
+                            <!--<td><div class="bazar_top_menu_separator">&nbsp;</div></td>
+                            <td>
+                            <div id="bazarCountries">
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=2"><img src="/images/france_selected.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=1"><img src="/images/british.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=3"><img src="/images/germany.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=5"><img src="/images/portugal.png" /></a>
+                            </div>
+                            </td>-->
+                        </ul>
+                    </div>
+                    <button id="nMenu_dropdown" class="display-phone display-tab hidden">
+                        <i class="fa fa-sort-desc"></i>
+                    </button>
+                    <ul class="dropdown">
+                        <li class="hidden-tab">
+                            <div id="logoLuxOnline" style="text-align: left; padding-left: 20px;"><img src="img/icon/Logo_LOL_bleu_baseline.svg" alt="logo Luxembourg Online"/></div>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                <div id="cinemaOnline">Cinema</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                <div id="newsOnline">High-Tech</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                <div id="guidetvOnline">Guide TV</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab sorties">
+                            <a href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                <div id="sortiesOnline">Sorties</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="bazarHeader_top" class="hidden-phone">
+                        <div class="container-bazar" style="height: 100%;">
+                            <div class="row">
+                                <ul id="nMenuContainer" class="clearfix tab-12 desk-10">
+                                    <li id="nMenuLogo" class="clearfix">
+                                        <a href="http://www.internet.lu" target="_blank">
+                                            <img border="0" class="menuIconImg" src="img/icon/logoPortail.png" alt="Luxembourg Online">
+                                            <h1 id="logo_title">cinema Luxembourg</h1>
+                                        </a>
+                                    </li>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink  hidden-phone" href="http://www.bazar.lu/Scripts/sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
+                                        <li class="nMenuEntry nMenuSelected clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="bazarOnline">Bazar.lu</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="cinemaOnline">Cinema</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="newsOnline">High-Tech</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="guidetvOnline">Guide TV</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink sorties hidden-phone" href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="sortiesOnline">Sorties</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator sorties hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bazarHeader_bottom" class="container-bazar hidden display-phone">
+                        <div class="clearfix">
+                            <div id="bazarLogo">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs" style="text-align: center; width: 100%;">
+                                    <img id="bazarLogo_image" src="img/icon/Logo_bazar.lu.svg">
+                                </a>
+                            </div>
+                            <div id="buttonList" class="phone-12 tab-7 hidden">
+                                <div>
+                                    <button id="categorie" class="mobile_button" style="margin-right: 20px; margin-left: 7px;">
+                                        <img src="img/icon/categorie.svg" alt="voir catégorie" title="voir catégorie"/>
+                                    </button>
+                                    <button id="search" class="mobile_button" style="margin-right: 10px;">
+                                        <img src="img/icon/recherche.svg" alt="rechercher une annonce" title="rechercher une annonce"/>
+                                    </button>
+                                    <button id="insert" class="mobile_button" style="margin-right: 5px;">
+                                        <img src="img/icon/inserer.svg" alt="ajout annonce" title="ajouter une annonce"/>
+                                    </button>
+                                    <button id="connect" class="mobile_button">
+                                        <img src="img/icon/connexion.svg" alt="connexion" title="se connecter"/>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6">
+                                <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                                    <div id="bazarSearch_container_left" class="pull-left">
+                                        <div id="bazarSearch_combo" style="width: 100%;">
+                                            <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
+                                            <select id="bazarSearch_choice" class="select" style="width: 100%;" name="category">
+                                                <option value="0">Tous</option>
+                                                <option value="1">Véhicules</option>
+                                                <option value="19">Immobilier</option>
+                                                <option value="30">Multimédia</option>
+                                                <option value="48">Matériel professionnel</option>
+                                                <option value="38">Enfance</option>
+                                                <option value="52">Sport et loisirs</option>
+                                                <option value="62">Maison</option>
+                                                <option value="42">Mode</option>
+                                                <option value="115">Beauté, Santé et Alimentation</option>
+                                                <option value="70">Emploi et services</option>
+                                                <option value="78">Rencontre</option>
+                                                <option value="84">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="bazarSearch_container_middle" class="pull-left">
+                                        <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
+                                    </div>
+                                    <div id="bazarSearch_container_right" class="pull-left align middle spread">
+                                        <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()" type="submit">
+                                            <img id="bazarSearch_button_image" src="img/icon/recherche_icon.svg">
+                                        </button>
+                                        <div id="bazarSearch_container_advanced" class="hidden-phone">
+                                            <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="bazar_newAnnonce" class="hidden-phone hidden-tab desk-3 pull-right">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
+                                    <button id="bazar_newAnnonce_button">insérer une annonce</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body" class="container-bazar">
+                <div id="bazarBody" class="clearfix">
+                    <div id="bazar_login">
+                        <div id="bazar_login_image" class="hidden-phone hidden-tab align center"><img src="img/icon/Logo_bazar.lu.svg" style="width: 100%; height: auto; position: relative; left: 18px;"></div>
+                        <div id="bazar_login_text"></div>
+                        <form id="bazar_login_form" action="sql.exe?SqlDB=bazar&amp;Sql=LoginClient_Login.phs" method="POST" name="bazar_login">
+                            <input class="bazar_login_input" type="text" name="_Username" value="" placeholder="Nom d'utilisateur">
+                            <input class="bazar_login_input" type="password" name="_Password" value="" placeholder="Mot de passe">
+                            <input type="hidden" name="ErrorScript" value="LoginError.phs">
+                            <input type="hidden" name="NextScript" value="Bazar.phs">
+                            <input type="hidden" name="_Login" value="1">
+                            <button class="bazar_login_button" name="login_button" onclick="bazarLogin();">Connexion</button>
+                            <a class="bazar_link login_link" href="sql.exe?SqlDB=bazar&amp;Sql=PasswordForgotten.phs">Mot de passe oublié?</a><br>
+                            <a class="bazar_link login_link" href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs">Je n'ai pas encore de compte</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="bazar_footer" style="position: absolute; bottom: 0px;">
+                <div class="container-bazar" style="height: 100%;">
+                    <div id="bazar_footer_content" class="clearfix">
+                        <div id="bazar_copy" class="phone-12 tab-4">Copyright © 2015 Luxembourg Online S.A.</div>
+                        <div id="bazar_footer_links" class="pull-right phone-12 tab-8">
+                            <ul class="bazar_footer_link">
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="#" target="_blank">Mentions légales</a>
+                                </li>
+                                <li class="bazar_footer_section"><span class="bazar_footer_link_separator">|</span></li>
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="mailto:bazar@bazar.lu" id="bazar_footer_link_email">Contact: bazar@bazar.lu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script async="" src="//www.google-analytics.com/analytics.js"></script>
+        <script src="http://jquery.bluechameleon.com/js/jquery" type="text/javascript"></script>
+        <script src="http://jquery.bluechameleon.com/js/jquery-ui" type="text/javascript"></script>
+        <script src="js/bazar.js" type="text/javascript"></script>
+        <script src="js/slide.js" type="text/javascript"></script>
+        <script>
+
+                                $(function () {
+                                    //initPanels(1, 'annonces_une_block');
+                                    $('#nMenu_dropdown').click(function (event) {
+                                        event.stopPropagation();
+                                        $('#nMenu_dropdown+.dropdown').toggleClass('open');
+                                    });
+                                    $('html').click(function (event) {
+                                        var element = $('#nMenu_dropdown');
+                                        if (!element.is(event.target) && element.has(event.target).length === 0) {
+                                            $('.dropdown.active').removeClass('open');
+                                        }
+                                    });
+
+
+
+                                });
+        </script>
+    </body>
+</html>
