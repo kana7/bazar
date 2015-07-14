@@ -165,3 +165,33 @@ var waitForFinalEvent = (function () {
         timers[uniqueId] = setTimeout(callback, ms);
     };
 });
+
+
+//inscription
+
+function addFile(id) {
+    var element = $('#' + id);
+    element.click();
+}
+function deleteFile(button, id) {
+    /* reset input file */
+    $('#' + id).val('');
+    $('#' + id).attr('src', "/images/add.png");
+    $('#' + id).parent().removeClass('borderLess');
+    $('#' + id + "_data").val("");
+    /* remove delete button */
+    $('#' + button).remove();
+}
+function Url2Thumbnail(input, id) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#' + id).attr('src', e.target.result)
+                    .css('max-width', '150px');
+            $('#' + id).parent().addClass('borderLess');
+            /* add data to hidden input */
+            $('#' + id + "_data").val(e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}

@@ -89,6 +89,7 @@ td, th {
     background-color:#FFFFFF;
     z-index: 6;
     margin-bottom:25px;
+    /* border-bottom: 1px solid #D5D5D5; */
 }
 @media(max-width:991px){
     #bazarHeader{
@@ -539,7 +540,7 @@ td, th {
         display:-webkit-flex;
         -webkit-flex-direction:row;
         align-items:center;
-        -webkit-align-items:center;
+        -webkit-align-items: center;
         justify-content:space-between;
         -webkit-justify-content:space-between;
         padding:0px 15px;
@@ -1293,6 +1294,8 @@ html,body {
     text-align:center;
     z-index:7;
 }
+
+button#nMenu_dropdown {}
 @media(min-width:711px){
     #nMenu_dropdown{
         display:none !important;

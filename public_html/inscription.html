@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bazar.lu</title>
+        <link rel="icon" href="img/icon/favicon.gif" type="image/gif">
+        <link rel="stylesheet" type="text/css" href="css/layout-grid.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/newclient.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header" class="clearfix">
+                <div id="bazarHeader" class="phone-12">
+                    <script src="js/googletracking_Bazar.js" type="text/javascript"></script>
+                    <div id="bazarHeader_top_menu" class="phone-12 hidden-phone hidden-tab">
+                        <ul class="pull-right" style="height: 100%; margin: 0;list-style-type: none; position: relative; z-index: 7;">
+                            <li style="display: inline-block;"><a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs"><div id="bazarConnexion">Se connecter</div></a></li>
+                            <li style="display: inline-block;"><div class="bazar_top_menu_separator">&nbsp;</div></li>
+                            <li style="display: inline-block;"><a href="sql.exe?SqlDB=bazar&amp;Sql=NewClient.phs"><div id="bazarInscription">S'inscrire</div></a></li>
+
+                            <!--<td><div class="bazar_top_menu_separator">&nbsp;</div></td>
+                            <td>
+                            <div id="bazarCountries">
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=2"><img src="/images/france_selected.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=1"><img src="/images/british.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=3"><img src="/images/germany.png" /></a>
+                            <a href="sql.exe?SqlDB=bazar&Sql=switchLanguage.phs&language=5"><img src="/images/portugal.png" /></a>
+                            </div>
+                            </td>-->
+                        </ul>
+                    </div>
+                    <button id="nMenu_dropdown" class="display-phone display-tab hidden">
+                        <i class="fa fa-sort-desc"></i>
+                    </button>
+                    <ul class="dropdown">
+                        <li class="hidden-tab">
+                            <div id="logoLuxOnline" style="text-align: left; padding-left: 20px;"><img src="img/icon/Logo_LOL_bleu_baseline.svg" alt="logo Luxembourg Online"/></div>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                <div id="cinemaOnline">Cinema</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                <div id="newsOnline">High-Tech</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab">
+                            <a href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                <div id="guidetvOnline">Guide TV</div>
+                            </a>
+                        </li>
+                        <li class="hidden-tab sorties">
+                            <a href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                <div id="sortiesOnline">Sorties</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="bazarHeader_top" class="hidden-phone">
+                        <div class="container-bazar" style="height: 100%;">
+                            <div class="row">
+                                <ul id="nMenuContainer" class="clearfix tab-12 desk-10">
+                                    <li id="nMenuLogo" class="clearfix">
+                                        <a href="http://www.internet.lu" target="_blank">
+                                            <img border="0" class="menuIconImg" src="img/icon/logoPortail.png" alt="Luxembourg Online">
+                                            <h1 id="logo_title">cinema Luxembourg</h1>
+                                        </a>
+                                    </li>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink  hidden-phone" href="http://www.bazar.lu/Scripts/sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs">
+                                        <li class="nMenuEntry nMenuSelected clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="bazarOnline">Bazar.lu</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.cinema.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Cine.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="cinemaOnline">Cinema</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.high-tech.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=Tech.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="newsOnline">High-Tech</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink hidden-phone" href="http://www.programme-tv.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=GuideTV.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="guidetvOnline">Guide TV</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                    <a class="nMenuLink sorties hidden-phone" href="http://www.sortir-luxembourg.online.lu/Scripts/sql.exe?SqlDB=loifo&amp;Sql=SortiesLuxembourg.phs">
+                                        <li class="nMenuEntry clearfix">
+                                            <div class="siteLogo">
+                                                <div class="onlineMenu" id="sortiesOnline">Sorties</div>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <li class="nMenuSeparator sorties hidden-phone"><img class="nMenuSeparatorImage" border="0" src="img/icon/sep.png"></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bazarHeader_bottom" class="container-bazar">
+                        <div class="clearfix">
+                            <div id="bazarLogo">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs" style="text-align: center; width: 100%;">
+                                    <img id="bazarLogo_image" src="img/icon/Logo_bazar.lu.svg">
+                                </a>
+                            </div>
+                            <div id="buttonList" class="phone-12 tab-7 display-phone display-tab-inline-block">
+                                <div>
+                                    <button id="categorie" class="mobile_button hidden" style="margin-right: 20px; margin-left: 7px;">
+                                        <img src="img/icon/categorie.svg" alt="voir catégorie" title="voir catégorie"/>
+                                    </button>
+                                    <button id="search" class="mobile_button" style="margin-right: 10px;">
+                                        <img src="img/icon/recherche.svg" alt="rechercher une annonce" title="rechercher une annonce"/>
+                                    </button>
+                                    <button id="insert" class="mobile_button" style="margin-right: 5px;">
+                                        <img src="img/icon/inserer.svg" alt="ajout annonce" title="ajouter une annonce"/>
+                                    </button>
+                                    <button id="connect" class="mobile_button">
+                                        <img src="img/icon/connexion.svg" alt="connexion" title="se connecter"/>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="bazarInputs" class="phone-12 desk-push-1 desk-6">
+                                <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                                    <div id="bazarSearch_container_left" class="pull-left">
+                                        <div id="bazarSearch_combo" style="width: 100%;">
+                                            <img id="bazarSearch_combo_image" src="img/icon/dropdownmenu.png">
+                                            <select id="bazarSearch_choice" class="select" style="width: 100%;" name="category">
+                                                <option value="0">Tous</option>
+                                                <option value="1">Véhicules</option>
+                                                <option value="19">Immobilier</option>
+                                                <option value="30">Multimédia</option>
+                                                <option value="48">Matériel professionnel</option>
+                                                <option value="38">Enfance</option>
+                                                <option value="52">Sport et loisirs</option>
+                                                <option value="62">Maison</option>
+                                                <option value="42">Mode</option>
+                                                <option value="115">Beauté, Santé et Alimentation</option>
+                                                <option value="70">Emploi et services</option>
+                                                <option value="78">Rencontre</option>
+                                                <option value="84">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="bazarSearch_container_middle" class="pull-left">
+                                        <input id="bazarSearch_text" type="text" name="_name" value="" placeholder="Chercher une annonce" style="width: 100%;">
+                                    </div>
+                                    <div id="bazarSearch_container_right" class="pull-left align middle spread">
+                                        <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()" type="submit">
+                                            <img id="bazarSearch_button_image" src="img/icon/recherche_icon.svg">
+                                        </button>
+                                        <div id="bazarSearch_container_advanced" class="hidden-phone">
+                                            <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="bazar_newAnnonce" class="hidden-phone hidden-tab desk-3 pull-right">
+                                <a href="sql.exe?SqlDB=bazar&amp;Sql=Login.phs">
+                                    <button id="bazar_newAnnonce_button">insérer une annonce</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body" class="container-bazar">
+                <div id="bazarBody" class="clearfix">
+                    <div id="content">
+                        <div id="add_client" class="phone-12">
+                            <form id="add_client_form" action="sql.exe?SqlDB=bazar&amp;Sql=InsertClient.phs" method="POST">
+                                <div class="add_client_title">Créez votre compte</div>
+                                <div id="add_client_required_fields">(* champs obligatoires)</div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Nom&nbsp;*</div>
+                                    <input id="add_client_name" class="add_client_input" name="client_name" type="text" maxlength="200">
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Prénom&nbsp;*</div>
+                                    <input id="add_client_prenom" class="add_client_input" name="client_prenom" type="text" maxlength="70">
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Ville&nbsp;*</div>
+                                    <input id="add_client_city" class="add_client_input" name="client_city" type="text" maxlength="250">
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Pays&nbsp;*</div>
+                                    <select id="add_client_country" class="add_client_select" name="client_country">
+                                        <option class="add_client_select_option" value="73">Afghanistan</option>
+                                        <option class="add_client_select_option" value="37">Albanie</option>
+                                        <option class="add_client_select_option" value="50">Algérie</option>
+                                        <option class="add_client_select_option" value="39">Angola</option>
+                                        <option class="add_client_select_option" value="36">Argentine</option>
+                                        <option class="add_client_select_option" value="38">Arménie</option>
+                                        <option class="add_client_select_option" value="40">Australie</option>
+                                        <option class="add_client_select_option" value="27">Autriche</option>
+                                        <option class="add_client_select_option" value="1">Belgique</option>
+                                        <option class="add_client_select_option" value="41">Brésil</option>
+                                        <option class="add_client_select_option" value="79">Bulgarie</option>
+                                        <option class="add_client_select_option" value="60">Cambodge</option>
+                                        <option class="add_client_select_option" value="44">Cameroun</option>
+                                        <option class="add_client_select_option" value="42">Canada</option>
+                                        <option class="add_client_select_option" value="47">Cap Vert</option>
+                                        <option class="add_client_select_option" value="43">Chili</option>
+                                        <option class="add_client_select_option" value="35">Chine</option>
+                                        <option class="add_client_select_option" value="71">Congo</option>
+                                        <option class="add_client_select_option" value="45">Costa Rica</option>
+                                        <option class="add_client_select_option" value="55">Croatie</option>
+                                        <option class="add_client_select_option" value="46">Cuba</option>
+                                        <option class="add_client_select_option" value="48">République Tchèque</option>
+                                        <option class="add_client_select_option" value="14">Danemark</option>
+                                        <option class="add_client_select_option" value="49">République Dominicaine</option>
+                                        <option class="add_client_select_option" value="51">Equateur</option>
+                                        <option class="add_client_select_option" value="52">Egypte</option>
+                                        <option class="add_client_select_option" value="26">Finlande</option>
+                                        <option class="add_client_select_option" value="3">France</option>
+                                        <option class="add_client_select_option" value="2">Allemagne</option>
+                                        <option class="add_client_select_option" value="9">Grande-Bretagne</option>
+                                        <option class="add_client_select_option" value="15">Grèce</option>
+                                        <option class="add_client_select_option" value="53">Guatemala</option>
+                                        <option class="add_client_select_option" value="54">Honduras</option>
+                                        <option class="add_client_select_option" value="21">Hongrie</option>
+                                        <option class="add_client_select_option" value="22">Islande</option>
+                                        <option class="add_client_select_option" value="57">Inde</option>
+                                        <option class="add_client_select_option" value="32">Iran</option>
+                                        <option class="add_client_select_option" value="58">Irak</option>
+                                        <option class="add_client_select_option" value="12">Irlande</option>
+                                        <option class="add_client_select_option" value="56">Israël</option>
+                                        <option class="add_client_select_option" value="23">Italie</option>
+                                        <option class="add_client_select_option" value="59">Jamaïque</option>
+                                        <option class="add_client_select_option" value="17">Japon</option>
+                                        <option class="add_client_select_option" value="61">Corée</option>
+                                        <option class="add_client_select_option" value="62">Liban</option>
+                                        <option class="add_client_select_option" value="78">lettonie</option>
+                                        <option class="add_client_select_option" value="4" selected="">Luxembourg</option>
+                                        <option class="add_client_select_option" value="64">Mexique</option>
+                                        <option class="add_client_select_option" value="63">Maroc</option>
+                                        <option class="add_client_select_option" value="5">Pays-Bas</option>
+                                        <option class="add_client_select_option" value="65">Nouvelle-Zélande</option>
+                                        <option class="add_client_select_option" value="20">Norvège</option>
+                                        <option class="add_client_select_option" value="0">Autre pays</option>
+                                        <option class="add_client_select_option" value="74">Paraguay</option>
+                                        <option class="add_client_select_option" value="76">Philippines</option>
+                                        <option class="add_client_select_option" value="75">Pologne</option>
+                                        <option class="add_client_select_option" value="7">Portugal</option>
+                                        <option class="add_client_select_option" value="66">Roumanie</option>
+                                        <option class="add_client_select_option" value="13">Russie</option>
+                                        <option class="add_client_select_option" value="28">Serbie</option>
+                                        <option class="add_client_select_option" value="80">Slovénie</option>
+                                        <option class="add_client_select_option" value="8">Espagne</option>
+                                        <option class="add_client_select_option" value="19">Suède</option>
+                                        <option class="add_client_select_option" value="6">Suisse</option>
+                                        <option class="add_client_select_option" value="70">Thaïlande</option>
+                                        <option class="add_client_select_option" value="67">Tunisie</option>
+                                        <option class="add_client_select_option" value="69">Turquie</option>
+                                        <option class="add_client_select_option" value="10">USA</option>
+                                        <option class="add_client_select_option" value="68">Vietnam</option>
+                                    </select>
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">E-mail &nbsp;*</div>
+                                    <input id="add_client_email" class="add_client_input" name="client_email" type="text" maxlength="80">
+                                </div>
+                                <div id="add_client_more_info"><img id="add_client_more_info_image" src="img/icon/plus.png"> ajouter plus d'informations (optionnel)</div>
+                                <div id="add_client_more">
+                                    <div class="add_client_input_container clearfix">
+                                        <div class="add_client_input_text">Téléphone</div>
+                                        <input id="add_client_tel" class="add_client_input" name="client_tel" type="text" maxlength="20">
+                                        <div id="add_client_tel_visible">
+                                            <input id="add_client_tel_visible_checkbox" type="checkbox" name="client_tel_visible">
+                                            <span id="add_client_tel_visible_text">afficher numéro dans les annonces</span>
+                                        </div>
+                                    </div>
+                                    <div class="add_client_input_container clearfix">
+                                        <div class="add_client_input_text">Rue et numéro</div>
+                                        <input id="add_client_address" class="add_client_input" name="client_address" type="text" maxlength="250">
+                                    </div>
+                                    <div class="add_client_input_container clearfix">
+                                        <div class="add_client_input_text">Code postal</div>
+                                        <input id="add_client_postalCode" class="add_client_input" name="client_PostalCode" type="text" maxlength="20">
+                                        <div id="add_client_add_visible">
+                                            <input id="add_client_add_visible_checkbox" type="checkbox" name="client_add_visible">
+                                            <span id="add_client_add_visible_text">afficher adresse dans les annonces</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add_client_separator"></div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Type d'annonceur</div>
+                                    <div id="add_client_type_annonceur">
+                                        <input id="radio_private" class="add_client_input_radio" type="radio" name="client_type" value="1" checked="">Privé
+                                        <input id="radio_pro" class="add_client_input_radio add_client_input_radio_last" type="radio" name="client_type" value="2">Professionnel
+                                    </div>
+                                </div>
+                                <div id="add_client_pro_more">
+                                    <div class="add_client_input_container clearfix">
+                                        <div class="add_client_input_text">Nom de l'entreprise&nbsp;*</div>
+                                        <input id="add_client_alias" class="add_client_input" name="client_alias" type="text" maxlength="50">
+                                    </div>
+                                    <div class="add_client_input_container clearfix">
+                                        <div class="add_client_input_text">Numéro de TVA&nbsp;*</div>
+                                        <input id="add_client_tva" class="add_client_input" name="client_tva" type="text" maxlength="25">
+                                    </div>
+                                    <div class="add_client_input_container clearfix add_client_input_container_image">
+                                        <div class="add_client_input_text">Logo</div>
+                                        <div class="add_client_image_container">
+                                            <img id="user_info_logo" src="img/icon/add.png" onclick="addFile('add_client_logo');">
+                                            <input id="user_info_logo_data" type="hidden" name="client_logo" value="">
+                                        </div>
+                                        <input id="add_client_logo" class="user_image_input" type="file" onchange="Url2Thumbnail(this, 'user_info_logo');">
+                                    </div>
+                                </div>
+                                <div class="add_client_separator"></div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Nom d'utilisateur&nbsp;*</div>
+                                    <input id="add_client_login" class="add_client_input" name="client_login" type="text" maxlength="40">
+                                    <span class="helpContainer">
+                                        <span id="usernameBubble" class="bubble">
+                                            seulement des lettres, chiffres et caractères de soulignement
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Mot de passe&nbsp;*</div>
+                                    <input id="add_client_password" class="add_client_input" name="client_password" type="password" maxlength="30">
+                                    <span class="helpContainer">
+                                        <span id="passwordBubble" class="bubble">
+                                            8 caractères minimum<br>
+                                            ( A, B, C, ... a, b, c, ... 0, 1, 2, ... Symboles spéciaux sauf espace )<br>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="add_client_input_container clearfix">
+                                    <div class="add_client_input_text">Confirmez le mot de passe&nbsp;*</div>
+                                    <input id="add_client_password_again" class="add_client_input" name="client_password_again" type="password" maxlength="30">
+                                    <span class="helpContainer">
+                                        <span id="notTheSameBubble" class="bubble">
+                                            Le mot de passe ne correspond pas
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="add_client_separator"></div>
+                                <div id="add_client_cert">
+                                    <input id="add_client_cert_checkbox" type="checkbox" name="client_conditions">
+                                    <span id="add_client_cert_text">Je certifie avoir lu et accepté les <a id="add_client_cert_link" href="/docs/mentions_legales.pdf" target="_blank">conditions générales</a></span>
+                                </div>
+                                <div id="my_recaptcha"><div><div style="width: 304px; height: 78px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" width="304" title="widget recaptcha" role="presentation" height="78" id="I0_1436881056958" name="I0_1436881056958" src="https://www.google.com/recaptcha/api2/anchor?k=6LdafgITAAAAAMN5f1kaTtL5aLbFlPgqZLJqQHcZ&amp;co=aHR0cDovL3d3dy5iYXphci5sdQ..&amp;hl=fr&amp;type=image&amp;v=r20150708165616&amp;theme=light&amp;size=normal&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.fr.DV-jc6yrMbo.O%2Fm%3D__features__%2Fam%3DQQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPiK_nj4QCML4Uqryed4s8OqOZj6Q#id=I0_1436881056958&amp;parent=http%3A%2F%2Fwww.bazar.lu&amp;pfname=&amp;rpctoken=10055426"></iframe></div><textarea id="g-recaptcha-response" name="grecaptcharesponse" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+    <span class="helpContainer">
+    <span id="captchaBubble" class="bubble">
+    Missing CAPTCHA
+    </span>
+    </span>
+    <div id="add_client_button_container">
+    <div class="add_client_button annonce_button" onclick="checkClientForm();
+            return false;">créer le compte</div>
+    </div>
+    </form>
+    </div>
+</div>
+                </div>
+            </div>
+            <div id="bazar_footer">
+                <div class="container-bazar" style="height: 100%;">
+                    <div id="bazar_footer_content" class="clearfix">
+                        <div id="bazar_copy" class="phone-12 tab-4">Copyright © 2015 Luxembourg Online S.A.</div>
+                        <div id="bazar_footer_links" class="pull-right phone-12 tab-8">
+                            <ul class="bazar_footer_link">
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="#" target="_blank">Mentions légales</a>
+                                </li>
+                                <li class="bazar_footer_section"><span class="bazar_footer_link_separator">|</span></li>
+                                <li class="clearfix" style="display: inline-block">
+                                    <a href="mailto:bazar@bazar.lu" id="bazar_footer_link_email">Contact: bazar@bazar.lu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script async="" src="//www.google-analytics.com/analytics.js"></script>
+        <script src="http://jquery.bluechameleon.com/js/jquery" type="text/javascript"></script>
+        <script src="http://jquery.bluechameleon.com/js/jquery-ui" type="text/javascript"></script>
+        <script src="js/bazar.js" type="text/javascript"></script>
+        <script src="js/slide.js" type="text/javascript"></script>
+        <script>
+        $(function () {
+
+            //Au chargement, on replace les éléments en fonction de la résolution
+            changeToMobile();
+            resizeInput();
+            $('#bazarSearch_choice').change(function () {
+                resizeSelect($(this));
+            });
+            $(window).resize(function () {
+                //Au resize, on replace les éléments pour la version mobile ou la version desktop
+                if (!$('input').is(':focus')) {
+                    changeToMobile();
+                }
+                resizeInput();
+                resizeOverlay();
+            });
+            //Au clic sur le bouton recherche, on ouvre le panneau avec le champ de recherche
+            $('#search').click(function (event) {
+                event.stopPropagation();
+                $('#bazarInputs').toggleClass('open');
+            });
+            //au clic sur le bouton catégorie, on ouvre le sidebar et on affiche l'overlay noir
+            $('#categorie').click('click', function (event) {
+                event.stopPropagation();
+                $('#sidebar, #categorie, #overlay').toggleClass('open');
+            });
+            //ferme le menu catégorie sur mobile quand on clic ailleurs
+            $('html').click(function (event) {
+                var element = $('#sidebar, #categorie, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
+                if (!element.is(event.target) && element.has(event.target).length === 0) {
+                    $('#sidebar.open, #categorie.open, #overlay').removeClass('open');
+                }
+            });
+            //initPanels(1, 'annonces_une_block');
+            $('#nMenu_dropdown').click(function (event) {
+                event.stopPropagation();
+                $('#nMenu_dropdown+.dropdown').toggleClass('open');
+            });
+            $('html').click(function (event) {
+                var element = $('#nMenu_dropdown');
+                if (!element.is(event.target) && element.has(event.target).length === 0) {
+                    $('.dropdown.active').removeClass('open');
+                }
+            });
+            /* show/hide more information */
+            $('#add_client_more_info').click(function () {
+                if ($('#add_client_more').is(":visible")) {
+                    $('#add_client_more_info_image').attr('src', 'img/icon/plus.png');
+                    $('#add_client_more').hide();
+                } else {
+                    $('#add_client_more_info_image').attr('src', 'img/icon/minus.png');
+                    $('#add_client_more').show();
+                }
+            });
+            /* show/hide pro options */
+            if ($('#radio_pro').is(':checked'))
+                $('#add_client_pro_more').show();
+            $('.add_client_input_radio').click(function () {
+                if ($('#radio_private').is(':checked'))
+                    $('#add_client_pro_more').hide();
+                else if ($('#radio_pro').is(':checked'))
+                    $('#add_client_pro_more').show();
+                else
+                    $('#add_client_pro_more').hide();
+            });
+        });
+        /* add delete button */
+        $('#delete_logo').remove();
+        $('<span id="delete_logo" class="deleteImage" onclick="deleteFile(\'delete_logo\', \'' + id + '\')">x</span>').insertAfter(input);
+        //Overlay à l'affichage du menu catégorie en mobile
+        $('#content').append("<div id='overlay' class='hidden display-tab display-phone'></div>");
+        resizeOverlay();
+</script>
+    </body>
+</html>

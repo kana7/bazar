@@ -1,0 +1,278 @@
+
+#add_client {
+    font-size: 11pt;
+}
+
+.add_client_separator {
+    border-bottom: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+.add_client_title {
+    font-size: 14pt;
+    margin-top: 25px;
+}
+
+.add_client_input_container {
+    margin-top: 10px;
+    min-height: 30px;
+}
+
+.add_client_input_text {
+    font-size: 11pt;
+    float: left;
+    line-height: 35px;
+    margin-right: 20px;
+    width: 15.57632398753894%;
+    font-style: italic;
+}
+
+.add_client_select {
+    display: block;
+    margin: 10px 0;
+    height: 30px;
+    width: 200px;
+}
+
+#add_client_rubrique {
+    display: none;
+    margin-left: 220px;
+}
+
+.add_client_input {
+    height: 35px;
+    line-height: 25px;
+    width: 38.94080996884735%;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+#add_client_price {
+    padding-left: 10px;
+    border: none;
+}
+
+.add_client_textarea {
+    width: 300px;
+    height: 150px;
+    margin: 5px 0;
+}
+
+.add_client_input_radios {
+    margin: 20px 0;
+}
+
+.add_client_input_radios .add_client_input_text {
+    margin-bottom: 5px;
+}
+
+#add_client_button_container {
+    margin-bottom: 30px;
+}
+
+.add_client_button {
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+.add_client_select_option {
+    text-transform: capitalize;
+}
+
+#add_client_add_visible_checkbox, #add_client_tel_visible_checkbox {
+    cursor: pointer;
+}
+
+#add_client_tel_visible, #add_client_add_visible {
+    display: inline;
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+/*
+#add_client_add_visible {
+    top: -22px;
+}
+*/
+#add_client_tel_visible span, #add_client_add_visible span {
+    position: relative;
+    top: -2px;
+}
+
+#add_client_required_fields, #add_client_cert, #my_recaptcha {
+    margin: 20px 0;
+}
+
+#add_client_cert_checkbox {
+    cursor: pointer;
+}
+
+.required {
+    border: 2px solid #ff8787;
+    box-shadow: 2px 1px #ddd;
+    margin-bottom: 3px;
+}
+
+.requiredCheckbox {
+    outline: 2px solid #ff8787;
+}
+
+#change_password_link {
+    position: relative;
+    top: 7px;
+    text-decoration: none;
+    color: #00529c;
+}
+
+#change_password_link:hover {
+    text-decoration: underline;
+}
+
+.user_info_verif {
+    height: 35px;
+    line-height: 35px;
+}
+
+.helpContainer {
+    position: relative;
+}
+
+.bubble {
+    background: none repeat scroll 0 0 #fffbb8;
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    display: none;
+    left: 25px;
+    padding: 8px;
+    position: absolute;
+    top: -11px;
+    white-space: nowrap;
+    width: auto;
+    z-index: 99999;
+}
+
+#captchaBubble {
+    left: 350px;
+    top: -65px;
+}
+
+#add_client_more_info {
+    margin-top: 30px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#add_client_more_info_image {
+    margin-right: 5px;
+}
+
+#add_client_more {
+    display: none;
+}
+
+.add_client_address_top {
+    top: -72px !important;
+}
+
+#add_client_cert_link {
+    text-decoration: underline;
+    color: #555;
+}
+
+#add_client_type_annonceur {
+    line-height: 35px;
+}
+
+.add_client_input_radio {
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+.add_client_input_radio_last {
+    margin-left: 20px;
+}
+#add_client_pro_more {
+    display: none;
+}
+.add_client_input_file {
+    line-height: 35px;
+}
+.user_image_input {
+    display: none;
+}
+#user_info_logo {
+    max-width: 150px;
+    max-height: 100px;
+    cursor: pointer;
+}
+.user_info_verif_image {
+    float: left;
+}
+.add_client_input_container_image {
+    position: relative;
+    min-height: 100px;
+    margin-top: 15px;
+}
+#user_info_logo:hover {
+    opacity: 0.7;
+}
+.borderLess {
+    border: none;
+}
+.deleteImage {
+    position: absolute;
+    top: -6px;
+    left: 385px;
+    cursor: pointer;
+    font-size: 15pt;
+}
+.deleteImageInit {
+    top: -42px;
+}
+.add_client_image_container, .user_info_verif_image {
+    border: 1px solid #ccc;
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 150px;
+    padding: 2px;
+}
+@media(min-width: 992px){
+    #header{
+        border-bottom: 1px solid #D5D5D5;
+    }
+}
+@media(max-width: 991px){
+    #add_client{
+        padding: 0px 20px;
+    }
+    .add_client_input{
+        width: 70% !important;
+    }
+    #add_client_tel_visible, #add_client_add_visible{
+        display: inline-block;
+        float: left;
+        width: 100%;
+        left: 17.8%;
+    }
+}
+@media(max-width: 700px){
+    .add_client_input_container>*{
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 100% !important;
+    }
+    #add_client_tel_visible, #add_client_add_visible{
+        left: 0px;
+    }
+}
