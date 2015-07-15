@@ -295,20 +295,40 @@ a, a:hover {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
+@media(max-width: 991px){
+    #bazarBandeau_search_arrangeby_select_container, .search_choice_box_container {
+        position: relative;
+        /* bottom: -1px; */
+        left: 90px;
+        width: 160px;
+        height: 28px;
+        background: #FFF url(../img/icon/tri.svg) no-repeat;
+        background-size: Auto 15px;
+        background-position: 95% center;
+        padding: 0px 10px;
+        border: 1px solid #CCC;
+        border-radius: 3px;
+    }
+    #bazarBandeau_search_arrangeby_select {
+        padding: 0 2px 0 5px !important;
+    }
+}
 #bazarBandeau_search_arrangeby_select, .search_choice_box_select {
-    position: absolute;
-    top: -1px;
-    bottom: 2px;
-    border: none;
-    background: none;
+    position: relative;
+    /* top: 0px; */
+    bottom: 0px;
+    /* border: none; */
+    /* background: none; */
     z-index: 0;
     height: 30px;
-    width: 170px;
+    width: 150px;
     font-size: 10pt;
     cursor: pointer;
+    border: 1px solid#CCC;
     padding-left: 2px;
-    outline: none;
+    border-radius: 3px;
+    /* outline: none; */
+    white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
 }
 
 .search_choice {

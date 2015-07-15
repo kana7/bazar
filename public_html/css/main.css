@@ -400,19 +400,6 @@ td, th {
     cursor:pointer;
     margin-top:-3px;
 }
-#profil {
-    position:absolute;
-    top:-8px;
-    right:-4px;
-    right:-11px;
-    text-align:right;
-    background:white;
-    border:1px solid #afafaf;
-    border-radius:5px;
-    z-index:999;
-    padding:7px 10px 10px 10px;
-    display:none;
-}
 #bazarHeader_profil {
     position:relative;
 }
@@ -421,6 +408,10 @@ td, th {
 }
 #profil_bottom_layer_container {
     white-space:nowrap;
+}
+#profil_icon>img{
+    position: relative;
+    top: 0px;
 }
 #profil_bottom_layer_username {
     font-weight:bold;
@@ -734,12 +725,11 @@ td, th {
     #content{
         width:100%;
     }
-    #sidebar{
-        width:300px;
+    .mobile-sidebar-menu{
+        width:300px !important;
         height:100%;
         overflow-y: scroll;
         position:absolute;
-        left:-300px;
         top:0;
         border-right:2px solid #E0E0E0;
         transform:translateX(0px);
@@ -749,30 +739,50 @@ td, th {
         z-index: 5;
         background-color:#ffffff;
     }
-    #sidebar.open{
+    .mobile-sidebar-menu.left{
+        left:-300px;
+    }
+    .mobile-sidebar-menu.left.open{
         transform:translateX(300px);
         -webkit-transform:translateX(300px);
     }
-    #category{
+    .mobile-sidebar-menu.right{
+        right:-300px;
+    }
+    .mobile-sidebar-menu.right.open{
+        transform:translateX(-300px);
+        -webkit-transform:translateX(-300px);
+    }
+    /*.mobile-sidebar-menu.open{
+        transform:translateX(300px);
+        -webkit-transform:translateX(300px);
+    }*/
+    .category{
         padding:0px !important;
     }
-    #categories{
+    .categories{
         margin:0px !important;
     }
-    #category .category_entry{
+    .category .category_entry{
         padding:12px 0px;
         padding-left:20px !important; 
         margin:0px;
     }
-    #category .category_entry:active{
+    .category .category_entry:active{
         background-color:#f5f5f5;
     }
-    #category .category_entry:not(:last-child){
+    .category .category_entry:not(:last-child){
         border-bottom:1px solid #E0E0E0;
+    }
+    #userMenu .category_entry:first-child{
+        border-top:1px solid #E0E0E0;
+    }
+    #userMenu .category_entry{
     }
 }
 #bazarBandeau {
-    padding:8px 4px;
+    padding: 4px 4px;
+    /* height: 45px; */
     line-height:26px;
     background:#f7f7f7;
     text-align:center;
@@ -791,7 +801,7 @@ td, th {
     color:#444;
     font-weight:bold;
 }
-#category {
+.category {
     padding:20px 0 0 0px;
 }
 .selectedCategory {
@@ -800,10 +810,18 @@ td, th {
 .showCategories {
     display:block !important;
 }
-#category_title, #annonces_une_title, #annonces_last_title {
+.category_title, #annonces_une_title, #annonces_last_title {
     font-weight:bold;
 }
-#categories, .sub_categories, .search_section_data {
+.category_title.profil{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #00529C;
+}
+.categories, .sub_categories, .search_section_data {
     list-style:none;
     padding:0px;
     margin:0px;
@@ -949,7 +967,7 @@ td, th {
     width:100%;
     height:120px;
     border:1px solid #e0e0e0;
-    border-top:none;
+    /* border-top:none; */
     margin-bottom:8px;
     text-align:center;
     height:140px;
@@ -1201,17 +1219,12 @@ html,body {
 @media(min-width:680px){
     #bazar_footer{
         padding:10px 10px;
-
-        /* position: absolute; */
-        /* bottom: 0; */
     }
 }
 @media(max-width:991px){
     #bazar_footer{
         height: 45px;
-    
-        /* margin-bottom: 5px; */
-}
+    }
 }
 #bazar_copy {
     font-size:8pt;
@@ -1384,6 +1397,9 @@ ul.dropdown{
         -webkit-transform:translateY(231px);
         box-shadow:0px 4px 15px 0px #575757;
     }
+    .annonces_une_entry_image{
+        border-top: none;
+    }
 }
 ul.dropdown>li{
     display:block;
@@ -1538,6 +1554,14 @@ ul.dropdown>li>a{
     top:24% !important;
     left:13% !important;
 }
+@media(min-width: 1400px){
+    .flickity-prev-next-button.next {
+        margin-right: -57px;
+    }
+    .flickity-prev-next-button.previous {
+        margin-left: -57px;
+    }
+}
 .select{
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -1546,5 +1570,10 @@ ul.dropdown>li>a{
 }
 select::-ms-expand {
     display:none;
+}
+
+#userMenu .category_number{
+    color: #FF0600;
+    font-weight: 600;
 }
 

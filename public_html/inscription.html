@@ -116,13 +116,26 @@
                             </div>
                         </div>
                     </div>
+                    <style>
+                        @media(max-width: 991px){
+                            #bazarLogo{
+                                margin-bottom: 25px; 
+                            }
+                        }
+                        @media(max-width: 679px){
+                            #bazarLogo{
+                                margin-bottom: 17px; 
+                            }
+                        }
+                    </style>
                     <div id="bazarHeader_bottom" class="container-bazar">
                         <div class="clearfix">
-                            <div id="bazarLogo">
+                            <div id="bazarLogo" class="align center" style="width:100%; display: flex;">
                                 <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs" style="text-align: center; width: 100%;">
                                     <img id="bazarLogo_image" src="img/icon/Logo_bazar.lu.svg">
                                 </a>
                             </div>
+                            <!--
                             <div id="buttonList" class="phone-12 tab-7 display-phone display-tab-inline-block">
                                 <div>
                                     <button id="categorie" class="mobile_button hidden" style="margin-right: 20px; margin-left: 7px;">
@@ -139,6 +152,7 @@
                                     </button>
                                 </div>
                             </div>
+                            
                             <div id="bazarInputs" class="phone-12 desk-push-1 desk-6">
                                 <form id="bazarSearch" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                                     <div id="bazarSearch_container_left" class="pull-left">
@@ -180,6 +194,7 @@
                                     <button id="bazar_newAnnonce_button">insérer une annonce</button>
                                 </a>
                             </div>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -476,6 +491,6 @@
         //Overlay à l'affichage du menu catégorie en mobile
         $('#content').append("<div id='overlay' class='hidden display-tab display-phone'></div>");
         resizeOverlay();
-</script>
+    </script>
     </body>
 </html>

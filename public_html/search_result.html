@@ -187,14 +187,14 @@
             </div>
             <div id="body" class="container-bazar">
                 <div id="bazarBody" class="clearfix">
-                    <div id="sidebar">
+                    <div id="sidebar" class="mobile-sidebar-menu left">
                         <form id="search_form" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                             <input type="hidden" name="_name" value="">
                             <input id="search_page" type="hidden" name="page" value="1">
                             <input id="search_page" type="hidden" name="category" value="19">
-                            <div id="category">
-                                <div id="category_title" class="hidden-tab hidden-phone">Catégories</div>
-                                <ul id="categories">
+                            <div id="category" class="category">
+                                <div id="category_title" class="category_title hidden-tab hidden-phone">Catégories</div>
+                                <ul id="categories" class="categories">
                                     <li class="category_entry">
                                         <div onclick="getBazarItems($(this), 'content', 1);">
                                             Véhicules<span class="category_number">(963)</span>
@@ -984,11 +984,10 @@
                         </form>
                     </div>
                     <div id="content">
-                        <div id="bazarBandeau" class="phone-12 hidden-phone">
+                        <div id="bazarBandeau" class="phone-12 align middle" style="  height: 45px;">
                             <div id="bazarBandeau_search_results"><span id="bazarBandeau_search_results_nbr">799</span> annonce(s) trouvée(s)</div>
                             <div id="bazarBandeau_search_arrangeby">
-                                <span id="bazarBandeau_search_arrangeby_text">Trier par</span>
-                                <div id="bazarBandeau_search_arrangeby_select_container"><img src="img/icon/dropdownmenu.png"></div>
+                                <span id="bazarBandeau_search_arrangeby_text" class="hidden-tab hidden-phone">Trier par</span>
                                 <select id="bazarBandeau_search_arrangeby_select" name="arrange_by">
                                     <option value="1">Dernières annonces</option>
                                     <option value="2">Prix: le moins cher</option>
@@ -1003,7 +1002,7 @@
                         </div>
 
                         <div id="search_result" class="phone-12">
-                            <div id="search_result_title" class="title">Résultats de la recherche</div>
+                            <div id="search_result_title" class="title hidden-phone hidden-tab">Résultats de la recherche</div>
                             <div id="search_result_content" class="clearfix">
                                 <div class="search_result_entry item list-group-item">
                                     <a class="annonces_entry_link" href="sql.exe?SqlDB=bazar&amp;Sql=Annonce.phs&amp;_annonce=1079">
@@ -1167,7 +1166,6 @@
         <script src="http://jquery.bluechameleon.com/js/jquery" type="text/javascript"></script>
         <script src="http://jquery.bluechameleon.com/js/jquery-ui" type="text/javascript"></script>
         <script src="js/bazar.js" type="text/javascript"></script>
-        <script src="js/slide.js" type="text/javascript"></script>
         <script>
                                             $(function () {
 

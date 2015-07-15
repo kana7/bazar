@@ -116,9 +116,21 @@
                             </div>
                         </div>
                     </div>
-                    <div id="bazarHeader_bottom" class="container-bazar hidden display-phone">
+                    <style>
+                        @media(max-width: 991px){
+                            #bazarLogo{
+                                margin-bottom: 25px; 
+                            }
+                        }
+                        @media(max-width: 679px){
+                            #bazarLogo{
+                                margin-bottom: 17px; 
+                            }
+                        }
+                    </style>
+                    <div id="bazarHeader_bottom" class="container-bazar display-phone display-tab hidden">
                         <div class="clearfix">
-                            <div id="bazarLogo">
+                            <div id="bazarLogo" class="align center" style="width:100%; display: flex;">
                                 <a href="sql.exe?SqlDB=bazar&amp;Sql=Bazar.phs" style="text-align: center; width: 100%;">
                                     <img id="bazarLogo_image" src="img/icon/Logo_bazar.lu.svg">
                                 </a>
@@ -240,9 +252,6 @@
                                             $('.dropdown.active').removeClass('open');
                                         }
                                     });
-
-
-
                                 });
         </script>
     </body>
