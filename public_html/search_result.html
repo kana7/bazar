@@ -941,63 +941,119 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="search_section">
-                                <div class="search_section_title">Type d'annonce</div>
-                                <div class="search_section_data search_main_data">
-                                    <div class="search_section_data_entry">
-                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_offre" value="1">
-                                        Offre<span class="search_section_data_detail">(454)</span>
-                                    </div>
-                                    <div class="search_section_data_entry">
-                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_demande" value="2">
-                                        Demande<span class="search_section_data_detail">(0)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="search_section">
-                                <div class="search_section_title">Annonceur</div>
-                                <div class="search_section_data search_main_data">
-                                    <div class="search_section_data_entry">
-                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_prive" value="1">
-                                        Privé<span class="search_section_data_detail">(7)</span>
-                                    </div>
-                                    <div class="search_section_data_entry">
-                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_pro" value="2">
-                                        Professionnel<span class="search_section_data_detail">(447)</span>
+                            <div class="hidden-tab hidden-phone">
+                                <div class="search_section">
+                                    <div class="search_section_title">Type d'annonce</div>
+                                    <div class="search_section_data search_main_data">
+                                        <div class="search_section_data_entry">
+                                            <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_offre" value="1">
+                                            Offre<span class="search_section_data_detail">(454)</span>
+                                        </div>
+                                        <div class="search_section_data_entry">
+                                            <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_demande" value="2">
+                                            Demande<span class="search_section_data_detail">(0)</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="search_section">
-                                <div class="search_section_title">Prix</div>
-                                <div class="search_section_dat search_main_data">
-                                    <div class="search_section_data_entry">
-                                        de <input class="search_section_data_price" type="text" name="price_min_main" value="">
-                                        à <input class="search_section_data_price" type="text" name="price_max_main" value="">
+                                <div class="search_section">
+                                    <div class="search_section_title">Annonceur</div>
+                                    <div class="search_section_data search_main_data">
+                                        <div class="search_section_data_entry">
+                                            <input class="search_section_data_checkbox" type="checkbox" name="annonceur_prive" value="1">
+                                            Privé<span class="search_section_data_detail">(7)</span>
+                                        </div>
+                                        <div class="search_section_data_entry">
+                                            <input class="search_section_data_checkbox" type="checkbox" name="annonceur_pro" value="2">
+                                            Professionnel<span class="search_section_data_detail">(447)</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="search_section">
-                                <div class="search_section_data">
-                                    <input class="search_section_data_button" type="submit" value="Rechercher">
+                                <div class="search_section">
+                                    <div class="search_section_title">Prix</div>
+                                    <div class="search_section_dat search_main_data">
+                                        <div class="search_section_data_entry">
+                                            de <input class="search_section_data_price" type="text" name="price_min_main" value="">
+                                            à <input class="search_section_data_price" type="text" name="price_max_main" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search_section">
+                                    <div class="search_section_data">
+                                        <input class="search_section_data_button" type="submit" value="Rechercher">
+                                    </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div id="content">
-                        <div id="bazarBandeau" class="phone-12 align middle" style="  height: 45px;">
-                            <div id="bazarBandeau_search_results"><span id="bazarBandeau_search_results_nbr">799</span> annonce(s) trouvée(s)</div>
+                        <div id="bazarBandeau" class="phone-12" style="  height: 45px;">
+                            <div id="bazarBandeau_search_results">
+                                <span id="bazarBandeau_search_results_nbr">799</span> annonce(s) trouvée(s)
+                            </div>
+                            <div id="bazarBandeau_buttons" class="btn-group pull-right list-group-button-style hidden-phone">
+                                <a href="#" id="list" class="btn btn-default btn-sm"><i class="fa fa-th-list"></i>Liste</a>
+                                <a href="#" id="grid" class="btn btn-default btn-sm"><i class="fa fa-th"></i>Grille</a>
+                            </div>
+                            <div id="bazarBandeau_mobile_philter" class="hidden display-tab display-phone">
+                                <img alt="philter" src="img/icon/philtre.svg" style="height: 100%; width: auto;"/>
+                                <div id="philter_dropdown">
+                                    <form id="search_form" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
+                                        <input type="hidden" name="_name" value="">
+                                        <input id="search_page" type="hidden" name="page" value="1">
+                                        <input id="search_page" type="hidden" name="category" value="19">
+                                        <div id="philtre_options">
+                                            <div class="search_section">
+                                                <div class="search_section_title">Type d'annonce</div>
+                                                <div class="search_section_data search_main_data">
+                                                    <div class="search_section_data_entry">
+                                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_offre" value="1">
+                                                        Offre<span class="search_section_data_detail">(454)</span>
+                                                    </div>
+                                                    <div class="search_section_data_entry">
+                                                        <input class="search_section_data_checkbox" type="checkbox" name="type_annonce_demande" value="2">
+                                                        Demande<span class="search_section_data_detail">(0)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search_section">
+                                                <div class="search_section_title">Annonceur</div>
+                                                <div class="search_section_data search_main_data">
+                                                    <div class="search_section_data_entry">
+                                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_prive" value="1">
+                                                        Privé<span class="search_section_data_detail">(7)</span>
+                                                    </div>
+                                                    <div class="search_section_data_entry">
+                                                        <input class="search_section_data_checkbox" type="checkbox" name="annonceur_pro" value="2">
+                                                        Professionnel<span class="search_section_data_detail">(447)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search_section">
+                                                <div class="search_section_title">Prix</div>
+                                                <div class="search_section_dat search_main_data">
+                                                    <div class="search_section_data_entry">
+                                                        de <input class="search_section_data_price" type="text" name="price_min_main" value="">
+                                                        à <input class="search_section_data_price" type="text" name="price_max_main" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search_section">
+                                                <div class="search_section_data">
+                                                    <input class="search_section_data_button" type="submit" value="Rechercher">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div id="bazarBandeau_search_arrangeby">
-                                <span id="bazarBandeau_search_arrangeby_text" class="hidden-tab hidden-phone">Trier par</span>
+                                <span id="bazarBandeau_search_arrangeby_text" class="hidden-tab hidden-phone">Trier par :</span>
                                 <select id="bazarBandeau_search_arrangeby_select" name="arrange_by">
                                     <option value="1">Dernières annonces</option>
                                     <option value="2">Prix: le moins cher</option>
                                     <option value="3">Prix: le plus cher</option>
                                     <option value="4">Urgent</option>
                                 </select>
-                            </div>
-                            <div id="bazarBandeau_buttons" class="btn-group pull-right list-group-button-style hidden-phone">
-                                <a href="#" id="list" class="btn btn-default btn-sm"><i class="fa fa-th-list"></i>Liste</a>
-                                <a href="#" id="grid" class="btn btn-default btn-sm"><i class="fa fa-th"></i>Grille</a>
                             </div>
                         </div>
 
@@ -1185,6 +1241,10 @@
                                                     resizeInput();
                                                     resizeOverlay();
                                                 });
+                                                $('#bazarBandeau_mobile_philter>img').click(function () {
+                                                    $(this).parent().toggleClass('open');
+                                                    $('#philter_dropdown').toggleClass('open');
+                                                });
 
                                                 $('#bazarBandeau_search_arrangeby_select').change(function () {
                                                     $('#search_form').submit();
@@ -1206,14 +1266,15 @@
                                                 });
                                                 //ferme le menu catégorie sur mobile quand on clic ailleurs
                                                 $('html').click(function (event) {
-                                                    var element = $('#sidebar, #categorie, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
+                                                    var element = $('#sidebar, #categorie, #bazarBandeau_mobile_philter, #nMenu_dropdown, .dropdown, #search, #bazarInputs');
                                                     if (!element.is(event.target) && element.has(event.target).length === 0) {
                                                         $('#sidebar.open, #categorie.open, #overlay').removeClass('open');
+                                                        $('#bazarBandeau_mobile_philter.open, #philter_dropdown.open').removeClass('open');
 
                                                     }
                                                 });
 
-                                                initPanels(1, 'annonces_une_block');
+                                                //initPanels(1, 'annonces_une_block');
 
                                                 $('#nMenu_dropdown').click(function (event) {
                                                     event.stopPropagation();

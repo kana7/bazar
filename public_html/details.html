@@ -191,14 +191,14 @@
             </div>
             <div id="body" class="container-bazar">
                 <div id="bazarBody" class="clearfix">
-                    <div id="sidebar">
+                    <div id="sidebar" class="mobile-sidebar-menu left">
                         <form id="search_form" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                             <input type="hidden" name="_name" value="">
                             <input id="search_page" type="hidden" name="page" value="1">
                             <input id="search_page" type="hidden" name="category" value="19">
-                            <div id="category">
-                                <div id="category_title" class="hidden-tab hidden-phone">Catégories</div>
-                                <ul id="categories">
+                            <div id="category" class="category">
+                                <div id="category_title" class="category_title hidden-tab hidden-phone">Catégories</div>
+                                <ul id="categories" class="categories">
                                     <li class="category_entry">
                                         <div onclick="getBazarItems($(this), 'content', 1);">
                                             Véhicules<span class="category_number">(963)</span>

@@ -174,7 +174,7 @@
 }
 
 #add_client_more {
-    display: none;
+    /* margin-top: 15px;*/
 }
 
 .add_client_address_top {

@@ -1,0 +1,315 @@
+#add_annonce, #contact_annonce {
+    font-size: 11pt;
+}
+
+#add_annonce_title, #contact_title {
+    font-size: 16pt;
+    margin-top: 25px;
+}
+
+@media (min-width: 992px){
+    #header {
+        border-bottom: 1px solid #D5D5D5;
+    }
+}
+.add_annonce_separator, .contact_separator {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+    display: inline-block;
+    /* float: left; */
+    width: 100%;
+}
+
+.add_annonce_input_container, .contact_input_container {
+    margin-top: 10px;
+}
+
+.add_annonce_input_container {}
+
+.add_annonce_input_text, .contact_input_text {
+    height: 35px;
+    font-size: 11pt;
+    float: left;
+    display: inline-block;
+    line-height: 35px;
+    margin-right: 20px;
+    width: 15.57632398753894%;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.add_annonce_select {
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 75%;
+    height: 35px;
+    width: 25%;
+}
+
+.add_annonce_select {
+    /* margin-left: 220px; */
+}
+
+.add_annonce_rubric {
+    display: none;
+}
+
+.add_annonce_input, .contact_input {
+    height: 35px;
+    line-height: 25px;
+    width: 38.94080996884735%;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.add_annonce_textarea, .contact_textarea {
+    width: 500px;
+    height: 150px;
+    margin: 5px 0;
+}
+
+.add_annonce_input_radios {
+    margin: 20px 0;
+}
+
+.add_annonce_input_radios .add_annonce_input_text {
+    margin-bottom: 5px;
+}
+
+#add_annonce_button_container, #contact_button_container {
+    margin-bottom: 30px;
+}
+
+.add_annonce_images_container {
+    height: auto;
+    position: relative;
+}
+
+.add_annonce_image_input {
+    display: none;
+}
+
+.add_annonce_image_container {
+    border: 1px solid #ddd;
+    width: 160px;
+    height: auto;
+    display: inline-block;
+    line-height: 100px;
+    text-align: center;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.add_annonce_image_container:hover .add_annonce_image_pic {
+    opacity: 0.7;
+}
+
+.borderLess {
+    border: none;
+}
+
+.add_annonce_button, .contact_button {
+    margin-bottom: 30px;
+    margin-left: 0px;
+}
+
+#add_annonce_price {
+    width: 230px;
+}
+
+#add_annonce_required_fields, #contact_required_fields {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.required {
+    border: 2px solid #ff8787;
+    box-shadow: 2px 1px #ddd;
+    margin-bottom: 3px;
+}
+
+.requiredTextArea {
+    margin-bottom: 7px;
+}
+
+#verif_annonce_form {
+    display: none;
+}
+
+.add_annonce_verif {
+    margin-left: 250px;
+    max-width: 980px;
+    min-height: 30px;
+    position: relative;
+    top: 6px;
+}
+
+.add_annonce_verif_description {
+    overflow: auto;
+    max-height: 250px;
+}
+
+.add_annonce_image_verif {
+    max-width: 160px;
+    margin: 10px 0;
+}
+
+.add_annonce_verif_category {
+    margin-right: 10px;
+}
+
+.add_annonce_verif_category_separator {
+    margin-right: 10px;
+}
+
+.requiredCheckbox {
+    outline: 2px solid #ff8787;
+}
+
+.add_annonce_price_text {
+    margin-left: 5px;
+}
+
+#add_annonce_price_free, #add_annonce_price_talk {
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.add_annonce_input_number, .add_annonce_input_double, .add_annonce_input_date {
+    width: 230px; 
+}
+
+.add_annonce_range {
+    margin: 0 10px;
+}
+
+.search_checkbox_atribute {
+    margin-left: 220px;
+    line-height: 35px;
+}
+
+.search_checkbox {
+    cursor: pointer;
+}
+
+.search_section_data_radio_entry {
+    line-height: 35px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.add_annonce_radio {
+    cursor: pointer;
+}
+
+.deleteImage {
+    position: relative;
+    top: -45px;
+    right: 35px;
+    cursor: pointer;
+    font-size: 15pt;
+}
+
+.add_annonce_image_pic {
+    max-width: 160px;
+    max-height: 100px;
+}
+
+#annonce_price_highlight {
+    margin-left: 5px;
+}
+
+.contact_contact_container {
+    height: 105px;
+}
+
+#contact_input_separator {
+    height: 30px;
+}
+
+.annonce_verif_attribute {
+    overflow-x: auto;
+}
+
+
+.annonce_verif_attribute_name, .annonce_verif_attribute_value {
+    line-height: 30px;
+    display: inline;
+}
+
+.annonce_verif_attribute_value {
+    font-style: italic;
+    color: #777;
+    width: 600px;
+    display: inline-flex;
+}
+
+.attribute {
+    display: none;
+}
+
+.attribute_top, .attribute_show {
+    display: block;
+}
+
+#add_annonce_more_info {
+    margin-top: 23px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#add_annonce_more_info_image {
+    margin-right: 5px;
+}
+
+.ui-datepicker-trigger {
+    margin: -3px 0 0 10px;
+    cursor: pointer;
+    width: 24px;
+}
+
+.add_annonce_category_select_container{
+    width: 84.42367601246106%; 
+    float: left; 
+    display: inline-block;
+}
+
+@media(max-width: 991px){
+    #add_annonce{
+        padding: 0px 20px;
+    }
+    .add_annonce_input{
+        width: 70% !important;
+    }
+    #add_annonce_tel_visible, #add_annonce_add_visible{
+        display: inline-block;
+        float: left;
+        width: 100%;
+        left: 17.8%;
+    }
+}
+@media(max-width: 700px){
+    .add_annonce_input_container>*{
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 100% !important;
+    }
+    #add_annonce_tel_visible, #add_annonce_add_visible{
+        left: 0px;
+    }
+}

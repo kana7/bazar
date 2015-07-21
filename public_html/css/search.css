@@ -222,13 +222,14 @@ a, a:hover {
     line-height: 26px;
     padding-left: 10px;
     margin: 0 5px;
-    width: 25%;
+    width: 34%;
 }
 
 .search_section_data_button {
     width: 200px;
     margin: 0 auto;
     margin-bottom: 20px;
+    padding: 0px;
     line-height: 30px;
     background: #f5f5f5;
     border: 1px solid #ddd;
@@ -242,10 +243,15 @@ a, a:hover {
 }
 
 #bazarBandeau_buttons {
-    position: absolute;
-    top: 6px;
-    right: 15px;
+    display: inline-block;
+    position: relative;
     border-radius: 5px;
+    height: 100%;
+}
+#bazarBandeau_buttons>a{
+    height: 100%;
+    padding-top: 8px; 
+    /* padding-left: 16px; */
 }
 
 .glyphicon {
@@ -255,27 +261,48 @@ a, a:hover {
 #bazarBandeau_search_results {
     font-size: 10pt;
     float: left;
-    margin-left: 20px;
+    display: inline-block;
+    margin-top: 3px;
 }
 
 #bazarBandeau_search_results_nbr {
     color: #f7941d !important;
 }
 
-#bazarBandeau_search_arrangeby, .search_choice {
-    position: absolute;
-    overflow: hidden;
+#bazarBandeau_mobile_philter{
+    height: 100%;
+    width: 33px;;
+    float: right;
+    display: inline-block;
+    position: relative;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+    padding: 2px 0px;
 }
-
+#bazarBandeau_mobile_philter.open{
+    background-color: #e6e6e6;
+}
+#bazarBandeau_mobile_philter:active{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
 #bazarBandeau_search_arrangeby {
-    width: 250px;
-    right: 200px;
+    margin-right: 10px;
+    height: 100%;
+    float: right;
+    position: relative;
+    display: inline-block;
 }
 
 #bazarBandeau_search_arrangeby_text {
     font-weight: normal !important;
     font-size: 10pt;
-    float: left;
     width: 90px;
     text-align: right;
     margin-top: 1px;
@@ -287,7 +314,6 @@ a, a:hover {
 
 #bazarBandeau_search_arrangeby_select_container, .search_choice_box_container {
     position: relative;
-    /* bottom: -1px; */
     left: 98px;
     width: 150px;
     height: 28px;
@@ -298,7 +324,6 @@ a, a:hover {
 @media(max-width: 991px){
     #bazarBandeau_search_arrangeby_select_container, .search_choice_box_container {
         position: relative;
-        /* bottom: -1px; */
         left: 90px;
         width: 160px;
         height: 28px;
@@ -309,26 +334,22 @@ a, a:hover {
         border: 1px solid #CCC;
         border-radius: 3px;
     }
-    #bazarBandeau_search_arrangeby_select {
-        padding: 0 2px 0 5px !important;
-    }
 }
 #bazarBandeau_search_arrangeby_select, .search_choice_box_select {
-    position: relative;
-    /* top: 0px; */
-    bottom: 0px;
-    /* border: none; */
-    /* background: none; */
-    z-index: 0;
-    height: 30px;
-    width: 150px;
+    height: 100%;
+    width: 160px;
     font-size: 10pt;
     cursor: pointer;
     border: 1px solid#CCC;
-    padding-left: 2px;
+    color: #555;
+    padding: 1px 28px 0px 4px;
     border-radius: 3px;
-    /* outline: none; */
-    white-space: nowrap;overflow: hidden;  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  text-overflow: ellipsis;
+    -webkit-appearance: none;
+    background: url(../img/icon/tri.svg) no-repeat #FFF;
+    background-size: 18px auto;
+    background-position: 95% center;
 }
 
 .search_choice {
@@ -345,12 +366,38 @@ a, a:hover {
     width: 200px;
 }
 
-#bazarBandeau_search_arrangeby_select_container {
-    /* right: 0px; */
-}
+@media(max-width: 450px){
+    #bazarBandeau_search_arrangeby_select {
+        width: 34px;
 
-#bazarBandeau_search_arrangeby_select {
-    right: -21px;
+        padding: 0px;
+        padding-right: 29px !important;
+        background-position: center center;
+        background-size: 20px auto;
+    }
+}
+#philter_dropdown{
+    z-index: 1;
+    width: auto;
+    display: none;
+    text-align: left;
+    padding: 0px 21px;
+    padding-top: 10px;
+    background-color: #FFF;
+    border: 1px solid #E0E0E0;
+    position: absolute;
+    top: 37px;
+    right: 0px;
+}
+#philter_dropdown.open{
+    display: inline-block;
+}
+#philter_dropdown #philtre_options>.search_section{
+    padding: 0px;
+    width: 100%;
+}
+#philter_dropdown #philtre_options>.search_section:not(:last-child){
+    margin-bottom: 10px; 
 }
 
 #bazarBandeau_search_arrangeby_select_container img, .search_choice_box_container img {
@@ -380,7 +427,7 @@ a, a:hover {
 
 .search_section_data td, .search_section_data tr, .search_section_data {
     line-height: 20px;
-    padding: 10px;
+    /* padding: 10px; */
     padding-left: 0px;
     margin-top: 0px;
 }
@@ -585,6 +632,7 @@ a, a:hover {
 .btn>i{
     font-size: 14px;
     position: relative;
+    color: #808382;
     top: 1px;
     right: 5px;
 }
