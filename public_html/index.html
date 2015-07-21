@@ -170,11 +170,14 @@
                                         <button id="bazarSearch_button"  onclick="$('#bazarSearch').submit()" type="submit">
                                             <img id="bazarSearch_button_image" src="img/icon/recherche_icon.svg">
                                         </button>
-                                        <div id="bazarSearch_container_advanced" class="hidden-phone">
+                                        <div class="hidden-phone hidden-tab bazarSearch_container_advanced">
                                             <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
                                         </div>
                                     </div>
                                 </form>
+                                <div class="display-phone-inline-block display-tab-inline-block hidden bazarSearch_container_advanced"   style="width:100%; text-align: right; padding-right: 9px; margin-top: 9px; font-size: 10pt;">
+                                    <a href="sql.exe?SqlDB=bazar&amp;Sql=AdvancedSearch.phs">Recherche avancée</a>
+                                </div>
                             </div>
 
                             <div id="bazar_newAnnonce" class="hidden-phone hidden-tab desk-3 pull-right">
