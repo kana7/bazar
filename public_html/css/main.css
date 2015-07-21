@@ -860,7 +860,7 @@ td, th {
 }
 #annonces_une {
     position:relative;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 #annonces_une_howto {
     position:absolute;
@@ -914,9 +914,10 @@ td, th {
 .annonces_une_entry {
     float:left;
     cursor:pointer;
-    /* padding-left:9px; */
-    /* padding-right:9px; */
+    padding-left: 1px;
+    padding-right: 1px;
     width:100%;
+    /* max-height: 250px; */
 }
 @media(max-width:569px){
     #annonces_une_container_left, #annonces_une_container_right {
@@ -973,8 +974,9 @@ td, th {
     /* border-top:none; */
     margin-bottom:8px;
     text-align:center;
-    height: 193px;
+    height: 186px;
     width:100%;
+    max-height: 200px;
     overflow: hidden;
 }
 .annonces_une_entry_title {
