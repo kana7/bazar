@@ -48,8 +48,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    /* ToDo */
-    /* width: 480px; */
     height: 60px;
     line-height: 60px;
     margin: 0px;
@@ -138,31 +136,15 @@
 .annonce_entry_image_thumbnails_pic {
     width: 100%;
     height: 100px;
-    /* text-align: center; */
-    /* padding: 0px 2px; */
-    /* float: left; */
-    /* margin-left: 12px; */
-    /* border: 1px solid #ddd; */
 }
 
 .annonce_entry_image_thumbnails_pic:hover {
     opacity: 0.9;
 }
 
-/* TEST */
-.annonce_entry_image_thumbnails_pic img {
-    /* max-width: 130px; */
-    /* width: 100%; */
-    /* height: auto; */
-}
-
 .annonce_entry_description_title {
     font-weight: bold;
     margin: 10px 0;
-}
-
-#annonce_right, #annonce_left {
-    /* vertical-align: top; */
 }
 
 .crlf {
@@ -413,8 +395,6 @@
     #annonce_buttons div{
         width: 100%;
         display: block;
-
-        /* padding: 0 10px; */
     }
     #annonce_buttons div:first-child{
         margin-bottom: 5px;
@@ -448,10 +428,6 @@
     margin-bottom: 5px;
 }
 
-#annonce_attribute_list_entries td {
-    vertical-align: top;
-}
-
 .annonces-right-container{
     position: relative;
     display: inline-block;
@@ -470,6 +446,12 @@
     margin-left: -57px !important;
 }
 @media(max-width: 759px){
+    .annonces-right-container{
+        width: 100%;
+    }
+    #annonce_buttons>div{
+        width: 40%;
+    }
     .annonce_entry_top_title{
         font-size: 14pt;
     }
@@ -533,12 +515,33 @@
         width:33.3333333%;
     }
 }
-@media (max-width:599px){
+@media(max-width:549px){
+    
+    #annonce_buttons{
+          width: 100%;
+          padding: 0;
+    
+          /* margin: 0; */
+          display: block;
+          /* min-height: 101px; */
+}
+    #annonce_buttons>div{
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+        position: relative;
+        display: inline-block;
+    }
+    #annonce_buttons>div:first-child{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:485px){
     .gallery-cell {
         width: 50%;
     }
 }
-@media (min-width: 600px){
+@media (min-width: 486px){
     .gallery-cell {
         width: 33.3333333%;
     }
