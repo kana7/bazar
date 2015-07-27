@@ -33,20 +33,21 @@
     display: inline-block;
     line-height: 35px;
     margin-right: 20px;
-    width: 15.57632398753894%;
+    width: 21.129032%;
     font-style: italic;
     margin: 5px 0;
 }
 
 .add_annonce_select {
-    display: inline-block;
+    display: block;
     position: relative;
     float: left;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 75%;
+    margin-right: 65%;
     height: 35px;
-    width: 25%;
+    width: 40%;
+    margin: 5px 0px;
 }
 
 .add_annonce_select {
@@ -68,7 +69,7 @@
 }
 
 .add_annonce_textarea, .contact_textarea {
-    width: 500px;
+    width: 38.94080996884735%;
     height: 150px;
     margin: 5px 0;
 }
@@ -96,7 +97,7 @@
 
 .add_annonce_image_container {
     border: 1px solid #ddd;
-    width: 160px;
+    width: 12.46105919003115%;
     height: auto;
     display: inline-block;
     line-height: 100px;
@@ -121,7 +122,7 @@
 }
 
 #add_annonce_price {
-    width: 230px;
+    width: 17.91277258566978%;
 }
 
 #add_annonce_required_fields, #contact_required_fields {
@@ -185,7 +186,7 @@
 }
 
 .add_annonce_input_number, .add_annonce_input_double, .add_annonce_input_date {
-    width: 230px; 
+    width: 22.36940643266322%; 
 }
 
 .add_annonce_range {
@@ -283,7 +284,7 @@
 }
 
 .add_annonce_category_select_container{
-    width: 84.42367601246106%; 
+    width: 78.870968%; 
     float: left; 
     display: inline-block;
 }
@@ -292,8 +293,20 @@
     #add_annonce{
         padding: 0px 20px;
     }
-    .add_annonce_input{
+    .add_annonce_textarea{
+        width: 100%;
+    }
+    .add_annonce_input, .add_annonce_category_select_container{
         width: 70% !important;
+    }
+    .add_annonce_input_text, .contact_input_text{
+        width: 30%;
+    }
+    .add_annonce_select{
+        width: 65%;
+    }
+    #add_annonce_price{
+        width: 20% !important;
     }
     #add_annonce_tel_visible, #add_annonce_add_visible{
         display: inline-block;
@@ -301,14 +314,46 @@
         width: 100%;
         left: 17.8%;
     }
+    .add_annonce_image_container{
+        width: 19.5%;
+        margin-right: 5%;
+    }
+    #add_annonce_image_3{
+        margin-right: 0px;
+    }
+}
+.add_annonce_input_container>#attribute_71{
+    margin-right: auto;
+}
+.attribute_radio.attribute_option{
+    display: inline-block;
+    float: left;
+    line-height: 35px;
+    margin: 5px 0px;
+}
+#add_annonce_rubric_container{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 65%;
+    height: 35px;
+    width: 35%;
+    margin: 5px 0px;
+}
+@media(min-width: 679px){
+    .add_annonce_input_number, .add_annonce_input_double, .add_annonce_input_date{
+        width: 35% !important;
+    }
+}
+@media(min-width: 992px){
+    .add_annonce_input_number, .add_annonce_input_double, .add_annonce_input_date{
+        width: 22.36940643266322% !important;
+    }
 }
 @media(max-width: 700px){
-    .add_annonce_input_container>*{
-        display: inline-block;
-        float: left;
-        position: relative;
-        width: 100% !important;
-    }
+
     #add_annonce_tel_visible, #add_annonce_add_visible{
         left: 0px;
     }
