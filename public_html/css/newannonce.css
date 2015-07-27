@@ -75,7 +75,7 @@
 }
 
 .add_annonce_input_radios {
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .add_annonce_input_radios .add_annonce_input_text {
@@ -322,6 +322,30 @@
         margin-right: 0px;
     }
 }
+@media(max-width: 679px){
+    .add_annonce_input_text, .contact_input_text, .add_annonce_input, .add_annonce_select, .add_annonce_category_select_container{
+        width: 100% !important;
+    }
+    .add_annonce_separator, .contact_separator, .add_annonce_input_container, .contact_input_container{
+        margin: 0px;
+    
+        width: 100%;
+        display: inline-block;
+}
+    .add_annonce_input_text{
+        margin-bottom: 0px;
+    }
+    .add_annonce_input{
+      margin-bottom: 10px;  
+    }
+    #add_annonce_price{
+        width: 40% !important;
+    }
+    .add_annonce_image_container{
+        width: 29.1%;
+        margin-right: 4%;
+    }
+}
 .add_annonce_input_container>#attribute_71{
     margin-right: auto;
 }
@@ -342,7 +366,10 @@
     width: 35%;
     margin: 5px 0px;
 }
-@media(min-width: 679px){
+#hidden_section{
+    margin-top: 10px;
+}
+@media(min-width: 680px){
     .add_annonce_input_number, .add_annonce_input_double, .add_annonce_input_date{
         width: 35% !important;
     }
