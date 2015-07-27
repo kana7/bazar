@@ -438,6 +438,10 @@
     .annonces-right-container{
         width: 100%;
     }
+    .annonce_entry_image_pic{
+        height: 285.75px;
+        max-height: 381px;
+    }
 }
 .flickity-prev-next-button.next {
     margin-right: -57px !important;
@@ -516,15 +520,15 @@
     }
 }
 @media(max-width:549px){
-    
+
     #annonce_buttons{
-          width: 100%;
-          padding: 0;
-    
-          /* margin: 0; */
-          display: block;
-          /* min-height: 101px; */
-}
+        width: 100%;
+        padding: 0;
+
+        /* margin: 0; */
+        display: block;
+        /* min-height: 101px; */
+    }
     #annonce_buttons>div{
         width: 80%;
         float: none;
