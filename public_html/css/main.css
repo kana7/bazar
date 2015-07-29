@@ -549,7 +549,7 @@ td, th {
     #bazarLogo_image{
         height:60px;
         position:relative;
-        left:0px;
+        left: 12px;
     }
     #buttonList>div{
         display:flex;
@@ -1017,9 +1017,7 @@ td, th {
 }
 .annonces_une_entry_title {
     color:#005dc3;
-    /* margin-bottom:5px; */
     width:100%;
-    /* line-height: 16px; */
     height:25px;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -1070,8 +1068,6 @@ td, th {
 .annonces_last_entry_image_pic, .search_result_entry_img_pic {
     width:100%;
     height:100%;
-    /* margin-bottom: -1px; */
-    /* margin-top: -1px; */
     overflow:hidden;
     line-height:90px;
     box-shadow: 1px 1px 0 0 #E0E0E0;
@@ -1131,8 +1127,6 @@ annonces_last_entry_content, .search_result_entry_content{
     font-size:10pt;
     color:#555;
 }
-.bazar_free, .bazar_negotiate {
-}
 .annonces_last_entry_info_day, .search_result_entry_info_day {
     position:absolute;
     bottom:16px;
@@ -1140,7 +1134,8 @@ annonces_last_entry_content, .search_result_entry_content{
     font-size:10pt;
 }
 #bazar_login_image img {
-    margin-top:35px;
+    margin-top: 17px;
+    
 }
 /* Bazar images magic */
 .bazar_image {
@@ -1617,15 +1612,6 @@ ul.dropdown>li>a{
     .flickity-prev-next-button.previous {
         margin-left: -57px;
     }
-}
-.select{
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    text-indent:0.01px;
-    text-overflow:'';
-}
-select::-ms-expand {
-    display:none;
 }
 
 #userMenu .category_number{
