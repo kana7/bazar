@@ -1192,6 +1192,7 @@ annonces_last_entry_content, .search_result_entry_content{
 /* Pages */
 #pages {
     margin-bottom:19px;
+    text-align: right;
     /* position: absolute; */
     /* right: 0; */
     /* bottom: 0; */
@@ -1199,6 +1200,7 @@ annonces_last_entry_content, .search_result_entry_content{
 @media(max-width:679px){
     #pages{
         justify-content:center !important;
+        text-align: center;
     }
 }
 .page_link {
