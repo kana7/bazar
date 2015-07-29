@@ -706,6 +706,11 @@ td, th {
     position:relative;
     padding: 0px;
 }
+@-moz-document url-prefix() {
+    #bazarSearch_button{
+        bottom: 11px;
+    }
+}
 #bazarSearch_button_image {
     width:18px;
     height:18px;
