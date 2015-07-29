@@ -1685,3 +1685,9 @@ Appliquez ces classes sur le conteneur (parent) des elements que vous voulez ali
     align-items: stretch;
     -webkit-align-items: stretch;
 }
+
+.vertical-align-middle{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
