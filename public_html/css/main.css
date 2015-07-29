@@ -793,7 +793,9 @@ td, th {
     }
     #bazarSearch_button{
         width: 39px !important;
-    }
+    
+        bottom: 0px;
+}
     .category{
         padding:0px !important;
     }
@@ -1565,7 +1567,7 @@ ul.dropdown>li>a{
     }
     #bazarInputs.open{
         box-shadow:0px 4px 15px 0px #575757;
-        transform:translateY(66px);
+        transform: translateY(90px);
         -webkit-transform: translateY(90px);
     }
 }
