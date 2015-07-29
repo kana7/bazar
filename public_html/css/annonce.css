@@ -134,6 +134,7 @@
 }
 
 .annonce_entry_image_thumbnails_pic {
+    text-align: center;
     width: 100%;
     height: 100px;
 }

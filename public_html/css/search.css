@@ -340,7 +340,7 @@ a, a:hover {
     width: 160px;
     font-size: 10pt;
     cursor: pointer;
-    border: 1px solid#CCC;
+    border: 1px solid #CCC;
     color: #555;
     padding: 1px 28px 0px 4px;
     border-radius: 3px;
@@ -350,8 +350,14 @@ a, a:hover {
     background: url(../img/icon/tri.svg) no-repeat #FFF;
     background-size: 18px auto;
     background-position: 95% center;
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
 }
-
+#bazarBandeau_search_arrangeby_select::-ms-expand, .search_choice_box_select::-ms-expand {
+    display: none;
+}
 .search_choice {
     width: 180px;
     height: 60px;
