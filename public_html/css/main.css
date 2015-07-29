@@ -1621,3 +1621,10 @@ ul.dropdown>li>a{
 .annonces_une_entry_content{
     padding: 0px 10px;
 }
+#bazarSearch_choice{
+ -moz-appearance: none;
+ -webkit-appearance: none;
+}
+#bazarSearch_choice::-ms-expand{
+ display: none;   
+}
