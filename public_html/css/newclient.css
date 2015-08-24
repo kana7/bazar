@@ -32,6 +32,8 @@
     margin: 10px 0;
     height: 30px;
     width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 #add_client_rubrique {

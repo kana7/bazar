@@ -509,6 +509,8 @@ a, a:hover {
     margin-top: 10px;
     height: 30px;
     width: 230px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 .add_annonce_rubric {
@@ -723,6 +725,8 @@ a, a:hover {
     height: 35px;
     width: 100%;
     margin: 5px 0px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 .search_section_data_entry.advanced{
@@ -731,4 +735,14 @@ a, a:hover {
 
 #search_category_container{
     padding: 10px 10px 0px 0px;
+}
+.search_price_container{
+    margin-top: 10px;
+}
+@media (max-width: 991px){
+    #advance_search{
+        padding: 0 20px;
+    
+        margin-top: 15px;
+}
 }

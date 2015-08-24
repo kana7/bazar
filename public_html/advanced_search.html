@@ -948,7 +948,7 @@
                         </form>
                     </div>
                     <div id="content">
-                        <div id="search_result">
+                        <div id="advance_search">
                             <div id="search_result_title">Recherche avancée</div>
                             <form id="advanced_search" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                                 <input id="category_hidden" type="hidden" name="category" value="">
@@ -999,21 +999,23 @@
                                 <div class="search_separator advanced"></div>
                                 <div class="search_section advanced">
                                     <div class="search_section_title">Par prix</div>
-                                    <div id="search_price" class="search_section_data">
-                                        <input class="search_checkbox" id="search_checkbox_price" type="checkbox" name="price_ok">
-                                        <div class="search_section_data_entry advanced">
-                                            de <input class="search_section_data_price search_input_number" type="text" name="price_min" value="">
-                                            à <input class="search_section_data_price search_input_number" type="text" name="price_max" value="">
-                                            Euros
+                                    <div class="search_price_container">
+                                        <div id="search_price" class="search_section_data">
+                                            <input class="search_checkbox" id="search_checkbox_price" type="checkbox" name="price_ok">
+                                            <div class="search_section_data_entry advanced">
+                                                de <input class="search_section_data_price search_input_number" type="text" name="price_min" value="">
+                                                à <input class="search_section_data_price search_input_number" type="text" name="price_max" value="">
+                                                Euros
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div id="search_price_negotiate" class="search_section_data">
-                                        <input class="search_checkbox" id="search_checkbox_negotiate" type="checkbox" name="price_negotiate">
-                                        <span class="search_text">prix à discuter</span>
-                                    </div>
-                                    <div id="search_price_free" class="search_section_data">
-                                        <input class="search_checkbox" id="search_checkbox_free" type="checkbox" name="price_free">
-                                        <span class="search_text">article gratuit</span>
+                                        <div id="search_price_negotiate" class="search_section_data">
+                                            <input class="search_checkbox" id="search_checkbox_negotiate" type="checkbox" name="price_negotiate">
+                                            <span class="search_text">prix à discuter</span>
+                                        </div>
+                                        <div id="search_price_free" class="search_section_data">
+                                            <input class="search_checkbox" id="search_checkbox_free" type="checkbox" name="price_free">
+                                            <span class="search_text">article gratuit</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="search_separator advanced"></div>
