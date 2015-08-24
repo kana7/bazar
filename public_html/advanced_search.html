@@ -974,8 +974,8 @@
                                     <div class="search_section_title">Par catégorie</div>
                                     <div id="search_category" class="search_section_data">
                                         <div id="search_category_container" class="clearfix">
-                                           <div class="tab-6 phone-12">
-                                                 <select id="search_categories" class="search_select">
+                                            <div class="tab-6 phone-12">
+                                                <select id="search_categories" class="search_select">
                                                     <option value="-1">Choississez une catégorie</option>
                                                     <option value="1">Véhicules</option>
                                                     <option value="19">Immobilier</option>
@@ -990,8 +990,72 @@
                                                     <option value="78">Rencontre</option>
                                                     <option value="84">Autre</option>
                                                 </select>
-                                                <div id="add_annonce_rubric_container" class="add_annonce_rubric"></div>
+                                                <div id="add_annonce_rubric_container" class="add_annonce_rubric" style="display: block;">
+                                                    <select id="add_annonce_rubric_1" class="add_annonce_select category_select">
+                                                        <option value="-1">Choisissez une sous-rubrique</option>
+                                                        <option value="2">Voitures</option>
+                                                        <option value="7">Motos</option>
+                                                        <option value="11">Utilitaires-camions</option>
+                                                        <option value="12">Caravanes, camping-cars, remorques</option>
+                                                        <option value="13">Nautisme</option>
+                                                        <option value="14">Equipements: Voitures</option>
+                                                        <option value="15">Equipements: Moto</option>
+                                                        <option value="16">Equipements: Utilitaire</option>
+                                                        <option value="17">Equipements: Caravaning</option>
+                                                        <option value="18">Equipements: Nautisme</option>
+                                                    </select>
+                                                    <select id="add_annonce_rubric_2" class="add_annonce_select category_select">
+                                                        <option value="-1">Choisissez une sous-rubrique</option>
+                                                        <option value="3">Berline</option>
+                                                        <option value="4">Cabriolet</option>
+                                                        <option value="5">Tout-terrain</option>
+                                                        <option value="100">Coupé</option>
+                                                        <option value="101">Citadine</option>
+                                                        <option value="102">Break</option>
+                                                        <option value="6">Voiture sans permis</option>
+                                                        <option value="131">Monospace</option>
+                                                        <option value="134">Anciennes</option>
+                                                        <option value="136">Accidentées</option>
+                                                    </select>
+                                                </div>
+                                                <div id="add_annonce_rubric_container_2" class="add_annonce_rubric" style="display: block;">
+
+                                                    <div id="add_annonce_rubric_container_4" class="add_annonce_rubric"></div>
+                                                    <script>
+                                                        $(document).ready(function () {
+                                                            $('#add_annonce_rubric_4').remove();
+                                                        });
+                                                    </script>
+                                                </div>
+                                                <script>
+                                                    $(document).ready(function () {
+                                                        $('#add_annonce_rubric_2').change(function () {
+                                                            var element = $('#add_annonce_rubric_container_2');
+                                                            $.ajaxSetup({
+                                                                'beforeSend': function (xhr) {
+                                                                    xhr.overrideMimeType('text/html; charset=windows-1252');
+                                                                },
+                                                            });
+                                                            element.load('sql.exe?SqlDB=bazar&Sql=addRubric.phs&_cat=' + $(this).val());
+                                                            element.show();
+                                                        });
+                                                    });
+                                                </script>
                                             </div>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    $('#add_annonce_rubric_1').change(function () {
+                                                        var element = $('#add_annonce_rubric_container_1');
+                                                        $.ajaxSetup({
+                                                            'beforeSend': function (xhr) {
+                                                                xhr.overrideMimeType('text/html; charset=windows-1252');
+                                                            },
+                                                        });
+                                                        element.load('sql.exe?SqlDB=bazar&Sql=addRubric.phs&_cat=' + $(this).val());
+                                                        element.show();
+                                                    });
+                                                });
+                                            </script>
                                         </div>
                                     </div>
                                 </div>
@@ -1021,47 +1085,57 @@
                                 <div class="search_separator advanced"></div>
                                 <div class="search_section advanced">
                                     <div class="search_section_title">Critères supplémentaires</div>
-                                    <div id="search_supp1" class="search_section_data">
-                                        <div><input class="search_checkbox" id="search_checkbox_annonceur" type="checkbox" name="annonceur_ok"></div>
-                                        <div class="search_radio_text"><span class="search_text">Type d'annonceur:</span></div>
-                                        <div class="search_radio_1">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="3">
-                                                <span class="search_section_data_radio_text">Tous</span>
+                                    <div class="search_supp_container">
+                                        <div id="search_supp1" class="search_section_data">
+                                            <input class="search_checkbox" id="search_checkbox_annonceur" type="checkbox" name="annonceur_ok">
+                                            <div class="search_supp_radio_container">
+                                                <div style="margin-right: 25px;" class="search_radio_text"><span class="search_text">Type d'annonceur:</span></div>
+                                                <ul class="search_radio">
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="3">
+                                                            <span class="search_section_data_radio_text">Tous</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="1">
+                                                            <span class="search_section_data_radio_text">Privé</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="2">
+                                                            <span class="search_section_data_radio_text">Professionnel</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="search_radio_2">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="1">
-                                                <span class="search_section_data_radio_text">Privé</span>
-                                            </div>
-                                        </div>
-                                        <div class="search_radio_3">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="2">
-                                                <span class="search_section_data_radio_text">Professionnel</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="search_supp2" class="search_section_data">
-                                        <div><input class="search_checkbox" id="search_checkbox_annonce" type="checkbox" name="type_annonce_ok"></div>
-                                        <div class="search_radio_text"><span class="search_text">Type d'annonce:</span></div>
-                                        <div class="search_radio_1">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="3">
-                                                <span class="search_section_data_radio_text">Tous</span>
-                                            </div>
-                                        </div>
-                                        <div class="search_radio_2">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="1">
-                                                <span class="search_section_data_radio_text">Offre</span>
-                                            </div>
-                                        </div>
-                                        <div class="search_radio_3">
-                                            <div class="search_section_data_entry advanced">
-                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="2">
-                                                <span class="search_section_data_radio_text">Demande</span>
+                                        <div id="search_supp2" class="search_section_data">
+                                            <div class="search_supp_radio_container">
+                                                <input class="search_checkbox" id="search_checkbox_annonce" type="checkbox" name="type_annonce_ok">
+                                                <div style="margin-right: 38px;" class="search_radio_text"><span class="search_text">Type d'annonce:</span></div>
+                                                <ul class="search_radio">
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="3">
+                                                            <span class="search_section_data_radio_text">Tous</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="1">
+                                                            <span class="search_section_data_radio_text">Offre</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="search_section_data_entry advanced">
+                                                            <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="2">
+                                                            <span class="search_section_data_radio_text">Demande</span>
+                                                        </div>  
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

@@ -742,7 +742,30 @@ a, a:hover {
 @media (max-width: 991px){
     #advance_search{
         padding: 0 20px;
-    
+
         margin-top: 15px;
+    }
 }
+.search_supp_radio_container{
+    display: inline-block;
+}
+.search_supp_container>.search_section_data:not(:last-child){
+    margin-bottom: 30px;
+}
+.search_supp_radio_container>*{
+    display: inline;
+}
+.search_supp_container{
+    margin-top: 15px;
+}
+.search_radio{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.search_radio>li{
+    display: inline-block;
+}
+.search_radio>li:not(:last-child){
+    margin-right: 25px;
 }
