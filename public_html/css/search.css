@@ -20,7 +20,8 @@ a, a:hover {
 
 .search_section_title {
     font-size: 11pt;
-    margin-left: -18px;
+    /* margin-left: -18px; */
+    /* padding-left: 15px; */
 }
 
 #search_result {
@@ -428,6 +429,9 @@ a, a:hover {
     /* float: left; */
     width: 100%;
 }
+.search_separator.advanced{
+    margin: 13px 0;
+}
 
 #search_button {
     margin-bottom: 40px;
@@ -439,6 +443,7 @@ a, a:hover {
     /* padding: 10px; */
     padding-left: 0px;
     margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 #search_motcle {
@@ -455,16 +460,19 @@ a, a:hover {
 }
 
 #search_text_in {
-    position: relative;
-    top: -35px;
+    /* position: relative; */
+    /* top: -35px; */
+    display: block;
 }
 
 .search_input_text {
-    border: 1px solid #e0e0e0;
-    line-height: 26px;
-    border-radius: 3px;
-    width: 500px;
-    padding-left: 10px;
+    height: 35px;
+    line-height: 25px;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
 }
 
 #search_category {
@@ -473,6 +481,8 @@ a, a:hover {
 
 .search_checkbox, .search_section_data_radio {
     cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .search_radio_1, .search_radio_2 {
@@ -489,6 +499,9 @@ a, a:hover {
     float: left;
     position: relative;
     display: inline-block;
+}
+.search_section.advanced{
+    padding: 0px 0 0 15px;
 }
 
 .add_annonce_select {
@@ -694,4 +707,28 @@ a, a:hover {
     .search_category_input, .search_category_container{
         width: 70% !important;
     }
+}
+
+.search_input_container{
+    display: inline-block;
+    position: relative;
+}
+.search_select{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 65%;
+    height: 35px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.search_section_data_entry.advanced{
+    display: inline;
+}
+
+#search_category_container{
+    padding: 10px 10px 0px 0px;
 }

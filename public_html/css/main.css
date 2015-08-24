@@ -873,6 +873,7 @@ td, th {
     /* margin-bottom:15px; */
 }
 .category_entry, .search_section_data_entry, .sub_category_entry {
+    display: inline-block;
     width:100%;
     margin:5px 0;
     cursor:pointer;

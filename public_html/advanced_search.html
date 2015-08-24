@@ -953,32 +953,29 @@
                             <form id="advanced_search" action="sql.exe?SqlDB=bazar&amp;Sql=Search.phs" method="POST">
                                 <input id="category_hidden" type="hidden" name="category" value="">
                                 <input type="hidden" name="advanced" value="1">
-                                <div class="search_separator"></div>
-                                <div class="search_section">
-                                    <div class="search_section_title">Par mot clé</div>
-                                    <div id="search_motcle" class="search_section_data">
-                                        <div><input class="search_input_text" type="text" name="_name" value="" placeholder="mot clé"></div>
-                                        <div class="search_select_container">
-                                            <span id="search_text_in" class="search_text">dans</span>
-                                            <div class="search_choice">
-                                                <div class="search_choice_box">
-                                                    <div class="search_choice_box_container"><img src="/images/dropdownmenu.png"></div>
-                                                    <select id="search_text_type" class="search_choice_box_select" name="text_type">
-                                                        <option value="1">titre de l'annonce</option>
-                                                        <option value="2">nom de l'annonceur</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                <div class="search_separator advanced"></div>
+                                <div class="search_section advanced">
+                                    <div class="search_input_container phone-6">
+                                        <div class="search_section_title">Par mot clé</div>
+                                        <div id="search_motcle" class="search_section_data">
+                                            <input class="search_input_text" type="text" name="_name" value="" placeholder="mot clé">
                                         </div>
                                     </div>
+                                    <div style="padding-left: 15px;" class="search_select_container phone-6">
+                                        <span id="search_text_in" class="search_text">dans</span>
+                                        <select id="search_text_type"  class="search_select" name="text_type">
+                                            <option value="1">titre de l'annonce</option>
+                                            <option value="2">nom de l'annonceur</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="search_separator"></div>
-                                <div class="search_section">
+                                <div class="search_separator advanced"></div>
+                                <div class="search_section advanced tab-6 phone-12">
                                     <div class="search_section_title">Par catégorie</div>
                                     <div id="search_category" class="search_section_data">
-                                        <div class="search_select_container">
-                                            <div id="search_category_container">
-                                                <select id="search_categories" class="add_annonce_select category_select">
+                                        <div id="search_category_container" class="clearfix">
+                                           <div class="tab-6 phone-12">
+                                                 <select id="search_categories" class="search_select">
                                                     <option value="-1">Choississez une catégorie</option>
                                                     <option value="1">Véhicules</option>
                                                     <option value="19">Immobilier</option>
@@ -999,81 +996,80 @@
                                     </div>
                                 </div>
                                 <div id="hidden_section"></div>
-                                <div class="search_separator"></div>
-                                <div class="search_section">
+                                <div class="search_separator advanced"></div>
+                                <div class="search_section advanced">
                                     <div class="search_section_title">Par prix</div>
                                     <div id="search_price" class="search_section_data">
-                                        <div><input class="search_checkbox" id="search_checkbox_price" type="checkbox" name="price_ok"></div>
-                                        <div>
-                                            <div class="search_section_data_entry">
-                                                de <input class="search_section_data_price search_input_number" type="text" name="price_min" value="">
-                                                à <input class="search_section_data_price search_input_number" type="text" name="price_max" value="">
-                                                Euros
-                                            </div>
+                                        <input class="search_checkbox" id="search_checkbox_price" type="checkbox" name="price_ok">
+                                        <div class="search_section_data_entry advanced">
+                                            de <input class="search_section_data_price search_input_number" type="text" name="price_min" value="">
+                                            à <input class="search_section_data_price search_input_number" type="text" name="price_max" value="">
+                                            Euros
                                         </div>
                                     </div>
                                     <div id="search_price_negotiate" class="search_section_data">
-                                        <div><input class="search_checkbox" id="search_checkbox_negotiate" type="checkbox" name="price_negotiate"></div>
-                                        <div><span class="search_text">prix à discuter</span></div>
-                                        <div id="search_price_free" class="search_section_data">
-                                            <div><input class="search_checkbox" id="search_checkbox_free" type="checkbox" name="price_free"></div>
-                                            <div><span class="search_text">article gratuit</span></div>
-                                        </div>
-                                        <div class="search_separator"></div>
-                                        <div class="search_section">
-                                            <div class="search_section_title">Critères supplémentaires</div>
-                                            <div id="search_supp1" class="search_section_data">
-                                                <div><input class="search_checkbox" id="search_checkbox_annonceur" type="checkbox" name="annonceur_ok"></div>
-                                                <div class="search_radio_text"><span class="search_text">Type d'annonceur:</span></div>
-                                                <div class="search_radio_1">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="3">
-                                                        <span class="search_section_data_radio_text">Tous</span>
-                                                    </div>
-                                                </div>
-                                                <div class="search_radio_2">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="1">
-                                                        <span class="search_section_data_radio_text">Privé</span>
-                                                    </div>
-                                                </div>
-                                                <div class="search_radio_3">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="2">
-                                                        <span class="search_section_data_radio_text">Professionnel</span>
-                                                    </div>
-                                                </div>
+                                        <input class="search_checkbox" id="search_checkbox_negotiate" type="checkbox" name="price_negotiate">
+                                        <span class="search_text">prix à discuter</span>
+                                    </div>
+                                    <div id="search_price_free" class="search_section_data">
+                                        <input class="search_checkbox" id="search_checkbox_free" type="checkbox" name="price_free">
+                                        <span class="search_text">article gratuit</span>
+                                    </div>
+                                </div>
+                                <div class="search_separator advanced"></div>
+                                <div class="search_section advanced">
+                                    <div class="search_section_title">Critères supplémentaires</div>
+                                    <div id="search_supp1" class="search_section_data">
+                                        <div><input class="search_checkbox" id="search_checkbox_annonceur" type="checkbox" name="annonceur_ok"></div>
+                                        <div class="search_radio_text"><span class="search_text">Type d'annonceur:</span></div>
+                                        <div class="search_radio_1">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="3">
+                                                <span class="search_section_data_radio_text">Tous</span>
                                             </div>
-                                            <div id="search_supp2" class="search_section_data">
-                                                <div><input class="search_checkbox" id="search_checkbox_annonce" type="checkbox" name="type_annonce_ok"></div>
-                                                <div class="search_radio_text"><span class="search_text">Type d'annonce:</span></div>
-                                                <div class="search_radio_1">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="3">
-                                                        <span class="search_section_data_radio_text">Tous</span>
-                                                    </div>
-                                                </div>
-                                                <div class="search_radio_2">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="1">
-                                                        <span class="search_section_data_radio_text">Offre</span>
-                                                    </div>
-                                                </div>
-                                                <div class="search_radio_3">
-                                                    <div class="search_section_data_entry">
-                                                        <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="2">
-                                                        <span class="search_section_data_radio_text">Demande</span>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <div class="search_radio_2">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="1">
+                                                <span class="search_section_data_radio_text">Privé</span>
+                                            </div>
+                                        </div>
+                                        <div class="search_radio_3">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonceur" type="radio" name="annonceur" value="2">
+                                                <span class="search_section_data_radio_text">Professionnel</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="search_separator"></div>
-                                    <div class="search_section">
-                                        <div class="search_section_data">
-                                            <div id="search_button" class="annonce_button" onclick="submitSearch();">Rechercher</div>
+                                    <div id="search_supp2" class="search_section_data">
+                                        <div><input class="search_checkbox" id="search_checkbox_annonce" type="checkbox" name="type_annonce_ok"></div>
+                                        <div class="search_radio_text"><span class="search_text">Type d'annonce:</span></div>
+                                        <div class="search_radio_1">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="3">
+                                                <span class="search_section_data_radio_text">Tous</span>
+                                            </div>
+                                        </div>
+                                        <div class="search_radio_2">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="1">
+                                                <span class="search_section_data_radio_text">Offre</span>
+                                            </div>
+                                        </div>
+                                        <div class="search_radio_3">
+                                            <div class="search_section_data_entry advanced">
+                                                <input class="search_section_data_radio radio_annonce" type="radio" name="type_annonce" value="2">
+                                                <span class="search_section_data_radio_text">Demande</span>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="search_separator advanced"></div>
+                                <div class="search_section advanced">
+                                    <div class="search_section_data">
+                                        <div id="search_button" class="annonce_button" onclick="submitSearch();">Rechercher</div>
+                                    </div>
+                                </div>
                             </form>
                             <script>
                                 $('#search_checkbox_free').change(function () {
