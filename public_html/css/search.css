@@ -421,9 +421,12 @@ a, a:hover {
     font-size: 11pt;
 }
 
-.search_separator {
+.search_separator{
     border-bottom: 1px solid #ddd;
-    margin-top: 15px;
+    margin: 20px 0;
+    display: inline-block;
+    /* float: left; */
+    width: 100%;
 }
 
 #search_button {
@@ -679,4 +682,16 @@ a, a:hover {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
     background-image: none;
+}
+
+.search_category_container{
+    width: 78.870968%; 
+    float: left; 
+    display: inline-block;
+}
+
+@media(max-width: 991px){
+    .search_category_input, .search_category_container{
+        width: 70% !important;
+    }
 }
