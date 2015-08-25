@@ -1171,7 +1171,7 @@ annonces_last_entry_content, .search_result_entry_content{
     height: 100%;
 }
 /* Button */
-.annonce_button {
+div#add_annonce_button_container {
     width:200px;
     height:35px;
     line-height:35px;
@@ -1186,6 +1186,11 @@ annonces_last_entry_content, .search_result_entry_content{
     cursor:pointer;
     float:left;
     /* margin-left:10px; */
+}
+@media(max-width: 400px){
+    div#add_annonce_button_container{
+        width: 100%;
+    }
 }
 /* Pages */
 #pages {
