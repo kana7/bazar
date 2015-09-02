@@ -87,8 +87,6 @@
     /* text-align: center; */
     overflow: hidden;
     /* line-height: 350px; */
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
 }
 
 .annonce_entry_image_leftarrow, .annonce_entry_image_rightarrow {
@@ -116,9 +114,9 @@
     /* width: 588px; */
     height: 100px;
     box-sizing: border-box;
-    /* overflow: hidden; */
     position: relative;
-    /* border-bottom: 1px solid #D5D5D5; */
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 
 .annonce_entry_image_thumbnails {

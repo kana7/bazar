@@ -128,7 +128,7 @@ td, th {
     padding-right:0px !important;
     border:1px solid #D5D5D5;
     height:50px;
-    border-radius:5px;
+    /* border-radius:5px; */
     border-bottom-left-radius:0px;
     border-bottom-right-radius:0px;
     width:100% !important;
