@@ -87,6 +87,7 @@
     /* text-align: center; */
     overflow: hidden;
     /* line-height: 350px; */
+    border: 1px solid #ddd;
 }
 
 .annonce_entry_image_leftarrow, .annonce_entry_image_rightarrow {
@@ -403,6 +404,7 @@
 .annonce_button {
     float: left;
     display: inline-block;
+    width: 200px;      height: 38px;      line-height: 35px;      text-align: center;      border: 1px solid #777;      border-radius: 5px;      text-transform: uppercase;      font-size: 10pt;      background: #00529C;      color: #fff;      cursor: pointer;            ;
 }
 
 .att_full_width {

@@ -341,8 +341,11 @@ td, th {
 }
 .ssMenu li {
     width:auto;
-    display:flex;
-    display:-webkit-flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-flex-direction:row; 
 }
 .ssMenuSelected h1 {
@@ -390,13 +393,19 @@ td, th {
     #bazarHeader_top_menu {
         padding-right:25px;
     }
+    #buttonList>.clearfix>.phone-3{
+        text-align: center;
+    }
 }
 @media(min-width:992px){
     #bazarHeader_top_menu>ul {
         align-items:center;
         -webkit-align-items:center;
-        display:flex;
-        display:-webkit-flex;;
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
         -webkit-flex-direction: row; 
     }
     .title{
@@ -511,13 +520,10 @@ td, th {
 }
 @media(max-width:679px){
     #bazarLogo {
+        display: inline-block;
+        text-align: center;
         width:100%;
-        display:flex;
-        display:-webkit-flex;
-        -webkit-flex-direction: row; 
         margin-bottom: 10px;
-        -webkit-justify-content:center;
-        justify-content:center;
         bottom:0px;
     }
     #bazarLogo_image{
@@ -526,14 +532,7 @@ td, th {
         position:relative;
         left:15px;
     }
-    #buttonList>div{
-        display:flex;
-        display:-webkit-flex;
-        -webkit-flex-direction:row;
-        align-items:center;
-        -webkit-align-items:center;
-        justify-content:center;
-        -webkit-justify-content:center;
+    #buttonList>div{  
         padding:0px 15px;
     }
 }
@@ -552,8 +551,11 @@ td, th {
         left: 12px;
     }
     #buttonList>div{
-        display:flex;
-        display:-webkit-flex;
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
         -webkit-flex-direction:row;
         align-items:center;
         -webkit-align-items: center;
@@ -793,9 +795,9 @@ td, th {
     }
     #bazarSearch_button{
         width: 39px !important;
-    
+
         bottom: 0px;
-}
+    }
     .category{
         padding:0px !important;
     }
@@ -1008,7 +1010,6 @@ td, th {
     width:100%;
     height:120px;
     border:1px solid #e0e0e0;
-    /* border-top:none; */
     margin-bottom:8px;
     text-align:center;
     height: 186px;
@@ -1070,7 +1071,7 @@ td, th {
     width:100%;
     height:100%;
     overflow:hidden;
-    line-height:90px;
+    /* line-height:90px; */
     box-shadow: 1px 1px 0 0 #E0E0E0;
     text-align:center;
 }
@@ -1136,21 +1137,23 @@ annonces_last_entry_content, .search_result_entry_content{
 }
 #bazar_login_image img {
     margin-top: 17px;
-    
+
 }
 /* Bazar images magic */
 .bazar_image {
     display:none;
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+
 }
 .fillWidth {
     width:100%;
     height: auto;
     display:inline-block;
-    /* vertical-align:middle; */
-    /* margin-top:-2px; */
+    /* vertical-align:middle;*/
 }
 .fillHeight {
     height: 100%;
@@ -1190,6 +1193,9 @@ div#add_annonce_button_container {
 @media(max-width: 400px){
     div#add_annonce_button_container{
         width: 100%;
+    }
+    .mobile_button{
+        width: 85% !important;
     }
 }
 /* Pages */
@@ -1247,8 +1253,11 @@ html,body {
 }
 #bazar_footer_content {
     height:100%;
-    display:flex;    
-    display:-webkit-flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-flex-direction:row; 
     align-items:center;
     -webkit-align-items:center;
@@ -1478,12 +1487,13 @@ ul.dropdown>li>a{
     font-size:14px;
 }
 .mobile_button{
+    display: inline-block;
     border:none;
     background-color:#ffffff;
     padding:0;
     text-align:center;
     width:82px;
-    height:82px;
+    height: auto;
 }
 .mobile_button>img{
     width:100%;
@@ -1628,9 +1638,9 @@ ul.dropdown>li>a{
     padding: 0px 10px;
 }
 #bazarSearch_choice{
- -moz-appearance: none;
- -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 #bazarSearch_choice::-ms-expand{
- display: none;   
+    display: none;   
 }
