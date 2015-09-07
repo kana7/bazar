@@ -74,6 +74,11 @@ a{
     -moz-osx-font-smoothing: grayscale;
     transform: translate(0, 0);
 }
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+    content: "\f00d";
+}
 .fa-th-list:before {
     content: "\f00b";
 }

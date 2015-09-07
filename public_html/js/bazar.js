@@ -2,6 +2,9 @@
  resizeAllImages();
  });*/
 
+var uploadFileData = [];
+var temp;
+
 $(document).ready(function () {
 
     $('#list').click(function (event) {
@@ -20,6 +23,14 @@ $(document).ready(function () {
         }
     });
 
+    /* init modules pour uploader image ---> insert annonce*/
+    if ($('.add_annonce_images_container')) {
+        $('.add_annonce_image_pic').each(function () {
+            temp = new uploadFile($(this));
+            temp.init();
+            uploadFileData.push(temp);
+        });
+    }
 });
 
 /*function resizeAllImages() {
@@ -156,8 +167,62 @@ var waitForFinalEvent = (function () {
 });
 
 
-//inscription
 
+/*Module pour ajouter une image via input file ----> insert annonce*/
+var uploadFile = function (element) {
+    var $image = element;
+
+    //cache dom 
+    var $imageContainer = $image.parent();
+    var $container = $imageContainer.parent();
+    var $deleteButton = $container.find('button');
+    var $hiddenInput = $imageContainer.find('input[type="hidden"]');
+    var $inputFile = $container.find('input[type="file"]');
+
+
+    this.init = function () {
+        _bindEvents();
+    };
+
+    var _bindEvents = function () {
+        $image.on('click', _addImage.bind(this));
+        $inputFile.on('change', function () {
+            _renderImage(this);
+        });
+        $deleteButton.on('click', _deleteImage.bind(this));
+    };
+
+    var _addImage = function () {
+        $inputFile.click();
+    };
+
+    var _deleteImage = function () {
+        /* reset input file */
+        $image.val('');
+        $image.attr('src', "img/icon/add.png");
+        $inputFile.val("");
+        $hiddenInput.val("");
+        /* remove delete button */
+        $deleteButton.addClass('hidden');
+    };
+
+    var _renderImage = function (input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $image.attr('src', e.target.result);
+                $hiddenInput.val(e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+            $deleteButton.removeClass('hidden');
+        }
+    };
+};
+
+
+//inscription
 function addFile(id) {
     var element = $('#' + id);
     element.click();
@@ -184,3 +249,20 @@ function Url2Thumbnail(input, id) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp").change(function () {
+    readURL(this);
+});

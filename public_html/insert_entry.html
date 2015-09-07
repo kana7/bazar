@@ -513,21 +513,30 @@
                                 <div class="add_annonce_separator"></div>
                                 <div class="add_annonce_images_container">
                                     <div class="add_annonce_input_text">Photo(s)</div>
-                                    <div class="add_annonce_image_container" onclick="addFile('add_annonce_image_input_1');">
-                                        <img id="add_annonce_image_pic_1" class="add_annonce_image_pic" src="img/icon/add.png">
-                                        <input id="add_annonce_image_pic_1_data" type="hidden" name="item_photo_1" value="">
+                                    <div class="uploadFile_container">
+                                        <div class="add_annonce_image_container">
+                                            <img id="add_annonce_image_pic_1" class="add_annonce_image_pic" alt="uploaded image 1" src="img/icon/add.png">
+                                            <input id="add_annonce_image_pic_1_data" type="hidden" name="item_photo_1" value="">
+                                        </div>
+                                        <input id="add_annonce_image_input_2" class="add_annonce_image_input" type="file">
+                                        <button type="button" class="deleteImage hidden"><span class="fa fa-close"></span></button>
                                     </div>
-                                    <input id="add_annonce_image_input_1" class="add_annonce_image_input" type="file" onchange="Url2Thumbnail(this, 'add_annonce_image_pic_1');">
-                                    <div class="add_annonce_image_container" onclick="addFile('add_annonce_image_input_2');">
-                                        <img id="add_annonce_image_pic_2" class="add_annonce_image_pic" src="img/icon/add.png">
-                                        <input id="add_annonce_image_pic_2_data" type="hidden" name="item_photo_2" value="">
+                                    <div class="uploadFile_container">
+                                        <div class="add_annonce_image_container">
+                                            <img id="add_annonce_image_pic_2" class="add_annonce_image_pic" alt="uploaded image 1" src="img/icon/add.png">
+                                            <input id="add_annonce_image_pic_2_data" type="hidden" name="item_photo_2" value="">
+                                        </div>
+                                        <input id="add_annonce_image_input_2" class="add_annonce_image_input" type="file">
+                                        <button type="button" class="deleteImage hidden"><span class="fa fa-close"></span></button>
                                     </div>
-                                    <input id="add_annonce_image_input_2" class="add_annonce_image_input" type="file" onchange="Url2Thumbnail(this, 'add_annonce_image_pic_2');">
-                                    <div id="add_annonce_image_3" class="add_annonce_image_container" onclick="addFile('add_annonce_image_input_3');">
-                                        <img id="add_annonce_image_pic_3" class="add_annonce_image_pic" src="img/icon/add.png">
-                                        <input id="add_annonce_image_pic_3_data" type="hidden" name="item_photo_3" value="">
+                                    <div class="uploadFile_container">
+                                        <div class="add_annonce_image_container">
+                                            <img id="add_annonce_image_pic_3" class="add_annonce_image_pic" alt="uploaded image 1" src="img/icon/add.png">
+                                            <input id="add_annonce_image_pic_3_data" type="hidden" name="item_photo_3" value="">
+                                        </div>
+                                        <input id="add_annonce_image_input_3" class="add_annonce_image_input" type="file">
+                                        <button type="button" class="deleteImage hidden"><span class="fa fa-close"></span></button>
                                     </div>
-                                    <input id="add_annonce_image_input_3" class="add_annonce_image_input" type="file" onchange="Url2Thumbnail(this, 'add_annonce_image_pic_3');">
                                 </div>
                                 <div class="add_annonce_separator"></div>
                                 <div id="add_annonce_required_fields">* champs obligatoires</div>
@@ -680,9 +689,10 @@
 
 
                                         });
-                                        /* add delete button */
-                                        $('#delete_logo').remove();
-                                        $('<span id="delete_logo" class="deleteImage" onclick="deleteFile(\'delete_logo\', \'' + id + '\')">x</span>').insertAfter(input);
+                                        /* add delete button 
+                                         $('#delete_logo').remove();
+                                         $('<span id="delete_logo" class="deleteImage" onclick="deleteFile(\'delete_logo\', \'' + id + '\')">x</span>').insertAfter(input);
+                                         */
                                         //Overlay à l'affichage du menu catégorie en mobile
                                         $('#content').append("<div id='overlay' class='hidden display-tab display-phone'></div>");
                                         resizeOverlay();
