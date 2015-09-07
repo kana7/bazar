@@ -207,6 +207,11 @@ var uploadFile = function (element) {
     };
 
     var _renderImage = function (input) {
+        if (window.File && window.FileReader && window.FileList && window.Blob){
+            console.log("The file API is supported on this browser");
+        }else{
+            alert("File API not supported on this browser, use ajax instead");
+        }
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
@@ -221,19 +226,16 @@ var uploadFile = function (element) {
     };
 };
 
-
-//inscription
+/*
 function addFile(id) {
     var element = $('#' + id);
     element.click();
 }
 function deleteFile(button, id) {
-    /* reset input file */
     $('#' + id).val('');
     $('#' + id).attr('src', "/images/add.png");
     $('#' + id).parent().removeClass('borderLess');
     $('#' + id + "_data").val("");
-    /* remove delete button */
     $('#' + button).remove();
 }
 function Url2Thumbnail(input, id) {
@@ -243,26 +245,10 @@ function Url2Thumbnail(input, id) {
             $('#' + id).attr('src', e.target.result)
                     .css('max-width', '150px');
             $('#' + id).parent().addClass('borderLess');
-            /* add data to hidden input */
             $('#' + id + "_data").val(e.target.result);
         };
         reader.readAsDataURL(input.files[0]);
     }
 }
 
-function readURL(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#blah').attr('src', e.target.result);
-        };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-$("#imgInp").change(function () {
-    readURL(this);
-});
+*/
